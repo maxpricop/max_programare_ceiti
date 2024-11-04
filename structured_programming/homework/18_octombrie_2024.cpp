@@ -1,4 +1,4 @@
-// Tema pentru acasa 18 octombrie -> 22 octombrie
+// Homework for 18 october -> 22 october
 #include <iostream>
 #include <cmath>
 
