@@ -9,10 +9,9 @@ void program1() {
     cout << "Introdu lungimea dreptunghiului: "; cin >> lungime;
     cout << "Introdu latimea dreptunghiului: "; cin >> latime;
 
-    if (lungime <= 0 || latime <= 0) {
-        cout << "Unul din numerele introduse este mai mic sau egal ca 0. Este imposibil de a efectua calculul." << endl;
-        return;
-    };
+    // Converteste numerele negative in pozitive pentru a preveni rezultate imposibile
+    lungime = abs(lungime);
+    latime = abs(latime);
 
     float perimetru = 2 * (lungime + latime);
     float aria = lungime * latime;
@@ -35,47 +34,46 @@ void program2() {
 
 // Problema 26
 void program3() {
-    int n;
+    unsigned n = 1, lastNumber = 0;
     cout << "Introdu cate numere Fibonacci vrei sa fie calculate: "; cin >> n;
 
-    if (n <= 0) {
-        cout << "Trebuie sa introduci un numar mai mare ca 0." << endl;
-        return;
-    } else if (n == 1) {
-        cout << "Nr. 1 din secventa Fibonacci este 0." << endl;
-        return;
-    } else if (n == 2) {
-        cout << "Nr. 2 din secventa Fibonacci este 1." << endl;
-        return;
+    switch (n) {
+    case 1: {
+        break;
     };
-
-    int i = 3, firstNumber = 0, secondNumber = 1, lastNumber;
-
-    // Metoda 1 - For Loop
-    for (i; i <= n; ++i) {
-        lastNumber = firstNumber + secondNumber;
-
-        firstNumber = secondNumber;
-        secondNumber = lastNumber;
+    case 2: {
+        lastNumber = 2;
+        break;
     };
+    default:
+        unsigned i = 0, firstNumber = 0, secondNumber = 1;
 
-    // Metoda 2 - While Loop
-    // while (i <= n) {
-    //     lastNumber = firstNumber + secondNumber;
+        // Metoda 1 - For Loop
+        for (i; i <= n; ++i) {
+            lastNumber = firstNumber + secondNumber;
 
-    //     firstNumber = secondNumber;
-    //     secondNumber = lastNumber;
-    //     i++;
-    // };
+            firstNumber = secondNumber;
+            secondNumber = lastNumber;
+        };
 
-    // Metoda 3 - Do While Loop
-    // do {
-    //     lastNumber = firstNumber + secondNumber;
+        // Metoda 2 - While Loop
+        // while (i <= n) {
+        //     lastNumber = firstNumber + secondNumber;
 
-    //     firstNumber = secondNumber;
-    //     secondNumber = lastNumber;
-    //     i++;
-    // } while (i <= n);
+        //     firstNumber = secondNumber;
+        //     secondNumber = lastNumber;
+        //     i++;
+        // };
+
+        // Metoda 3 - Do While Loop
+        // do {
+        //     lastNumber = firstNumber + secondNumber;
+
+        //     firstNumber = secondNumber;
+        //     secondNumber = lastNumber;
+        //     i++;
+        // } while (i <= n);
+    };
 
     cout << "Nr. " << n << " din secventa Fibonacci este " << lastNumber << endl;
 };
