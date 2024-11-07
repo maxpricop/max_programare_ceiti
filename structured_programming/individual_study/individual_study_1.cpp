@@ -34,48 +34,41 @@ void program2() {
 
 // Problema 26
 void program3() {
-    unsigned n = 1, lastNumber = 0;
+    unsigned n = 1, i = 1;
     cout << "Introdu cate numere Fibonacci vrei sa fie calculate: "; cin >> n;
 
-    switch (n) {
-    case 1: {
-        break;
-    };
-    case 2: {
-        lastNumber = 2;
-        break;
-    };
-    default:
-        unsigned i = 0, firstNumber = 0, secondNumber = 1;
+    unsigned long long nextNumber = 0, displayNumber = 0, otherNumber = 1;
+    
+    // Secventa fibonacci: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ...
+    // Metoda 1 - For Loop
+    for (i; i < n; i++) {
+        nextNumber = displayNumber + otherNumber;
 
-        // Metoda 1 - For Loop
-        for (i; i <= n; ++i) {
-            lastNumber = firstNumber + secondNumber;
-
-            firstNumber = secondNumber;
-            secondNumber = lastNumber;
-        };
-
-        // Metoda 2 - While Loop
-        // while (i <= n) {
-        //     lastNumber = firstNumber + secondNumber;
-
-        //     firstNumber = secondNumber;
-        //     secondNumber = lastNumber;
-        //     i++;
-        // };
-
-        // Metoda 3 - Do While Loop
-        // do {
-        //     lastNumber = firstNumber + secondNumber;
-
-        //     firstNumber = secondNumber;
-        //     secondNumber = lastNumber;
-        //     i++;
-        // } while (i <= n);
+        displayNumber = otherNumber;
+        otherNumber = nextNumber;
     };
 
-    cout << "Nr. " << n << " din secventa Fibonacci este " << lastNumber << endl;
+    // Metoda 2 - While Loop
+    // while (i < n) {
+    //     nextNumber = displayNumber + otherNumber;
+
+    //     displayNumber = otherNumber;
+    //     otherNumber = nextNumber;
+    //     i++;
+    // };
+
+    // Metoda 3 - Do While Loop
+    // do {
+    //     nextNumber = displayNumber + otherNumber;
+
+    //     displayNumber = otherNumber;
+    //     otherNumber = nextNumber;
+
+    //     if (i == 1) displayNumber = 0;
+    //     i++;
+    // } while (i <= n);
+
+    cout << "Nr. " << n << " din secventa Fibonacci este " << displayNumber << endl;
 };
 
 int main(){
