@@ -50,22 +50,22 @@ void program3() {
 
     // Metoda 2 - While Loop
     // while (i < n) {
+    //     i++;
     //     nextNumber = displayNumber + otherNumber;
 
     //     displayNumber = otherNumber;
     //     otherNumber = nextNumber;
-    //     i++;
     // };
 
     // Metoda 3 - Do While Loop
     // do {
+    //     i++;
+    //     if (i == 2) continue;
+
     //     nextNumber = displayNumber + otherNumber;
 
     //     displayNumber = otherNumber;
     //     otherNumber = nextNumber;
-
-    //     if (i == 1) displayNumber = 0;
-    //     i++;
     // } while (i <= n);
 
     cout << "Nr. " << n << " din secventa Fibonacci este " << displayNumber << endl;
