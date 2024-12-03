@@ -2,6 +2,7 @@
     "editor.formatOnSave": true,
     "prettier.configPath": "./.prettierrc",
     "prettier.useEditorConfig": true,
+    "C_Cpp.clang_format_style": "{BasedOnStyle: Microsoft, AllowShortIfStatementsOnASingleLine: AllIfsAndElse}",
     "[cpp]": {
         "editor.defaultFormatter": "ms-vscode.cpptools",
         "editor.wordBasedSuggestions": "currentDocument",
