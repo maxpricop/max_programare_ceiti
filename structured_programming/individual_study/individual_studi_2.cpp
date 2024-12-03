@@ -23,23 +23,47 @@ void ex1() {
     cout << "Suma numerelor pozitive din acest array este: " << sumPositive << endl;
 };
 
+/*
+Se consideră tabloul T[n][m] cu elemente numere întregi.
+Să se compună un program care va înlocui în tabloul T elementele lui negative prin elementul maximal.
+Tabloul modificat se va afişa pe ecran.
+
+Conditia modificata de profesoara in clasa live, de scris asta in word
+*/
 void ex2() {
     unsigned n, m;
-    cout << "Introdu nr. de coloane: "; cin >> n;
-    cout << "Introdu numarul de randuri: "; cin >> m;
+    cout << "Introdu nr. de randuri: "; cin >> n;
+    cout << "Introdu numarul de coloane: "; cin >> m;
 
-    int T[n][m];
+    int T[n][m], maxNumber;
 
-    for (unsigned column = 0; column < n; column++) {
-        for (unsigned row = 0; row < m; row++) {
-            cout << "Introdu T["<< column <<"][" << row << "] = "; cin >> T[column][row];
-        }
+    // Primul for loop pentru a introduce elementele si a determina numarul maxim.
+    for (unsigned row = 0; row < n; row++) {
+        for (unsigned column = 0; column < m; column++) {
+            cout << "Introdu T["<< row <<"][" << column << "] = "; cin >> T[row][column];
+
+            if (T[row][column] == T[0][0]) maxNumber = T[0][0];
+            else if (T[row][column] > maxNumber) maxNumber = T[row][column];
+        };
+    };
+
+    // Al doilea for loop pentru a inlocui numerele negative cu numarul maxim si a afisa arryul pe ecran.
+    for (unsigned row = 0; row < n; row++) {
+        for (unsigned column = 0; column < m; column++) {
+            if (T[row][column] < 0) T[row][column] = maxNumber;
+
+            cout << "\t" << T[row][column];
+        };
+        cout << endl;
     };
 };
 
 int main() {
     cout << "----- Problema 1 -----" << endl;
     ex1();
+
+    cout << "----- Problema 2 -----" << endl;
+    ex2();
 
     return 0;
 };
