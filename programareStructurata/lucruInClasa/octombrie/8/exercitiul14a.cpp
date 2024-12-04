@@ -4,8 +4,7 @@ using namespace std;
 
 /*Exercitiul 14 (a) pagina 23 Turbo Pascal Culegere
 Sa se rezolve ecuatia: ax + b = 0*/
-int main()
-{
+int main() {
     // Declararea celor 2 numere din ecuatie
     float a, b;
 
@@ -18,9 +17,7 @@ int main()
     // Calcularea si afisarea solutiei
     (a == 0)
         ? cout << "Solutia ecuatiei " << a << "x" << " + " << b << " de gradul 1: x = orice numar (a este 0)" << endl
-    : (b == 0)
-        ? cout << "Solutia ecuatiei " << a << "x" << " + " << b << " de gradul 1: x = 0 (b este 0, x = 0)" << endl
-        : cout << "Solutia ecuatiei " << a << "x" << " + " << b << " de gradul 1: x = " << -1 * (a / b) << endl;
+        : cout << "Solutia ecuatiei " << a << "x" << " + " << b << " de gradul 1: x = " << -b / a << endl;
 
     return 0;
 }
