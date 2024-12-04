@@ -7,17 +7,17 @@ Calcularea produsului si catului a 2 numere intregi*/
 int main()
 {
     // Declararea celor 2 numere
-    int x, y;
+    int numar1, numar2;
 
     // Introducerea numerelor de catre utilizator
     cout << "Introdu nr. 1: ";
-    cin >> x;
+    cin >> numar1;
     cout << "Introdu nr. 2: ";
-    cin >> y;
+    cin >> numar2;
 
     // Afisarea rezultatelor calculelor
-    cout << "Produsul variabilelor: " << x * y << endl;
-    cout << "Catul numerelor: " << x / y << endl;
+    cout << "Produsul variabilelor: " << numar1 * numar2 << endl;
+    cout << "Catul numerelor: " << numar1 / numar2 << endl;
 
     return 0;
 }
