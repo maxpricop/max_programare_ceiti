@@ -5,8 +5,7 @@ using namespace std;
 /*Exercitiul 20 pagina 15 Turbo Pascal Culegere
 Se da numerele reale x si y
 Sa se afiseze dacac x > y*/
-int main()
-{
+int main() {
     // Declararea numerelor
     float x, y;
 

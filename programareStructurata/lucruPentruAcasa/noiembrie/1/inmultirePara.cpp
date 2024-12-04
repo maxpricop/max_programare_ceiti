@@ -3,8 +3,7 @@
 using namespace std;
 
 // Produsul progresiei aritmetice: 4 * 8 * 12 * ...
-int main()
-{
+int main() {
     /*Declararea variabilelor
     nrStop = Cate numere din progresie o sa fie calculate
     produs = Produsul nr. calculate din progresie*/
@@ -15,8 +14,7 @@ int main()
     cin >> nrStop;
 
     // Iterarea prin fiecare numar al progresiei
-    for (int i = 1; i <= nrStop; ++i)
-    {
+    for (int i = 1; i <= nrStop; ++i) {
         // Calcularea produslui in baza formulei: 4n
         produs *= 4 * i;
     };

@@ -5,8 +5,7 @@ using namespace std;
 /*Exercitiul 30 pagina 16 Turbo Pascal Culegere
 Se citest de la tastatura 4 numere reale: a, b, c, d.
 Sa se interschimbe circular de la stanga la dreapta valorile lor.*/
-int main()
-{
+int main() {
     // Declararea variabilelor din conditie si a unei temporare
     float a, b, c, d, temp;
 

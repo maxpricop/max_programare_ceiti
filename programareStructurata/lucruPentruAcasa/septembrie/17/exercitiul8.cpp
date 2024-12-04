@@ -4,8 +4,7 @@ using namespace std;
 
 /*Exercitiul 8 pagina 14 Turbo Pascal Culegere
 Calcularea produsului si catului a 2 numere intregi*/
-int main()
-{
+int main() {
     // Declararea celor 2 numere
     int numar1, numar2;
 

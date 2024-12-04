@@ -3,8 +3,7 @@
 using namespace std;
 
 // Aflarea celui mai mare nr. dintre 3 numere
-int main()
-{
+int main() {
     // Declararea variabilelor si a celui mai mare nr.
     int a, b, c, biggestNumber;
 

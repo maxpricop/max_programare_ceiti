@@ -8,8 +8,7 @@ Sa se schimbe intre ele valorile acestor variabile, astfel incat:
 a sa aiba valoarea lui b
 b sa aiba valoarea lui c
 c sa aiba valoarea lui a*/
-int main()
-{
+int main() {
     // Declararea variabilelor din conditie si a unei temporare
     int a, b, c, temp;
 

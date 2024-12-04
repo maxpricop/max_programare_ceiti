@@ -6,8 +6,7 @@ using namespace std;
 Se da numarul natural n.
 Sa se calculeze cate ore, minute, secunde sunt in:
 n zile, n saptamani si luna mai*/
-int main()
-{
+int main() {
     // Declararea numarului n
     unsigned n;
 

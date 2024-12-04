@@ -3,8 +3,7 @@
 using namespace std;
 
 // Sa se afle daca anul introdus este bisect
-int main()
-{
+int main() {
     int an;
 
     // Introducerea variabilei de catre utilizator

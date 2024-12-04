@@ -8,8 +8,7 @@ Sa se transforme n mentri in cm
 Sa se transforme n kg in mg
 Cate tone se afla in n kg
 Sa se transforme n ani in luni, saptamani si zile*/
-int main()
-{
+int main() {
     // Declararea numarului n
     unsigned n;
 

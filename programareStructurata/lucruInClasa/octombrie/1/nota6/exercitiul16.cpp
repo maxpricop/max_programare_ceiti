@@ -6,8 +6,7 @@ using namespace std;
 Se da numarul natural n.
 Sa se afle ultima cifra al lui, penultima cifra al lui
 si restul si catul impartirii la 9*/
-int main()
-{
+int main() {
     // Declararea numarului n
     unsigned n;
 

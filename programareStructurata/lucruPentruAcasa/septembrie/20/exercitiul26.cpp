@@ -7,8 +7,7 @@ using namespace std;
 Se dau nr. naturale a, p, s
 Sa se afle cu cat va creste in timp de a ani suma de s lei depusa la o banca,
 daca dobanda anuala este de p procente*/
-int main()
-{
+int main() {
     // Declararea variabilelor din conditie
     unsigned int a, s;
     float p;

@@ -3,8 +3,7 @@
 using namespace std;
 
 // Eu sunt nr. 26 in catalog, fac exercitiul 26.
-int main()
-{
+int main() {
     /* Declararea Variabilelor:
     n = numarul de numere fibonaci ce trebuie sa fie aratate
     i = variabila pentru a stoca numarul iteratiei in diferite bucle*/
@@ -22,8 +21,7 @@ int main()
 
     // Secventa fibonacci: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ...
     // Metoda 1 - For Loop
-    for (i; i < n; i++)
-    {
+    for (i; i < n; i++) {
         nextNumber = displayNumber + otherNumber;
 
         displayNumber = otherNumber;

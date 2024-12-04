@@ -4,8 +4,7 @@ using namespace std;
 
 /*Exercitiul 7 pagina 14 Turbo Pascal Culegere
 Calcularea sumei si diferentei a 2 numere intregi*/
-int main()
-{
+int main() {
     // Declararea a 2 numere;
     int numar1, numar2;
 

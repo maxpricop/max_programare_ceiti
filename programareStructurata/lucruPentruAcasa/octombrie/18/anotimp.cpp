@@ -3,8 +3,7 @@
 using namespace std;
 
 // Sa se determine in ce anotimp se afla luna in baza numarului ei.
-int main()
-{
+int main() {
     // Declararea variabilei lunii
     unsigned luna;
 
@@ -13,8 +12,7 @@ int main()
     cin >> luna;
 
     // Determinarea anotimpului si afisarea rezultatului
-    switch (luna)
-    {
+    switch (luna) {
     case 3:
     case 4:
     case 5:

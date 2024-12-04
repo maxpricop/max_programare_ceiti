@@ -5,8 +5,7 @@ using namespace std;
 
 /*Exercitiul 13 pagina 14 Turbo Pascal Culegere
 Calcularea razei si ariei unui cerc in baza lungimii*/
-int main()
-{
+int main() {
     // Declararea variabilelor de lungime si raza a cercului;
     float lungimea, raza;
 

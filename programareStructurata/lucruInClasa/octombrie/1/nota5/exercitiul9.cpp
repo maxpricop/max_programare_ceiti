@@ -5,8 +5,7 @@ using namespace std;
 
 /*Exercitiul 9 pagina 14 Turbo Pascal Culegere
 Calcularea mediei artimetice si geometrice a 2 numere naturale*/
-int main()
-{
+int main() {
     // Declararea celor 2 numere
     unsigned numar1, numar2;
 

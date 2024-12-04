@@ -4,8 +4,7 @@
 using namespace std;
 
 // Eu sunt nr. 26 in catalog, fac exercitiul 9.
-int main()
-{
+int main() {
     /* Declararea variabilele:
     x = nr. introdus de utilizator
     y = rezultatul calcularii*/

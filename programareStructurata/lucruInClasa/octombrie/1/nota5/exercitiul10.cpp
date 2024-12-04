@@ -4,8 +4,7 @@ using namespace std;
 
 /*Exercitiul 10 pagina 14 Turbo Pascal Culegere
 Calcularea ariei si perimetrului unui patrat*/
-int main()
-{
+int main() {
     // Declararea variabilei ce contine latura patratului
     unsigned latura;
 

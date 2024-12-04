@@ -3,8 +3,7 @@
 using namespace std;
 
 // Eu sunt nr. 26 in catalog, fac exercitiul 26.
-int main()
-{
+int main() {
     // Declararea variabilei n = nr. de elemente din array
     unsigned n;
 
@@ -13,8 +12,7 @@ int main()
     cin >> n;
 
     // Resetarea nr. sub 40 daca trece de el (din conditie)
-    if (n >= 40)
-    {
+    if (n >= 40) {
         n = 39;
         cout << "Nr. de elemente trebuie sa fie mai mic decat 40. Valoare introdusa a fost resetata la 39." << endl;
     }
@@ -23,8 +21,7 @@ int main()
     int H[n], sumPositive = 0;
 
     // Interarea prin fiecare element al array-ului
-    for (unsigned i = 0; i < n; i++)
-    {
+    for (unsigned i = 0; i < n; i++) {
         // Introducerea la fiecare element individual de catre utilizator
         cout << "Introdu H[" << i << "] = ";
         cin >> H[i];

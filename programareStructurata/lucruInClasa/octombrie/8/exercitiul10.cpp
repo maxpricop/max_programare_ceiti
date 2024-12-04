@@ -6,8 +6,7 @@ using namespace std;
 Se dau numerele naturale diferite a, b, c.
 Sa se afiseze numarul care nu e nici cel mai mare, nici cel mai mic.
 Sa se verifice daca ele pot fi termeni consecutivi ai unei progresii aritmetice*/
-int main()
-{
+int main() {
     // Declararea numerelor a, b, c.
     unsigned a, b, c;
 

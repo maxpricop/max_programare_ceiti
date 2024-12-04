@@ -5,8 +5,7 @@ using namespace std;
 /*Exercitiul 9 pagina 22 Turbo Pascal Culegere
 Se dau numerele intregi n si m.
 Sa se verifice daca ele sunt consecutive*/
-int main()
-{
+int main() {
     // Declararea numerelor n si m
     int m, n;
 

@@ -5,8 +5,7 @@ using namespace std;
 /*Exercitiul 13 pagina 23 Turbo Pascal Culegere
 Se dau numerele naturale diferite a si b.
 Sa se verifice daca b divide a*/
-int main()
-{
+int main() {
     // Declararea numerelor
     unsigned a, b;
 

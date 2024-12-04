@@ -4,8 +4,7 @@
 using namespace std;
 
 // Eu sunt nr. 26 in catalog, fac exercitiul 26.
-int main()
-{
+int main() {
     // Declarare variabile de lungime si latime dreptunghi
     float lungime, latime;
 

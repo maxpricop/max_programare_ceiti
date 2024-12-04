@@ -6,8 +6,7 @@ using namespace std;
 /*Exercitiul 14 pagina 14 Turbo Pascal Culegere
 Calcularea ariei, perimetrului, numarul diagonalelor si raza cercului inscris
 intrun poligon in baza numarului de laturi si a razei cercului circumscris*/
-int main()
-{
+int main() {
     /*Declararea variabilelor:
     n = nr. de laturi a poligonului
     r = raza cercului circumscris a poligonului*/

@@ -3,8 +3,7 @@
 using namespace std;
 
 // Sa se afli ziua saptamanii in baza nr. zilei
-int main()
-{
+int main() {
     // Declararea variabilei zilei
     unsigned zi;
 
@@ -13,8 +12,7 @@ int main()
     cin >> zi;
 
     // Determinarea zilei in baza numarului si afisarea rezultatului
-    switch (zi)
-    {
+    switch (zi) {
     case 1:
         cout << "Ziua este luni." << endl;
         break;

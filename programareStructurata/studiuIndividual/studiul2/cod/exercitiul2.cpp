@@ -2,8 +2,7 @@
 
 using namespace std;
 
-int main()
-{
+int main() {
     /*Declararea variabilelor:
     n = nr. de randuri (cate elemente contine array-ul principal)
     m = nr. de coloane (cate elemente contine fiecare array din array-ul principal)*/
@@ -19,11 +18,9 @@ int main()
     int T[n][m], maxNumber;
 
     // Iterarea prin array-ul principal pentru ca utilizatorul sa le acceseze pe cele secundare
-    for (unsigned row = 0; row < n; row++)
-    {
+    for (unsigned row = 0; row < n; row++) {
         // Interarea prin fiecare element al fiecarui array secundar
-        for (unsigned column = 0; column < m; column++)
-        {
+        for (unsigned column = 0; column < m; column++) {
             // Introducerea fiecarui element din array de catre utilizator
             cout << "Introdu T[" << row << "][" << column << "] = ";
             cin >> T[row][column];
@@ -40,11 +37,9 @@ int main()
     cout << endl << "Afisarea array-ului:" << endl;
 
     // Iterarea prin array-ul principal pentru a afisa elementele la ecran
-    for (unsigned row = 0; row < n; row++)
-    {
+    for (unsigned row = 0; row < n; row++) {
         // Interarea prin fiecare element al fiecarui array secundar
-        for (unsigned column = 0; column < m; column++)
-        {
+        for (unsigned column = 0; column < m; column++) {
             // Setarea numerelor negative ca si numarul maxim din array (din conditie)
             if (T[row][column] < 0) T[row][column] = maxNumber;
 

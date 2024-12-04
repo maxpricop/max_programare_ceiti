@@ -3,8 +3,7 @@
 using namespace std;
 
 // Suma progresiei aritmetice: 1 + 3 + 5 + 7 + ...
-int main()
-{
+int main() {
     /*Declararea variabilelor
     nrStop = Cate numere din progresie o sa fie calculate
     suma = Suma nr. calculate din progresie*/
@@ -15,8 +14,7 @@ int main()
     cin >> nrStop;
 
     // Iterarea prin fiecare numar al progresiei
-    for (int i = 1; i <= nrStop; ++i)
-    {
+    for (int i = 1; i <= nrStop; ++i) {
         // Calcularea sumei in baza formulei progresiei: 2n - 1
         suma += 2 * i - 1;
     };

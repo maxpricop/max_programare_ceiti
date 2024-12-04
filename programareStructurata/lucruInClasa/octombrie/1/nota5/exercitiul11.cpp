@@ -5,8 +5,7 @@ using namespace std;
 
 /*Exercitiul 11 pagina 14 Turbo Pascal Culegere
 Calcularea muchiei unui cub*/
-int main()
-{
+int main() {
     // Declararea variabilei cu muchia cubului
     float muchie;
 

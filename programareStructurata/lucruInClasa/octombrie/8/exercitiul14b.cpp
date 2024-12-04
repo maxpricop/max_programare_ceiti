@@ -5,8 +5,7 @@ using namespace std;
 
 /*Exercitiul 14 (b) pagina 23 Turbo Pascal Culegere
 Sa se rezolve ecuatia: ax^2 + bx + c = 0*/
-int main()
-{
+int main() {
     // Declararea celor 3 numere din ecuatie
     float a, b, c;
 
