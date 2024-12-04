@@ -2,7 +2,8 @@
 
 using namespace std;
 
-// Calcularea produsului si catului a 2 numere
+/*Exercitiul 8 pagina 14 Turbo Pascal Culegere
+Calcularea produsului si catului a 2 numere*/
 int main()
 {
     // Declararea celor 2 numere

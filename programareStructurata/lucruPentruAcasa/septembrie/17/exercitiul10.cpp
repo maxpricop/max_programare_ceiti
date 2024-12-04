@@ -2,7 +2,8 @@
 
 using namespace std;
 
-// Calcularea ariei si perimetrului unu patrat
+/*Exercitiul 10 pagina 14 Turbo Pascal Culegere
+Calcularea ariei si perimetrului unu patrat*/
 int main()
 {
     // Declararea variabilei ce contine latura patratului

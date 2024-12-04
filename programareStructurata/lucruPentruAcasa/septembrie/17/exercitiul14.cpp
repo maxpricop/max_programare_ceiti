@@ -3,7 +3,8 @@
 
 using namespace std;
 
-/* Calcularea ariei, perimetrului, numarul diagonalelor si raza cercului inscris
+/*Exercitiul 14 pagina 14 Turbo Pascal Culegere
+Calcularea ariei, perimetrului, numarul diagonalelor si raza cercului inscris
 intrun poligon in baza numarului de laturi si a razei cercului circumscris*/
 int main()
 {
