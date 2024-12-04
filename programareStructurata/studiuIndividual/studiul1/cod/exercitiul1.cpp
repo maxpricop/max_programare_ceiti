@@ -15,8 +15,8 @@ int main() {
     cin >> latime;
 
     // Converteste numerele negative in pozitive pentru a preveni rezultate imposibile
-    lungime = abs(lungime);
-    latime = abs(latime);
+    lungime = fabsf(lungime);
+    latime = fabsf(latime);
 
     // Calcularea ariei si perimetrului dreptunghiului dupa formule
     float perimetru = 2 * (lungime + latime);
