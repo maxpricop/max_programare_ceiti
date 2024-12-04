@@ -7,7 +7,7 @@ Calcularea ariei si perimetrului unui patrat*/
 int main()
 {
     // Declararea variabilei ce contine latura patratului
-    int latura;
+    unsigned latura;
 
     // Introducerea laturei patratului de catre utilizator
     cout << "Introdu latura patratului: ";
