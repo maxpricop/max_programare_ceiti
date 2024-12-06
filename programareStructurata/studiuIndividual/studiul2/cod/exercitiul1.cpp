@@ -11,11 +11,11 @@ int main() {
     // Declararea variabilei n = numerelor de elemente din array
     unsigned n;
 
-    // Introducerea nr. de elemente din array de catre utilizator
+    // Introducerea numerelor de elemente din array de catre utilizator
     cout << "Introdu nr. de elemente ce in array: ";
     cin >> n;
 
-    // Resetarea nr. sub 40 daca trece de el (din conditie)
+    // Resetarea numarului sub 40 daca trece de el (din conditie)
     if (n >= 40) {
         n = 39;
         cout << "Nr. de elemente trebuie sa fie mai mic decat 40. Valoare introdusa a fost resetata la 39." << endl;
