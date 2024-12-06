@@ -32,7 +32,7 @@ int main() {
             /* Determinarea numarului maxim din array:
             Daca este prima iteratie (introducerea primului nr.) nr. maxim este setat ca el
             Daca este alta iteratie, nr. maxim este setat doar daca noul nr. introdus e mai mare ca cel trecut*/
-            if (T[row][column] == T[0][0]) maxNumber = T[0][0];
+            if (row == 0 && column == 0) maxNumber = T[0][0];
             else if (T[row][column] > maxNumber) maxNumber = T[row][column];
         };
     };
