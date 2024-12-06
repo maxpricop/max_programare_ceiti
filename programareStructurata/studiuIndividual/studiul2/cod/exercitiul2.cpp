@@ -2,6 +2,10 @@
 
 using namespace std;
 
+/*Eu sunt nr. 26 in catalog, fac exercitiul 26.
+Se consideră tabloul T[n][m] cu elemente numere întregi.
+Să se compună un program care va înlocui în tabloul T elementele lui negative prin elementul maxim.
+Tabloul modificat  se va  afişa pe ecran.*/
 int main() {
     /*Declararea variabilelor:
     n = nr. de randuri (cate elemente contine array-ul principal)
@@ -14,7 +18,7 @@ int main() {
     cout << "Introdu numarul de coloane: ";
     cin >> m;
 
-    // Initializarea array-ului si a variabilei ce va contine numarul maxim din array
+    // Declararea array-ului si a variabilei ce va contine numarul maxim din array
     int T[n][m], maxNumber;
 
     // Iterarea prin array-ul principal pentru ca utilizatorul sa le acceseze pe cele secundare
@@ -46,7 +50,7 @@ int main() {
             // Afisarea fiecarui numar la ecran
             cout << T[row][column] << "\t";
         };
-        // Rescrie fiecare array iterat
+        // Rescrie fiecare array iterat pe o linie noua
         cout << endl;
     };
 
