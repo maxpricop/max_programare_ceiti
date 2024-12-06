@@ -26,7 +26,7 @@ int main() {
     cout << "Introdu sirul de caractere: ";
 
     /*Limitarea textului la lungimea array-ului + 1 pentru elementul null din array.
-    Functia get transfroma ultimul element valid in null
+    Functia get transforma ultimul element valid in null
     si permite ca utilizatorul sa introduca cu 1 caracter mai putin decat specificat in ea.*/
     cin.get(s, lungime + 1);
 
