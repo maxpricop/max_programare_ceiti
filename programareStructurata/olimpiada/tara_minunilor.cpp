@@ -19,8 +19,6 @@ numărul de monede contribuite de motanul Basilio și numărul de monede contrib
 int main() {
     // Declararea variabilelor cu numarul de monede tinute de vulpe si pisoi si suma ce trebuie platita
     unsigned monede3, monede5, suma;
-
-    cout << "Introdu suma ce vrei sa fie platita: ";
     cin >> suma;
 
     // Previne introducerea numerelor care nu sunt intre 7 si 1000 (din conditie)
