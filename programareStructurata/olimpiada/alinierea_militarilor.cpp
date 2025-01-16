@@ -28,18 +28,14 @@ int main() {
         cin >> N;    // Reintroducerea numarului
     }
 
-    // Iterarea de la numarul introdus in jos pana se gaseste cel mai mare patrat perfect ce e divizibil cu N
-    for (unsigned i = N; i >= 1; i--) {
-        // Verificarea ca N este divizibil cu noul numar
-        if (N % i == 0) {
-            // Gasirea radicalului noului numar. De tip unsigned pentru a nu avea numere dupa virgula
-            unsigned radical = sqrt(i);
+    // Iterarea de la cel mai mare patrat (radical din N) in jos pana la 1.
+    for (unsigned i = sqrt(N); i >= 1; i--) {
+        unsigned patratPerfect = i * i; // Calcularea numarului original (patratul perfect)
 
-            // Confirmarea ca numarul este patrat perfect prin inmultirea radicalului lui rotunjit
-            if (radical * radical == i) {
-                M = i; // Setarea lui M ca si noul numar
-                break; // Oprirea complet a iterarilor
-            }
+        // Determinarea daca patratul perfect este un divizor al numarului introdus
+        if (N % patratPerfect == 0) {
+            M = patratPerfect; // Setarea lui M ca si patratul perfect
+            break;             // Oprirea totala a iteratiilor
         }
     }
 
