@@ -1,4 +1,3 @@
-#include <cmath>
 #include <iostream>
 using namespace std;
 
@@ -12,8 +11,8 @@ Date de ieşire. La ecran se va afișa numărul natural Sp–
 cantitatea de numere cu sumă impară de cifre, dintre cele scrise pe tablă.
 Restricţii: 1 ≤ A, B ≤ 10^9*/
 int main() {
-    unsigned A, B, Sp; // Declararea variabilelor din conditie
-    cin >> A >> B;     // Introducerea numerelor din conditie
+    unsigned A, B, Sp = 0; // Declararea variabilelor din conditie
+    cin >> A >> B;         // Introducerea numerelor din conditie
 
     // Previne introducerea numerelor care sunt inafara restrictiiei din conditie
     // Nu previn de introducerea a textului deoarace in conditie se zice ca sa introduc 2 numere naturale
