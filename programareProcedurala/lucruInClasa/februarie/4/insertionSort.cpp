@@ -2,18 +2,18 @@
 using namespace std;
 
 int main() {
-    unsigned arrayLength;
+    unsigned lungimeArray;
     cout << "Introdu lungimea arrayului: ";
-    cin >> arrayLength;
+    cin >> lungimeArray;
 
     // Introducerea array-ului de utilizator
-    int array[arrayLength];
-    for (unsigned i = 0; i < arrayLength; i++) {
+    int array[lungimeArray];
+    for (unsigned i = 0; i < lungimeArray; i++) {
         cin >> array[i];
     };
 
     // Insertion Sort
-    for (unsigned i = 1; i < arrayLength; i++) {
+    for (unsigned i = 1; i < lungimeArray; i++) {
         int temp = array[i];
         int j = i - 1;
 
@@ -28,7 +28,7 @@ int main() {
     }
 
     // Afisarea array-ului sortat
-    for (unsigned i = 0; i < arrayLength; i++) {
+    for (unsigned i = 0; i < lungimeArray; i++) {
         cout << array[i] << " ";
     };
 
