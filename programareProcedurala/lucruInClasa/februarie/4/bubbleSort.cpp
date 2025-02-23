@@ -12,24 +12,12 @@ int main() {
         cin >> array[i];
     };
 
-    // Schimbarea valorilor
-    bool change = false;
-    do {
-        change = false;
-
-        // Iterarea prin tot array-ul
-        for (unsigned i = 0; i < lungimeArray; i++) {
-
-            // Daca se gaseste o valoare unde indexul mai mic e mai mare ca urmatoarea
-            if (array[i] > array[i + 1]) {
-                // Schimbarea valorilor intre ele
-                swap(array[i], array[i + 1]);
-
-                change = true;
-            }
+    // Bubble sort
+    for (unsigned i = 0; i < lungimeArray; i++) {
+        for (unsigned j = 0; j < lungimeArray - i - 1; j++) {
+            if (array[j] > array[j + 1]) swap(array[j], array[j + 1]);
         }
-
-    } while (change);
+    }
 
     // Afisarea array-ului sortat
     for (unsigned i = 0; i < lungimeArray; i++) {
