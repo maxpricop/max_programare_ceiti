@@ -3,12 +3,12 @@
 
 int main() {
     int sum = 0;
-    short int numbers[10];
+    short int number;
     std::ifstream file("1.txt");
 
     for (unsigned short i = 0; i < 10; i++) {
-        file >> numbers[i];
-        sum += numbers[i];
+        file >> number;
+        sum += number;
     }
 
     file.close();
