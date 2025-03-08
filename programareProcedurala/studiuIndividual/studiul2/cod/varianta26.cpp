@@ -51,6 +51,13 @@ int main() {
     }
     input.close();
 
+    // Afisarea informatiilor citite despre elevi
+    cout << "Informatii elevi: " << endl;
+    for (int i = 0; i < nrElevi; i++) {
+        cout << elevi[i].nume << " " << elevi[i].prenume << " " << elevi[i].gen << " " << elevi[i].dataNasterii << " "
+             << elevi[i].nota1 << " " << elevi[i].nota2 << " " << elevi[i].nota3 << " " << endl;
+    }
+
     // Sortarea array-ului cu elevii dupa media lor in ordine descrescatoarea cu insertion sort
     for (int i = 1; i < nrElevi; i++) {
         student elevCurent = elevi[i];
@@ -70,7 +77,7 @@ int main() {
         return 0;
     }
 
-    // Scrierea datele elevilor sortate in fisier
+    // Scrierea datelor elevilor sortate in fisier
     for (int i = 0; i < nrElevi; i++) {
         output << elevi[i].nume << " " << elevi[i].prenume << " " << elevi[i].gen << " " << elevi[i].dataNasterii << " "
                << elevi[i].nota1 << " " << elevi[i].nota2 << " " << elevi[i].nota3 << " " << elevi[i].medie << "\n";
@@ -78,13 +85,18 @@ int main() {
     output.close();
 
     // Afisarea elevilor restantieri
-    cout << "Elevi restantieri" << endl;
+    bool restantieri = false;
+    cout << endl << "Elevi restantieri:" << endl;
+
     for (int i = 0; i < nrElevi; i++) {
         if (elevi[i].nota1 < 5 || elevi[i].nota2 < 5 || elevi[i].nota3 < 5) {
             cout << elevi[i].nume << " " << elevi[i].prenume << endl;
+
             elevi[i].restantier = true;
+            restantieri = true;
         }
     }
+    if (!restantieri) cout << "Nu sunt elevi restantieri." << endl;
 
     // Calcularea si afisarea burselor pentru fiecare elev
     cout << endl << "Elevi cu burse: " << endl;
