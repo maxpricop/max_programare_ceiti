@@ -1,0 +1,26 @@
+25
+Ion Popescu M 15.08.2000 8 7.5 9
+Maria Ionescu F 10.12.2001 6 5 7
+Andrei Iordache M 05.06.2002 9 9 10
+Elena Georgescu F 12.11.2000 7 8 8.5
+Vasile Mihai M 01.01.1999 4 10 10
+Ana Radu F 20.03.2002 10 9 8
+Cristian Dumitru M 07.07.2001 7.5 7 7
+Gabriela Stoica F 25.09.2000 8.5 9 9.5
+Mihai Radulescu M 30.10.2001 5 4.5 6
+Ioana Marinescu F 04.04.2002 10 10 9
+Florin Vasile M 11.02.2000 6 6 5.5
+Smaranda Petrescu F 19.05.2001 9 8.5 8
+Adrian Oprea M 22.08.2000 8 7 6.5
+Larisa Nistor F 03.03.2002 7 7 7
+Daniela Constantinescu F 14.06.2001 4.5 5 5
+Valentin Preda M 09.09.2000 8 8 8
+Carmen Iliescu F 28.12.2001 6.5 6 6
+Marius Enache M 16.01.2002 10 9.5 9
+Simona Dobre F 07.07.2000 8.5 8 7
+Radu Barbu M 10.10.2001 4 6 5
+Teodora Popa F 23.04.2000 9 7.5 8.5
+Gheorghe Iancu M 05.05.2001 6 7 6
+Nicoleta Stanciu F 31.08.2001 8 9 8.5
+Petru Luca M 12.12.2000 7 7.5 8
+Diana Costea F 18.02.2002 9 9 9
