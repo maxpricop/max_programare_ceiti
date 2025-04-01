@@ -1,0 +1,2 @@
+Elaborati un program C++ care va citi de la tastatura 3 numere si va determina elementul situat intre maximul si minimul dintre aceste trei numere.
+Toate numerele vor fi alocate dinamic.
