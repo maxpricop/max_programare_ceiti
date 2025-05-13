@@ -1,0 +1,15 @@
+1 0 CocaCola MaroÎnchis 4.20
+2 0 Fanta Portocaliu 3.80
+3 0 Sprite Transparent 3.50
+4 0 Pepsi MaroÎnchis 4.00
+5 1 Dorna Transparent 1.15
+6 1 Java Transparent 1.10
+7 1 OM Transparent 1.05
+8 1 GuraCainarului Transparent 1.20
+9 2 J7Portocale Portocaliu 5.00
+10 2 RichMere Roșu 4.80
+11 2 SunnyMacedonia Galben 5.20
+12 2 MagicOrange Portocaliu 5.10
+13 3 Grenadine Roșu 2.60
+14 3 Mentha Verde 2.80
+15 3 Zmeura Roșu 3.00
