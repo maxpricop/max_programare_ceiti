@@ -1,5 +1,5 @@
-#ifndef Deliveries
-#define Deliveries
+#ifndef DeliveriesHpp
+#define DeliveriesHpp
 
 struct Delivery {
     unsigned id;

@@ -1,5 +1,5 @@
-#ifndef Bevreages
-#define Bevreages
+#ifndef BevreagesHpp
+#define BevreagesHpp
 
 #include "string"
 
