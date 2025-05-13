@@ -10,7 +10,7 @@ enum BeverageType {
     Syrup
 };
 
-struct Bevreage {
+struct Beverage {
     unsigned id;
     BeverageType type;
     std::string name;
