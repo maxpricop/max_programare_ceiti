@@ -3,7 +3,7 @@
 
 struct Delivery {
     unsigned id;
-    unsigned bevreageId;
+    unsigned beverageId;
     double quantityDelivered;
 };
 

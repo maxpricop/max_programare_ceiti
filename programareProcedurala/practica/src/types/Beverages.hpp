@@ -1,9 +1,9 @@
-#ifndef BevreagesHpp
-#define BevreagesHpp
+#ifndef BeveragesHpp
+#define BeveragesHpp
 
 #include "string"
 
-enum BevreageType {
+enum BeverageType {
     Sweet,
     Mineral,
     Juice,
@@ -12,7 +12,7 @@ enum BevreageType {
 
 struct Bevreage {
     unsigned id;
-    BevreageType type;
+    BeverageType type;
     std::string name;
     std::string color;
     double pricePerLiter;
