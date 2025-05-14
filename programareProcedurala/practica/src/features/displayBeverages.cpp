@@ -17,8 +17,8 @@ void displayBeverages(const std::string &filename) {
     std::vector<Beverage> beverageList;
     Beverage currentBeverage;
 
-    // Expected line layout: ID (unsigned), Type (BeverageType), name (string), color (string), pricePerLiter
-    // (double)
+    // Expected line layout:
+    // ID (unsigned), Type (BeverageType), name (string), color (string), pricePerLiter(double)
     while (file >> currentBeverage.id) {
         int rawBeverageType;
         file >> rawBeverageType >> currentBeverage.name >> currentBeverage.color >> currentBeverage.pricePerLiter;
@@ -27,7 +27,8 @@ void displayBeverages(const std::string &filename) {
         beverageList.push_back(currentBeverage);
     }
 
-    for (const auto &bev : beverageList) {
-        std::cout << bev.id << getBeverageTypeName(bev.type) << bev.name << bev.color << bev.pricePerLiter << "\n";
+    for (const Beverage &bev : beverageList) {
+        std::cout << bev.id << " " << getBeverageTypeName(bev.type) << " " << bev.name << " " << bev.color << " "
+                  << bev.pricePerLiter << "\n";
     }
 };
