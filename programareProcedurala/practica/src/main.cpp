@@ -25,10 +25,16 @@ void beverageOptions() {
             displayBeverages("../data/Baut.txt");
             break;
         }
+        case 8: {
+            std::cout << "Ai revenit la meniul principal.";
+            break;
+        }
         default: {
             break;
         }
     }
+
+    std::cout << "\n\n\n";
 }
 
 void deliveryOptions() {
@@ -52,43 +58,54 @@ void deliveryOptions() {
             displayDeliveries("../data/Livr.txt");
             break;
         }
-        default: {
-            break;
-        }
-    }
-}
-
-int main() {
-    short unsigned userChoice;
-
-    std::cout << "╔═══════════════════════════════════════════════════════╗\n";
-    std::cout << "║                    Meniu Principal                    ║\n";
-    std::cout << "╠═══════════════════════════════════════════════════════╣\n";
-    std::cout << "║ 1. Optiuni bauturi                                    ║\n";
-    std::cout << "║ 2. Optiuni livrari                                    ║\n";
-    std::cout << "║ 3. Inchide meniul                                     ║\n";
-    std::cout << "╚═══════════════════════════════════════════════════════╝\n";
-    std::cout << "Alege o optiune: ";
-    std::cin >> userChoice;
-
-    std::cout << "\n\n\n";
-
-    switch (userChoice) {
-        case 1: {
-            beverageOptions();
-            break;
-        }
-        case 2: {
-            deliveryOptions();
-            break;
-        }
-        case 3: {
-            std::cout << "Ai inchis meniul.";
+        case 6: {
+            std::cout << "Ai revenit la meniul principal.";
             break;
         }
         default: {
             std::cout << "Optiunea " << userChoice << " nu este valida.";
             break;
+        }
+    }
+
+    std::cout << "\n\n\n";
+}
+
+int main() {
+    while (true) {
+        short unsigned userChoice;
+
+        std::cout << "╔═══════════════════════════════════════════════════════╗\n";
+        std::cout << "║                    Meniu Principal                    ║\n";
+        std::cout << "╠═══════════════════════════════════════════════════════╣\n";
+        std::cout << "║ 1. Optiuni bauturi                                    ║\n";
+        std::cout << "║ 2. Optiuni livrari                                    ║\n";
+        std::cout << "║ 3. Inchide meniul                                     ║\n";
+        std::cout << "╚═══════════════════════════════════════════════════════╝\n";
+        std::cout << "Alege o optiune: ";
+        std::cin >> userChoice;
+
+        switch (userChoice) {
+            case 1: {
+                std::cout << "\n\n\n";
+                beverageOptions();
+
+                break;
+            }
+            case 2: {
+                std::cout << "\n\n\n";
+                deliveryOptions();
+
+                break;
+            }
+            case 3: {
+                std::cout << "Ai inchis meniul.";
+                return 0;
+            }
+            default: {
+                std::cout << "Optiunea " << userChoice << " nu este valida.";
+                return 0;
+            }
         }
     }
 
