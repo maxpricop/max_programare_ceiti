@@ -1,6 +1,4 @@
-#ifndef BeveragesHpp
-#define BeveragesHpp
-
+#pragma once
 #include "string"
 
 enum BeverageType {
@@ -17,5 +15,3 @@ struct Beverage {
     std::string color;
     float pricePerLiter;
 };
-
-#endif
