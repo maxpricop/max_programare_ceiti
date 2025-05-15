@@ -1,11 +1,9 @@
 #include "createRepeatedString.hpp"
-#include "iostream"
 #include "string"
 
-using namespace std;
-
-string createRepeatedString(string lineStart, string repeatedString, unsigned length, string lineEnd) {
-    string line = lineStart;
+std::string createRepeatedString(std::string lineStart, std::string repeatedString, unsigned length,
+                                 std::string lineEnd) {
+    std::string line = lineStart;
 
     for (unsigned i = 0; i < length; i++) {
         line += repeatedString;

@@ -1,8 +1,5 @@
-#ifndef CreateRepeatedStringHpp
-#define CreateRepeatedStringHpp
-
+#pragma once
 #include "string"
 
-std::string createRepeatedString(std::string lineStart, std::string repeatedString, std::string lineEnd);
-
-#endif
+std::string createRepeatedString(std::string lineStart, std::string repeatedString, unsigned length,
+                                 std::string lineEnd);
