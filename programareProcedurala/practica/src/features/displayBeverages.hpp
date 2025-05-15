@@ -1,8 +1,4 @@
-#ifndef DisplayBeveragesHpp
-#define DisplayBeveragesHpp
-
+#pragma once
 #include "string"
 
 void displayBeverages(const std::string &filename);
-
-#endif
