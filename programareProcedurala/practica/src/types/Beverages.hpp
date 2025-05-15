@@ -15,7 +15,7 @@ struct Beverage {
     BeverageType type;
     std::string name;
     std::string color;
-    double pricePerLiter;
+    float pricePerLiter;
 };
 
 #endif
