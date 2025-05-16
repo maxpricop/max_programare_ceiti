@@ -29,6 +29,9 @@ void displayBeverages(const std::string &filename) {
         beverageList.push_back(currentBeverage);
     }
 
+    // Close the file
+    file.close();
+
     // Column widths
     const int wId = 6;
     const int wName = 25;

@@ -25,6 +25,9 @@ void displayDeliveries(const std::string &filename) {
         deliveriesList.push_back(currentDelivery);
     }
 
+    // Close the file
+    file.close();
+
     // Column widths
     const unsigned wId = 6;
     const unsigned wBeverageId = 12;
