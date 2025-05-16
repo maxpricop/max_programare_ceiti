@@ -10,6 +10,8 @@ CXXFLAGS="-std=c++17 -Wall -Wextra -I."
 # the .cpp files you need to compile
 SOURCES=(
   main.cpp
+  features/displayBeverages.cpp
+  features/displayDeliveries.cpp
   utils/createRepeatedString.cpp
   utils/getBevreageTypeName.cpp
 )
