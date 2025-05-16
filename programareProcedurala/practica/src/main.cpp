@@ -30,6 +30,7 @@ void beverageOptions() {
             break;
         }
         default: {
+            std::cout << "Optiunea " << userChoice << " nu este valida.";
             break;
         }
     }
@@ -103,8 +104,8 @@ int main() {
                 return 0;
             }
             default: {
-                std::cout << "Optiunea " << userChoice << " nu este valida.";
-                return 0;
+                std::cout << "Optiunea " << userChoice << " nu este valida.\n";
+                break;
             }
         }
     }
