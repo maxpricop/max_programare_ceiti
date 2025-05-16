@@ -1,5 +1,6 @@
 #include "features/beverages/addNewBeverage.hpp"
 #include "features/beverages/displayBeverages.hpp"
+#include "features/deliveries/addNewDelivery.hpp"
 #include "features/deliveries/displayDeliveries.hpp"
 #include <iostream>
 
@@ -62,6 +63,10 @@ void deliveryOptions() {
     switch (userChoice) {
         case 1: {
             displayDeliveries("../data/Livr.txt");
+            break;
+        }
+        case 2: {
+            addNewDelivery("../data/Livr.txt");
             break;
         }
         case 6: {
