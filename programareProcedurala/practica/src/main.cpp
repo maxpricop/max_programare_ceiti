@@ -1,5 +1,5 @@
-#include "features/displayBeverages.hpp"
-#include "features/displayDeliveries.hpp"
+#include "features/beverages/displayBeverages.hpp"
+#include "features/deliveries/displayDeliveries.hpp"
 #include <iostream>
 
 void beverageOptions() {
