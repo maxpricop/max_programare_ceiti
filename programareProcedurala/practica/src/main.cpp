@@ -1,7 +1,5 @@
-#include "features/beverages/addNewBeverage.hpp"
-#include "features/beverages/displayBeverages.hpp"
-#include "features/deliveries/addNewDelivery.hpp"
-#include "features/deliveries/displayDeliveries.hpp"
+#include "features/beverages/beverages.hpp"
+#include "features/deliveries/deliveries.hpp"
 #include <iostream>
 
 void beverageOptions() {
