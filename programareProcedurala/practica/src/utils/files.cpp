@@ -1,4 +1,4 @@
-#include "appendLine.hpp"
+#include "files.hpp"
 #include "fstream"
 #include "iostream"
 #include "string"
@@ -23,3 +23,24 @@ void appendLine(const std::vector<std::string> &elements, const std::string &fil
     file << '\n';
     file.close();
 };
+
+std::vector<std::string> readAllLines(const std::string &filename) {
+    std::ifstream file(filename);
+
+    std::vector<std::string> lines;
+    std::string line;
+
+    while (std::getline(file, line)) {
+        lines.push_back(line);
+    }
+
+    return lines;
+}
+
+void writeAllLines(const std::vector<std::string> &lines, const std::string &filename) {
+    std::ofstream file(filename);
+
+    for (auto &line : lines) {
+        file << line << '\n';
+    }
+}

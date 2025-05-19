@@ -4,7 +4,7 @@
 #include "iostream"
 #include "string"
 #include "types/Delivery.hpp"
-#include "utils/appendLine.hpp"
+#include "utils/files.hpp"
 
 void addNewDelivery(const std::string &filename) {
     Delivery newDelivery{};
