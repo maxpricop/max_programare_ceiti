@@ -12,8 +12,10 @@ SOURCES=(
   main.cpp
   features/beverages/displayBeverages.cpp
   features/beverages/addNewBeverage.cpp
+  features/beverages/deleteBeverage.cpp
   features/deliveries/displayDeliveries.cpp
   features/deliveries/addNewDelivery.cpp
+  features/deliveries/deleteDelivery.cpp
   utils/files.cpp
   utils/createRepeatedString.cpp
   utils/getBevreageTypeName.cpp

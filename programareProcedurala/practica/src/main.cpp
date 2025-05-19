@@ -29,6 +29,10 @@ void beverageOptions() {
             addNewBeverage("../data/Baut.txt");
             break;
         }
+        case 3: {
+            deleteBeverage("../data/Baut.txt");
+            break;
+        }
         case 8: {
             std::cout << "Ai revenit la meniul principal.";
             break;
@@ -65,6 +69,10 @@ void deliveryOptions() {
         }
         case 2: {
             addNewDelivery("../data/Livr.txt");
+            break;
+        }
+        case 3: {
+            deleteDelivery("../data/Livr.txt");
             break;
         }
         case 6: {
