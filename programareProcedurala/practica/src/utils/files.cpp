@@ -34,6 +34,7 @@ std::vector<std::string> readAllLines(const std::string &filename) {
         lines.push_back(line);
     }
 
+    file.close();
     return lines;
 }
 
@@ -43,4 +44,6 @@ void writeAllLines(const std::vector<std::string> &lines, const std::string &fil
     for (auto &line : lines) {
         file << line << '\n';
     }
+
+    file.close();
 }
