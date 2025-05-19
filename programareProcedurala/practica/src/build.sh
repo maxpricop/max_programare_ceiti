@@ -5,7 +5,7 @@ set -e
 
 # compiler and flags
 CXX=g++
-CXXFLAGS="-std=c++17 -Wall -Wextra -I."
+CXXFLAGS="-std=c++23 -Wall -Wextra -I."
 
 # the .cpp files you need to compile
 SOURCES=(
