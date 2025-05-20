@@ -13,9 +13,11 @@ SOURCES=(
   features/beverages/displayBeverages.cpp
   features/beverages/addNewBeverage.cpp
   features/beverages/deleteBeverage.cpp
+  features/beverages/editBeverage.cpp
   features/deliveries/displayDeliveries.cpp
   features/deliveries/addNewDelivery.cpp
   features/deliveries/deleteDelivery.cpp
+  features/deliveries/editDelivery.cpp
   utils/createRepeatedString.cpp
   utils/files.cpp
   utils/findItemById.cpp
