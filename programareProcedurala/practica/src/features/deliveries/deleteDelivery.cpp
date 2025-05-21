@@ -13,10 +13,13 @@ void deleteDelivery(const std::string &filename) {
     std::vector<std::string> lines = readAllLines(filename);
     auto it = std::find_if(lines.begin(), lines.end(), [&](const std::string &l) { return findItemById(l) == id; });
 
-    if (it != lines.end()) {
-        lines.erase(it);
-        std::cout << "Sters livrarea cu ID-ul '" << id << "'\n";
+    if (it == lines.end()) {
+        std::cout << "Nu exista nici o livrare cu ID-ul '" << id << "'\n";
+        return;
+    }
 
-        writeAllLines(lines, filename);
-    } else std::cout << "Nu exista nici o livrare cu ID-ul '" << id << "'\n";
+    lines.erase(it);
+    std::cout << "Sters livrarea cu ID-ul '" << id << "'\n";
+
+    writeAllLines(lines, filename);
 }

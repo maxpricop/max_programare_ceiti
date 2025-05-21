@@ -17,10 +17,13 @@ void deleteBeverage(const std::string &filename) {
     std::vector<std::string> lines = readAllLines(filename);
     auto it = std::find_if(lines.begin(), lines.end(), [&](const std::string &l) { return containsName(l, name); });
 
-    if (it != lines.end()) {
-        lines.erase(it);
-        std::cout << "Sters bautura '" << name << "'\n";
+    if (it == lines.end()) {
+        std::cout << "Nu exista nici o bautura cu numele '" << name << "'\n";
+        return;
+    }
 
-        writeAllLines(lines, filename);
-    } else std::cout << "Nu exista nici o bautura cu numele '" << name << "'\n";
+    lines.erase(it);
+    std::cout << "Sters bautura '" << name << "'\n";
+
+    writeAllLines(lines, filename);
 }
