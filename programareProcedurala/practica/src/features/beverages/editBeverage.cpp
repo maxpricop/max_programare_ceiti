@@ -1,6 +1,7 @@
 #include "../../types/Beverages.hpp"
 #include "../../utils/files.hpp"
 #include "../../utils/findItemById.hpp"
+#include "../../utils/strings.hpp"
 #include "beverages.hpp"
 #include "iostream"
 #include "string"
@@ -12,41 +13,32 @@ void editBeverage(const std::string &filename) {
     std::cout << "Introdu ID-ul bauturii pe care vrei sa o editezi: ";
     std::cin >> id;
 
-    std::vector<std::string> beverages = readAllLines(filename);
+    std::vector<Beverage> beverages = getAllBeverages(filename);
 
     for (auto &beverage : beverages) {
-        if (findItemById(beverage) != id) continue;
+        if (beverage.id != id) continue;
 
-        std::cout << "Bautura originala: " + beverage + '\n';
+        std::cout << "Bautura originala: " + beverageToString(beverage) + '\n';
         std::cout << '\n';
 
-        unsigned newId;
-        int rawBeverageType;
-        BeverageType beverageType;
-        std::string newName;
-        std::string newColor;
-        float pricePerLiter;
-
         std::cout << "Modifica ID-ul bauturii: ";
-        std::cin >> newId;
+        std::cin >> beverage.id;
 
+        int rawBeverageType;
         std::cout << "Modifica tipul bauturii(0=Apa dulce,1=Minerala,2=Suc,3=Sirop): ";
         std::cin >> rawBeverageType;
-        beverageType = static_cast<BeverageType>(rawBeverageType);
+        beverage.type = static_cast<BeverageType>(rawBeverageType);
 
         std::cout << "Modifica numele bauturii: ";
-        std::cin >> newName;
+        std::cin >> beverage.name;
 
         std::cout << "Modifica culoarea bauturii: ";
-        std::cin >> newColor;
+        std::cin >> beverage.color;
 
         std::cout << "Modifica pretul pe litru al bauturii: ";
-        std::cin >> pricePerLiter;
+        std::cin >> beverage.pricePerLiter;
 
-        beverage = std::to_string(newId) + ' ' + std::to_string(beverageType) + ' ' + newName + ' ' + newColor + ' ' +
-                   std::to_string(pricePerLiter);
-
-        writeAllLines(beverages, filename);
+        writeBeverages(beverages, filename);
         return;
     }
 

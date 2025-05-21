@@ -1,5 +1,7 @@
+#include "../../types/Delivery.hpp"
 #include "../../utils/files.hpp"
 #include "../../utils/findItemById.hpp"
+#include "../../utils/strings.hpp"
 #include "deliveries.hpp"
 #include "iostream"
 #include "string"
@@ -11,30 +13,24 @@ void editDelivery(const std::string &filename) {
     std::cout << "Introdu ID-ul livrarii pe care vrei sa o editezi: ";
     std::cin >> id;
 
-    std::vector<std::string> deliveries = readAllLines(filename);
+    std::vector<Delivery> deliveries = getAllDeliveries(filename);
 
     for (auto &delivery : deliveries) {
-        if (findItemById(delivery) != id) continue;
+        if (delivery.id != id) continue;
 
-        std::cout << "Livrarea originala: " + delivery + '\n';
+        std::cout << "Livrarea originala: " + deliveryToString(delivery) + '\n';
         std::cout << '\n';
 
-        unsigned newId;
-        unsigned newBeverageId;
-        double newQuantity;
-
         std::cout << "Modifica ID-ul livrarii: ";
-        std::cin >> newId;
+        std::cin >> delivery.id;
 
         std::cout << "Modifica ID-ul bauturilor livrate: ";
-        std::cin >> newBeverageId;
+        std::cin >> delivery.beverageId;
 
         std::cout << "Modifica cantitatea livrata: ";
-        std::cin >> newQuantity;
+        std::cin >> delivery.quantityDelivered;
 
-        delivery = std::to_string(newId) + ' ' + std::to_string(newBeverageId) + ' ' + std::to_string(newQuantity);
-
-        writeAllLines(deliveries, filename);
+        writeDeliveries(deliveries, filename);
         return;
     }
 
