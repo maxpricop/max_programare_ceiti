@@ -22,7 +22,6 @@ SOURCES=(
   utils/createRepeatedString.cpp
   utils/files.cpp
   utils/findItemById.cpp
-  utils/getBevreageTypeName.cpp
 )
 
 # output binary name
