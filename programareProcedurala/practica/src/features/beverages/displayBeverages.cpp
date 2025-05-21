@@ -1,5 +1,6 @@
-#include "../types/Beverages.hpp"
-#include "../utils/createRepeatedString.hpp"
+#include "../../types/Beverages.hpp"
+#include "../../utils/createRepeatedString.hpp"
+#include "../../utils/files.hpp"
 #include "beverages.hpp"
 #include "fstream"
 #include "iomanip"
@@ -9,28 +10,12 @@
 #include "vector"
 
 void displayBeverages(const std::string &filename) {
-    std::ifstream file(filename);
+    std::vector<Beverage> beverageList = getAllBeverages(filename);
 
-    if (!file.is_open()) {
+    if (beverageList.empty()) {
         std::cerr << "Error: cannot open file \"" << filename << "\"\n";
         return;
     }
-
-    std::vector<Beverage> beverageList;
-    Beverage currentBeverage;
-
-    // Expected line layout:
-    // ID (unsigned), Type (BeverageType), name (string), color (string), pricePerLiter (float)
-    while (file >> currentBeverage.id) {
-        int rawBeverageType;
-        file >> rawBeverageType >> currentBeverage.name >> currentBeverage.color >> currentBeverage.pricePerLiter;
-
-        currentBeverage.type = static_cast<BeverageType>(rawBeverageType);
-        beverageList.push_back(currentBeverage);
-    }
-
-    // Close the file
-    file.close();
 
     // Column widths
     const int wId = 6;

@@ -1,5 +1,6 @@
-#include "../types/Delivery.hpp"
-#include "../utils/createRepeatedString.hpp"
+#include "../../types/Delivery.hpp"
+#include "../../utils/createRepeatedString.hpp"
+#include "../../utils/files.hpp"
 #include "deliveries.hpp"
 #include "fstream"
 #include "iomanip"
@@ -8,25 +9,12 @@
 #include "vector"
 
 void displayDeliveries(const std::string &filename) {
-    std::ifstream file(filename);
+    std::vector<Delivery> deliveriesList = getAllDeliveries(filename);
 
-    if (!file.is_open()) {
+    if (deliveriesList.empty()) {
         std::cerr << "Error: cannot open file \"" << filename << "\"\n";
         return;
     }
-
-    std::vector<Delivery> deliveriesList;
-    Delivery currentDelivery;
-
-    // Expected line layout:
-    // ID (unsigned), Beverage ID (unsigned), Quantity Delivered (double)
-    while (file >> currentDelivery.id) {
-        file >> currentDelivery.beverageId >> currentDelivery.quantityDelivered;
-        deliveriesList.push_back(currentDelivery);
-    }
-
-    // Close the file
-    file.close();
 
     // Column widths
     const unsigned wId = 6;

@@ -10,6 +10,7 @@ CXXFLAGS="-std=c++23 -Wall -Wextra -I."
 # the .cpp files you need to compile
 SOURCES=(
   main.cpp
+  features/beverages/utils/getBevreageTypeName.cpp
   features/beverages/displayBeverages.cpp
   features/beverages/addNewBeverage.cpp
   features/beverages/deleteBeverage.cpp
