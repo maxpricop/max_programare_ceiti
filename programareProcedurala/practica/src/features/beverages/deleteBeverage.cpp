@@ -1,12 +1,8 @@
+#include "../../types/Beverages.hpp"
 #include "../../utils/files.hpp"
 #include "beverages.hpp"
 #include "iostream"
 #include "string"
-
-bool containsName(const std::string &line, const std::string &word) {
-    std::string token = ' ' + word + ' ';
-    return line.find(token) != std::string::npos;
-}
 
 void deleteBeverage(const std::string &filename) {
     std::string name;
@@ -14,16 +10,22 @@ void deleteBeverage(const std::string &filename) {
     std::cout << "Introdu numele bauturii pe care vrei sa o stergi: ";
     std::cin >> name;
 
-    std::vector<std::string> lines = readAllLines(filename);
-    auto it = std::find_if(lines.begin(), lines.end(), [&](const std::string &l) { return containsName(l, name); });
+    std::vector<Beverage> beverageList = getAllBeverages(filename);
 
-    if (it == lines.end()) {
-        std::cout << "Nu exista nici o bautura cu numele '" << name << "'\n";
+    if (beverageList.empty()) {
+        std::cerr << "Error: cannot open file \"" << filename << "\"\n";
         return;
     }
 
-    lines.erase(it);
-    std::cout << "Sters bautura '" << name << "'\n";
+    auto it = std::find_if(beverageList.begin(), beverageList.end(), [&](const Beverage &b) { return b.name == name; });
 
-    writeAllLines(lines, filename);
+    if (it == beverageList.end()) {
+        std::cout << "Nu exista nici o bautura cu numele \"" << name << "\"\n";
+        return;
+    }
+
+    beverageList.erase(it);
+    std::cout << "Sters bautura cu numele \"" << name << "\"\n";
+
+    writeBeverages(beverageList, filename);
 }

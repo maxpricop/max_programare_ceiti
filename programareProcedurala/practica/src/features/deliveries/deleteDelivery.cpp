@@ -1,3 +1,4 @@
+#include "../../types/Delivery.hpp"
 #include "../../utils/files.hpp"
 #include "../../utils/findItemById.hpp"
 #include "deliveries.hpp"
@@ -10,16 +11,22 @@ void deleteDelivery(const std::string &filename) {
     std::cout << "Introdu ID-ul livrarii pe care vrei sa o stergi: ";
     std::cin >> id;
 
-    std::vector<std::string> lines = readAllLines(filename);
-    auto it = std::find_if(lines.begin(), lines.end(), [&](const std::string &l) { return findItemById(l) == id; });
+    std::vector<Delivery> deliveriesList = getAllDeliveries(filename);
 
-    if (it == lines.end()) {
-        std::cout << "Nu exista nici o livrare cu ID-ul '" << id << "'\n";
+    if (deliveriesList.empty()) {
+        std::cerr << "Error: cannot open file \"" << filename << "\"\n";
         return;
     }
 
-    lines.erase(it);
-    std::cout << "Sters livrarea cu ID-ul '" << id << "'\n";
+    auto it = std::find_if(deliveriesList.begin(), deliveriesList.end(), [&](const Delivery &d) { return d.id == id; });
 
-    writeAllLines(lines, filename);
+    if (it == deliveriesList.end()) {
+        std::cout << "Nu exista nici o livrare cu ID-ul \"" << id << "\"\n ";
+        return;
+    }
+
+    deliveriesList.erase(it);
+    std::cout << "Sters livrarea cu ID-ul \"" << id << "\"\n";
+
+    writeDeliveries(deliveriesList, filename);
 }
