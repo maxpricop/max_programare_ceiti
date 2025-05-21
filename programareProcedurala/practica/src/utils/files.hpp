@@ -12,4 +12,8 @@ void writeAllLines(const std::vector<std::string> &lines, const std::string &fil
 
 std::vector<Beverage> getAllBeverages(const std::string &filename);
 
+void writeBeverages(const std::vector<Beverage> &beverages, const std::string &filename);
+
 std::vector<Delivery> getAllDeliveries(const std::string &filename);
+
+void writeDeliveries(const std::vector<Delivery> &deliveries, const std::string &filename);

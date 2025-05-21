@@ -43,6 +43,11 @@ std::vector<std::string> readAllLines(const std::string &filename) {
 void writeAllLines(const std::vector<std::string> &lines, const std::string &filename) {
     std::ofstream file(filename);
 
+    if (!file.is_open()) {
+        std::cerr << "Error: cannot open file \"" << filename << "\"\n";
+        return;
+    }
+
     for (auto &line : lines) {
         file << line << '\n';
     }
@@ -72,6 +77,26 @@ std::vector<Beverage> getAllBeverages(const std::string &filename) {
     return beverages;
 }
 
+void writeBeverages(const std::vector<Beverage> &beverages, const std::string &filename) {
+    std::ofstream file(filename);
+
+    if (!file.is_open()) {
+        std::cerr << "Error: cannot open file \"" << filename << "\"\n";
+        return;
+    }
+
+    for (auto &beverage : beverages) {
+        std::string stringId = std::to_string(beverage.id);
+        std::string stringType = std::to_string(beverage.type);
+        std::string stringPrice = std::to_string(beverage.pricePerLiter);
+
+        file << stringId << ' ' << stringType << ' ' << beverage.name << ' ' << beverage.color << ' ' << stringPrice;
+        file << '\n';
+    }
+
+    file.close();
+}
+
 std::vector<Delivery> getAllDeliveries(const std::string &filename) {
     std::vector<Delivery> deliveries;
     std::ifstream file(filename);
@@ -89,4 +114,23 @@ std::vector<Delivery> getAllDeliveries(const std::string &filename) {
 
     file.close();
     return deliveries;
+}
+
+void writeDeliveries(const std::vector<Delivery> &deliveries, const std::string &filename) {
+    std::ofstream file(filename);
+
+    if (!file.is_open()) {
+        std::cerr << "Error: cannot open file \"" << filename << "\"\n";
+        return;
+    }
+
+    for (auto &delivery : deliveries) {
+        std::string stringId = std::to_string(delivery.id);
+        std::string stringBevId = std::to_string(delivery.beverageId);
+        std::string stringQuantity = std::to_string(delivery.quantityDelivered);
+
+        file << stringId << ' ' << stringBevId << ' ' << stringQuantity << '\n';
+    }
+
+    file.close();
 }
