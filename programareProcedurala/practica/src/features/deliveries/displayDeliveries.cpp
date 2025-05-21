@@ -1,10 +1,10 @@
+#include "../types/Delivery.hpp"
+#include "../utils/createRepeatedString.hpp"
 #include "deliveries.hpp"
 #include "fstream"
 #include "iomanip"
 #include "iostream"
 #include "string"
-#include "types/Delivery.hpp"
-#include "utils/createRepeatedString.hpp"
 #include "vector"
 
 void displayDeliveries(const std::string &filename) {

@@ -1,10 +1,10 @@
+#include "../types/Beverages.hpp"
+#include "../utils/createRepeatedString.hpp"
 #include "beverages.hpp"
 #include "fstream"
 #include "iomanip"
 #include "iostream"
 #include "string"
-#include "types/Beverages.hpp"
-#include "utils/createRepeatedString.hpp"
 #include "utils/getBevreageTypeName.hpp"
 #include "vector"
 

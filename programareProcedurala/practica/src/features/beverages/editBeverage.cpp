@@ -1,9 +1,9 @@
+#include "../types/Beverages.hpp"
+#include "../utils/files.hpp"
+#include "../utils/findItemById.hpp"
 #include "beverages.hpp"
 #include "iostream"
 #include "string"
-#include "types/Beverages.hpp"
-#include "utils/files.hpp"
-#include "utils/findItemById.hpp"
 #include "vector"
 
 void editBeverage(const std::string &filename) {

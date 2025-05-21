@@ -1,8 +1,8 @@
+#include "../types/Beverages.hpp"
+#include "../utils/files.hpp"
 #include "beverages.hpp"
 #include "iostream"
 #include "string"
-#include "types/Beverages.hpp"
-#include "utils/files.hpp"
 
 void addNewBeverage(const std::string &filename) {
     Beverage newBeverage{};
