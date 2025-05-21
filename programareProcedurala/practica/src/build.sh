@@ -19,7 +19,7 @@ SOURCES=(
   features/deliveries/addNewDelivery.cpp
   features/deliveries/deleteDelivery.cpp
   features/deliveries/editDelivery.cpp
-  utils/createRepeatedString.cpp
+  utils/strings.cpp
   utils/files.cpp
   utils/findItemById.cpp
 )
