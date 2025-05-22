@@ -10,3 +10,5 @@ void deleteBeverage(const std::string &filename);
 void editBeverage(const std::string &filename);
 
 void displaySpecificBeverage(const std::string &filename);
+
+void displayBeverageValueExtremes(const std::string &beverageFile, const std::string &deliveryFile);

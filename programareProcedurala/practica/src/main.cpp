@@ -41,6 +41,10 @@ void beverageOptions() {
             displaySpecificBeverage("../data/Baut.txt");
             break;
         }
+        case 6: {
+            displayBeverageValueExtremes("../data/Baut.txt", "../data/Livr.txt");
+            break;
+        }
         case 8: {
             std::cout << "Ai revenit la meniul principal.";
             break;
