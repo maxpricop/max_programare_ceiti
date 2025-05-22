@@ -46,4 +46,6 @@ void summarizeDeliveries(const std::string &beverageFile, const std::string &del
         summaryFile << summary.name << ' ' << std::to_string(summary.quantityDelivered) << ' '
                     << std::to_string(summary.value) << '\n';
     }
+
+    std::cout << "Creat rezumatul livrarilor in fisierul \"" << outFile << "\"\n";
 }
