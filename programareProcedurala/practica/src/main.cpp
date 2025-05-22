@@ -83,6 +83,10 @@ void deliveryOptions() {
             editDelivery("../data/Livr.txt");
             break;
         }
+        case 5: {
+            summarizeDeliveries("../data/Baut.txt", "../data/Livr.txt", "../data/RezumatLivrari.txt");
+            break;
+        }
         case 6: {
             std::cout << "Ai revenit la meniul principal.";
             break;
