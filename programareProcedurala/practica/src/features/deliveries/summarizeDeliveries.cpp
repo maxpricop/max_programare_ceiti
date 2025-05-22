@@ -16,6 +16,16 @@ void summarizeDeliveries(const std::string &beverageFile, const std::string &del
     std::vector<Beverage> beverages = getAllBeverages(beverageFile);
     std::vector<Delivery> deliveries = getAllDeliveries(deliveryFile);
 
+    if (beverages.empty()) {
+        std::cerr << "Error: cannot open file \"" << beverageFile << "\"\n";
+        return;
+    }
+
+    if (deliveries.empty()) {
+        std::cerr << "Error: cannot open file \"" << deliveryFile << "\"\n";
+        return;
+    }
+
     std::vector<Summary> summaries;
 
     for (const auto &beverage : beverages) {
