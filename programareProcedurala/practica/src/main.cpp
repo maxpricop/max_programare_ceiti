@@ -37,6 +37,10 @@ void beverageOptions() {
             editBeverage("../data/Baut.txt");
             break;
         }
+        case 5: {
+            displaySpecificBeverage("../data/Baut.txt");
+            break;
+        }
         case 8: {
             std::cout << "Ai revenit la meniul principal.";
             break;

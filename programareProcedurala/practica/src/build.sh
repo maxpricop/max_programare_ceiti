@@ -15,6 +15,7 @@ SOURCES=(
   features/beverages/addNewBeverage.cpp
   features/beverages/deleteBeverage.cpp
   features/beverages/editBeverage.cpp
+  features/beverages/displaySpecificBeverage.cpp
   features/deliveries/displayDeliveries.cpp
   features/deliveries/addNewDelivery.cpp
   features/deliveries/deleteDelivery.cpp

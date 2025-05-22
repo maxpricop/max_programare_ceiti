@@ -77,6 +77,30 @@ std::vector<Beverage> getAllBeverages(const std::string &filename) {
     return beverages;
 }
 
+std::vector<Beverage> getSpecificBeverage(const std::string &filename, BeverageType &type) {
+    std::vector<Beverage> beverages;
+    std::ifstream file(filename);
+
+    if (!file.is_open()) return beverages;
+
+    Beverage currentBeverage;
+
+    // Expected line layout:
+    // ID (unsigned), Type (BeverageType), name (string), color (string), pricePerLiter (float)
+    while (file >> currentBeverage.id) {
+        int rawBeverageType;
+        file >> rawBeverageType >> currentBeverage.name >> currentBeverage.color >> currentBeverage.pricePerLiter;
+
+        currentBeverage.type = static_cast<BeverageType>(rawBeverageType);
+        if (currentBeverage.type != type) continue;
+
+        beverages.push_back(currentBeverage);
+    }
+
+    file.close();
+    return beverages;
+}
+
 void writeBeverages(const std::vector<Beverage> &beverages, const std::string &filename) {
     std::ofstream file(filename);
 

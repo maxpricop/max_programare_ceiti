@@ -8,3 +8,5 @@ void addNewBeverage(const std::string &filename);
 void deleteBeverage(const std::string &filename);
 
 void editBeverage(const std::string &filename);
+
+void displaySpecificBeverage(const std::string &filename);
