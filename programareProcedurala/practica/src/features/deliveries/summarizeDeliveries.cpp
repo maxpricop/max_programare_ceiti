@@ -6,9 +6,6 @@
 #include "iostream"
 #include "string"
 
-// Crearea fișierului text RezumatLivrari.txt, care să conțină pentru fiecare băutură: denumirea, cantitatea totală
-// livrată(în litri) și valoarea totală a livrărilor(cantitate × preț pe litru)
-
 struct Summary {
     std::string name;
     double quantityDelivered;
