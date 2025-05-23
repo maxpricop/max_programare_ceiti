@@ -6,7 +6,7 @@
 6 1 Java Transparent 1.100000
 7 1 OM Transparent 1.050000
 8 1 GuraCainarului Transparent 1.200000
-9 2 J7Portocale Portocaliu 5.000000
+9 2 Naturalis Portocaliu 5.000000
 10 2 RichMere Rosu 4.800000
 11 2 SunnyMacedonia Galben 5.200000
 12 2 MagicOrange Portocaliu 5.100000
