@@ -17,6 +17,7 @@ SOURCES=(
   features/beverages/editBeverage.cpp
   features/beverages/displaySpecificBeverage.cpp
   features/beverages/displayBeverageValueExtremes.cpp
+  features/beverages/displayAveragePriceForQuantity.cpp
   features/deliveries/displayDeliveries.cpp
   features/deliveries/addNewDelivery.cpp
   features/deliveries/deleteDelivery.cpp

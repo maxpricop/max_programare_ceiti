@@ -45,6 +45,10 @@ void beverageOptions() {
             displayBeverageValueExtremes("../data/Baut.txt", "../data/Livr.txt");
             break;
         }
+        case 7: {
+            displayAveragePriceForQuantity("../data/Baut.txt", "../data/Livr.txt");
+            break;
+        }
         case 8: {
             std::cout << "Ai revenit la meniul principal.";
             break;
