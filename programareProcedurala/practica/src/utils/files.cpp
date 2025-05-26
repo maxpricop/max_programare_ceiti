@@ -61,12 +61,8 @@ void writeBeverages(const std::vector<Beverage> &beverages, const std::string &f
     }
 
     for (auto &beverage : beverages) {
-        std::string stringId = std::to_string(beverage.id);
-        std::string stringType = std::to_string(beverage.type);
-        std::string stringPrice = std::to_string(beverage.pricePerLiter);
-
-        file << stringId << ' ' << stringType << ' ' << beverage.name << ' ' << beverage.color << ' ' << stringPrice;
-        file << '\n';
+        file << std::to_string(beverage.id) << ' ' << std::to_string(beverage.type) << ' ' << beverage.name << ' '
+             << beverage.color << ' ' << std::to_string(beverage.pricePerLiter) << '\n';
     }
 
     file.close();
@@ -100,11 +96,8 @@ void writeDeliveries(const std::vector<Delivery> &deliveries, const std::string 
     }
 
     for (auto &delivery : deliveries) {
-        std::string stringId = std::to_string(delivery.id);
-        std::string stringBevId = std::to_string(delivery.beverageId);
-        std::string stringQuantity = std::to_string(delivery.quantityDelivered);
-
-        file << stringId << ' ' << stringBevId << ' ' << stringQuantity << '\n';
+        file << std::to_string(delivery.id) << ' ' << std::to_string(delivery.beverageId) << ' '
+             << std::to_string(delivery.quantityDelivered) << '\n';
     }
 
     file.close();
