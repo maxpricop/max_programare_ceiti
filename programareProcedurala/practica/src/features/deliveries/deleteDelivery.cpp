@@ -26,7 +26,7 @@ void deleteDelivery(const std::string &filename) {
     }
 
     deliveriesList.erase(it);
-    std::cout << "Sters livrarea cu ID-ul \"" << id << "\"\n";
-
     writeDeliveries(deliveriesList, filename);
+
+    std::cout << "Sters livrarea cu ID-ul \"" << id << "\"\n";
 }

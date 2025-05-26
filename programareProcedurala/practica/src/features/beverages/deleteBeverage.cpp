@@ -25,7 +25,7 @@ void deleteBeverage(const std::string &filename) {
     }
 
     beverageList.erase(it);
-    std::cout << "Sters bautura cu numele \"" << name << "\"\n";
-
     writeBeverages(beverageList, filename);
+
+    std::cout << "Sters bautura cu numele \"" << name << "\"\n";
 }
