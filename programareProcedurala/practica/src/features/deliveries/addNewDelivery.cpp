@@ -1,6 +1,7 @@
 #include "../../types/Delivery.hpp"
-#include "../../utils/files.hpp"
+#include "../../utils/strings.hpp"
 #include "deliveries.hpp"
+#include "fstream"
 #include "iostream"
 #include "string"
 
@@ -16,7 +17,14 @@ void addNewDelivery(const std::string &filename) {
     std::cout << "Introduceti cantitatea livrata: ";
     std::cin >> newDelivery.quantityDelivered;
 
-    appendLine({std::to_string(newDelivery.id), std::to_string(newDelivery.beverageId),
-                std::to_string(newDelivery.quantityDelivered)},
-               filename);
+    std::string delivery = deliveryToString(newDelivery);
+    std::ofstream file(filename, std::ios::app);
+
+    if (!file.is_open()) {
+        std::cerr << "Error: cannot open file \"" << filename << "\"\n";
+        return;
+    }
+
+    file << delivery << '\n';
+    file.close();
 };

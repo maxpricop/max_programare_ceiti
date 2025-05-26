@@ -1,6 +1,7 @@
 #include "../../types/Beverages.hpp"
-#include "../../utils/files.hpp"
+#include "../../utils/strings.hpp"
 #include "beverages.hpp"
+#include "fstream"
 #include "iostream"
 #include "string"
 
@@ -24,7 +25,14 @@ void addNewBeverage(const std::string &filename) {
     std::cout << "Introduceti pretul pe litru: ";
     std::cin >> newBeverage.pricePerLiter;
 
-    appendLine({std::to_string(newBeverage.id), std::to_string(newBeverage.type), newBeverage.name, newBeverage.color,
-                std::to_string(newBeverage.pricePerLiter)},
-               filename);
+    std::string beverage = beverageToString(newBeverage);
+    std::ofstream file(filename, std::ios::app);
+
+    if (!file.is_open()) {
+        std::cerr << "Error: cannot open file \"" << filename << "\"\n";
+        return;
+    }
+
+    file << beverage << '\n';
+    file.close();
 };
