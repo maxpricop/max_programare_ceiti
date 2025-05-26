@@ -3,8 +3,8 @@
 #include "../types/Delivery.hpp"
 #include "string"
 
-std::string createRepeatedString(std::string lineStart, std::string repeatedString, unsigned length,
-                                 std::string lineEnd);
+std::string createRepeatedString(const std::string lineStart, const std::string repeatedString, const unsigned length,
+                                 const std::string lineEnd);
 
 std::string beverageToString(const Beverage &beverage);
 
