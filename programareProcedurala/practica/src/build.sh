@@ -25,7 +25,6 @@ SOURCES=(
   features/deliveries/summarizeDeliveries.cpp
   utils/strings.cpp
   utils/files.cpp
-  utils/findItemById.cpp
 )
 
 # output binary name
