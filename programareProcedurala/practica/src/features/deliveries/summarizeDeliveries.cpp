@@ -27,6 +27,7 @@ void summarizeDeliveries(const std::string &beverageFile, const std::string &del
     }
 
     std::vector<Summary> summaries;
+    summaries.reserve(beverages.size());
 
     for (const auto &beverage : beverages) {
         Summary newSummary{name : beverage.name, quantityDelivered : 0, value : 0};
