@@ -30,6 +30,8 @@ void editDelivery(const std::string &filename) {
         std::cin >> delivery.quantityDelivered;
 
         writeDeliveries(deliveries, filename);
+
+        std::cout << "Modificat cu succes livrarea.\n";
         return;
     }
 

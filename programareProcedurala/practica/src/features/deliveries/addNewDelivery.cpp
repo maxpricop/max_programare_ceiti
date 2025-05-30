@@ -27,4 +27,6 @@ void addNewDelivery(const std::string &filename) {
 
     file << delivery << '\n';
     file.close();
+
+    std::cout << "Creat cu succes o noua livrare.\n";
 };

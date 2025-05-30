@@ -38,6 +38,8 @@ void editBeverage(const std::string &filename) {
         std::cin >> beverage.pricePerLiter;
 
         writeBeverages(beverages, filename);
+
+        std::cout << "Creat cu succes o noua bautura.\n";
         return;
     }
 

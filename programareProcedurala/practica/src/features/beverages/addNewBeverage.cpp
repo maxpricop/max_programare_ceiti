@@ -35,4 +35,6 @@ void addNewBeverage(const std::string &filename) {
 
     file << beverage << '\n';
     file.close();
+
+    std::cout << "Creat cu succes o noua bautura.\n";
 };
