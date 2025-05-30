@@ -1,6 +1,7 @@
 #include "files.hpp"
 #include "../types/Beverages.hpp"
 #include "../types/Delivery.hpp"
+#include "./strings.hpp"
 #include "fstream"
 #include "iostream"
 #include "string"
@@ -61,8 +62,7 @@ void writeBeverages(const std::vector<Beverage> &beverages, const std::string &f
     }
 
     for (auto &beverage : beverages) {
-        file << std::to_string(beverage.id) << ' ' << std::to_string(beverage.type) << ' ' << beverage.name << ' '
-             << beverage.color << ' ' << std::to_string(beverage.pricePerLiter) << '\n';
+        file << beverageToString(beverage) << '\n';
     }
 
     file.close();
@@ -96,8 +96,7 @@ void writeDeliveries(const std::vector<Delivery> &deliveries, const std::string 
     }
 
     for (auto &delivery : deliveries) {
-        file << std::to_string(delivery.id) << ' ' << std::to_string(delivery.beverageId) << ' '
-             << std::to_string(delivery.quantityDelivered) << '\n';
+        file << deliveryToString(delivery) << '\n';
     }
 
     file.close();
