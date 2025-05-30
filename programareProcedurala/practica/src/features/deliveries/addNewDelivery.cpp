@@ -1,4 +1,5 @@
 #include "../../types/Delivery.hpp"
+#include "../../utils/files.hpp"
 #include "../../utils/strings.hpp"
 #include "deliveries.hpp"
 #include "fstream"
@@ -6,10 +7,18 @@
 #include "string"
 
 void addNewDelivery(const std::string &filename) {
+    std::vector<Delivery> deliveries = getAllDeliveries(filename);
     Delivery newDelivery{};
 
     std::cout << "Introduceti ID Livrare: ";
     std::cin >> newDelivery.id;
+
+    for (const auto &delivery : deliveries) {
+        if (delivery.id != newDelivery.id) continue;
+
+        std::cout << "Deja exista o livrare cu acest ID.\n";
+        return;
+    }
 
     std::cout << "Introduceti ID bautura livrata: ";
     std::cin >> newDelivery.beverageId;
