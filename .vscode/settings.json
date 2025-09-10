@@ -1,20 +1,23 @@
 {
-    "editor.formatOnSave": true,
-    "prettier.configPath": "./.prettierrc",
-    "prettier.useEditorConfig": true,
-    "C_Cpp.clang_format_style": "{BasedOnStyle: Microsoft, AllowShortIfStatementsOnASingleLine: AllIfsAndElse, BreakBeforeBraces: Attach, IndentCaseLabels: true}",
-    "[cpp]": {
-        "editor.defaultFormatter": "ms-vscode.cpptools",
-        "editor.wordBasedSuggestions": "currentDocument",
-        "editor.semanticHighlighting.enabled": true,
-        "editor.stickyScroll.defaultModel": "outlineModel",
-        "editor.suggest.insertMode": "replace"
-    },
-    "[json]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.quickSuggestions": {
-            "strings": true
-        },
-        "editor.suggest.insertMode": "replace"
-    },
+	"editor.formatOnSave": true,
+
+	"prettier.configPath": "./.prettierrc",
+	"prettier.useEditorConfig": true,
+
+	"[cpp]": {
+		"editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
+		"editor.wordBasedSuggestions": "currentDocument",
+		"editor.semanticHighlighting.enabled": true,
+		"editor.stickyScroll.defaultModel": "outlineModel",
+		"editor.suggest.insertMode": "replace"
+	},
+
+	"[json]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.quickSuggestions": {
+			"strings": true
+		},
+		"editor.suggest.insertMode": "replace"
+	},
+	"cmake.ignoreCMakeListsMissing": true
 }

@@ -1,5 +1,5 @@
 {
-	"printWidth": 120,
+	"printWidth": 140,
 	"singleQuote": false,
 	"useTabs": true,
 	"tabWidth": 4,
@@ -9,4 +9,3 @@
 	"arrowParens": "avoid",
 	"endOfLine": "crlf"
 }
-
