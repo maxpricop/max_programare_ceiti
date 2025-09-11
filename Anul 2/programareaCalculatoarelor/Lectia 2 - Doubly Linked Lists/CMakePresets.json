@@ -1,29 +1,54 @@
 {
-    "version": 8,
-    "configurePresets": [
-        {
-            "name": "Clang Windows",
-            "displayName": "Clang 20.1.8 x86_64-pc-windows-msvc",
-            "description": "Using compilers: C = C:\\Program Files\\LLVM\\bin\\clang.exe, CXX = C:\\Program Files\\LLVM\\bin\\clang++.exe",
-            "binaryDir": "${sourceDir}/out/build/${presetName}",
-            "cacheVariables": {
-                "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}",
-                "CMAKE_C_COMPILER": "C:/Program Files/LLVM/bin/clang.exe",
-                "CMAKE_CXX_COMPILER": "C:/Program Files/LLVM/bin/clang++.exe",
-                "CMAKE_BUILD_TYPE": "Debug"
-            }
-        },
-        {
-            "name": "Clang Linux",
-            "displayName": "Clang 16.0.6 x86_64-pc-linux-gnu",
-            "description": "Using compilers: C = /usr/bin/clang, CXX = /usr/bin/clang++",
-            "binaryDir": "${sourceDir}/out/build/${presetName}",
-            "cacheVariables": {
-                "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}",
-                "CMAKE_C_COMPILER": "/usr/bin/clang",
-                "CMAKE_CXX_COMPILER": "/usr/bin/clang++",
-                "CMAKE_BUILD_TYPE": "Debug"
-            }
-        }
-    ]
+	"version": 8,
+	"configurePresets": [
+		{
+			"name": "clang-win",
+			"displayName": "Clang Windows x86_64-pc-windows-msvc",
+			"description": "Clang toolchain on Windows (Visual Studio generator)",
+			"binaryDir": "${sourceDir}/out/build/clang-win",
+			"cacheVariables": {
+				"CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/clang-win",
+				"CMAKE_C_COMPILER": "C:/Program Files/LLVM/bin/clang.exe",
+				"CMAKE_CXX_COMPILER": "C:/Program Files/LLVM/bin/clang++.exe"
+			}
+		},
+		{
+			"name": "clang-linux-debug",
+			"displayName": "Clang Linux x86_64-pc-linux-gnu (Debug)",
+			"description": "Clang Debug Build",
+			"binaryDir": "${sourceDir}/out/build/clang-linux-debug",
+			"cacheVariables": {
+				"CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/clang-linux-debug",
+				"CMAKE_C_COMPILER": "/usr/bin/clang",
+				"CMAKE_CXX_COMPILER": "/usr/bin/clang++",
+				"CMAKE_BUILD_TYPE": "Debug"
+			}
+		},
+		{
+			"name": "clang-linux-release",
+			"displayName": "Clang Linux x86_64-pc-linux-gnu (Release)",
+			"description": "Clang Release Build",
+			"binaryDir": "${sourceDir}/out/build/clang-linux-release",
+			"cacheVariables": {
+				"CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/clang-linux-release",
+				"CMAKE_C_COMPILER": "/usr/bin/clang",
+				"CMAKE_CXX_COMPILER": "/usr/bin/clang++",
+				"CMAKE_BUILD_TYPE": "Release"
+			}
+		}
+	],
+	"buildPresets": [
+		{
+			"name": "clang-win-debug-build",
+			"configurePreset": "clang-win",
+			"configuration": "Debug",
+			"description": "Build clang-win in Debug"
+		},
+		{
+			"name": "clang-win-release-build",
+			"configurePreset": "clang-win",
+			"configuration": "Release",
+			"description": "Build clang-win in Release"
+		}
+	]
 }
