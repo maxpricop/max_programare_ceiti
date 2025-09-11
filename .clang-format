@@ -10,5 +10,7 @@ PointerAlignment: Right
 AllowShortIfStatementsOnASingleLine: AllIfsAndElse
 BreakBeforeBraces: Attach
 IndentCaseLabels: true
+IndentAccessModifiers: true
+AccessModifierOffset: 4
 ---
 
