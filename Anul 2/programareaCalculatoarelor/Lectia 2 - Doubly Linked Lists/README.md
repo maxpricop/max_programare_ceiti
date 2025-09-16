@@ -52,19 +52,19 @@ Proiectul folosește **CMake** cu **presets** pentru Windows și Linux.
 Configurează proiectul folosind presetul dorit:
 
 - **Windows Clang:**
-```bash
-cmake --preset=clang-win
-```
+    ```bash
+    cmake --preset=clang-win
+    ```
 
 - **Linux Clang Debug:**
-```bash
-cmake --preset=clang-linux-debug
-```
+    ```bash
+    cmake --preset=clang-linux-debug
+    ```
 
 - **Linux Clang Release:**
-```bash
-cmake --preset=clang-linux-release
-```
+    ```bash
+    cmake --preset=clang-linux-release
+    ```
 
 ---
 
