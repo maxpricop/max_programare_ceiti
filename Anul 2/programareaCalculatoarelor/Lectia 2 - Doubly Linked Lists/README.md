@@ -95,5 +95,5 @@ cmake --preset=clang-linux-release
 Executabilul va fi generat în folderul corespunzător presetului:
 
 ```bash
-./out/build/clang-linux-debug/LinkedListApp
+./out/build/clang-linux-debug/DoublyLinkedLists
 ```
