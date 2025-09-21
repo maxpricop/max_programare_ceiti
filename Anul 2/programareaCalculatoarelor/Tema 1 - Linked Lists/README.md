@@ -1,4 +1,4 @@
-# Tema 2 – Liste simplu înlănțuite (C++)
+# Tema 1 – Liste simplu înlănțuite (C++)
 
 Acesta este un proiect realizat ca **temă de casă** pentru a exersa lucrul cu **liste simplu înlănțuite (singly linked lists)** în C++.
 Proiectul este **modular**, fiind împărțit în mai multe fișiere pentru claritate și ușurință în întreținere.
