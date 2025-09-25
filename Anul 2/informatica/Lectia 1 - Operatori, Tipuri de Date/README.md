@@ -10,7 +10,7 @@ Programul este unul introductiv și pune accent pe interacțiunea cu utilizatoru
 
 Proiectul este alcătuit dintr-un singur fișier:
 
-- `src/Main.java` – Program principal, care conține un **meniu text** și implementările tuturor exercițiilor (ex1–ex5).
+- `src/Main.java` – Program principal, care conține un **meniu text** și implementările tuturor exercițiilor (ex1–ex9).
 
 ---
 
@@ -19,42 +19,71 @@ Proiectul este alcătuit dintr-un singur fișier:
 Proiectul implementează următoarele exerciții:
 
 ### Exercițiul 1
-1. Citirea a două numere întregi.
+1. Citirea a două numere întregi.  
 2. Calculul și afișarea:
-   - sumei numerelor;
+   - sumei numerelor;  
    - diferenței numerelor.
 
 ### Exercițiul 2
-1. Citirea a două numere întregi.
+1. Citirea a două numere întregi.  
 2. Calculul și afișarea:
-   - produsului numerelor;
-   - câtului împărțirii primului număr la al doilea.
+   - produsului numerelor;  
+   - câtului împărțirii primului număr la al doilea (împărțire reală).
 
 ### Exercițiul 3
-1. Citirea a două numere naturale.
+1. Citirea a două numere naturale.  
 2. Calculul și afișarea:
-   - mediei aritmetice;
+   - mediei aritmetice;  
    - mediei geometrice.
 
 ### Exercițiul 4
-1. Citirea lungimii laturii unui pătrat.
+1. Citirea lungimii laturii unui pătrat.  
 2. Calculul și afișarea:
-   - ariei pătratului;
+   - ariei pătratului;  
    - perimetrului pătratului.
 
 ### Exercițiul 5
-1. Citirea lungimii laturii unui cub.
+1. Citirea lungimii laturii unui cub.  
 2. Calculul și afișarea:
-   - ariei cubului;
+   - ariei totale a cubului;  
    - volumului cubului.
+
+### Exercițiul 6
+1. Citirea razei unui cerc.  
+2. Calculul și afișarea:
+   - ariei cercului;  
+   - circumferinței cercului.
+
+### Exercițiul 7
+1. Citirea lungimii cercului (circumferința).  
+2. Calculul și afișarea:
+   - razei cercului (din circumferință);  
+   - ariei cercului (calculată din rază).
+
+### Exercițiul 8
+1. Citirea numărului de laturi `n` al unui poligon regulat și a razei cercului circumscris `R`.  
+2. Calculul și afișarea:
+   - perimetrului poligonului;  
+   - ariei poligonului;  
+   - măsurii unghiului interior (grade);  
+   - numărului de diagonale;  
+   - razei cercului înscris (r).
+
+### Exercițiul 9
+1. Citirea coordonatelor a două puncte `A(ax, ay)` și `B(bx, by)`.  
+2. Calculul și afișarea:
+   - distanței dintre cele două puncte;  
+   - coordonatelor mijlocului segmentului AB.
 
 ---
 
-## Funcționalități
+## Funcționalități & concepte abordate
 
-- **Interactivitate:** utilizatorul alege exercițiul dorit dintr-un meniu afișat la începutul programului.
-- **Modularitate:** fiecare exercițiu este implementat într-o metodă separată (`ex1`–`ex5`).
-- **Concepte fundamentale:** programul demonstrează utilizarea operatorilor aritmetici, a tipurilor de date numerice și a clasei `Scanner` pentru citirea datelor de la tastatură.
+- **Interactivitate:** meniu text, selecție prin `Scanner`.  
+- **Modularitate locală:** fiecare exercițiu este izolat într-o metodă (`ex1` … `ex9`).  
+- **Utilizare `Math`:** `Math.sqrt`, `Math.pow`, `Math.sin`, `Math.cos`, `Math.PI`.  
+- **Validări de intrare implementate:** verificare împărțire la zero (ex2), verificare valori naturale (ex3), `n >= 3` și `R > 0` pentru poligon (ex8).  
+- **Consistență tipuri:** s-a folosit `double` pentru intrări și calcule pentru a evita pierderea de precizie.
 
 ---
 
