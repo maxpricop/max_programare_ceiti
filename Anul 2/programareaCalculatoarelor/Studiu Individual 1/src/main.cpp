@@ -1,6 +1,7 @@
 #include "../include/linkedLists/CircularLinkedList.hpp"
 #include <cstddef>
 #include <iostream>
+#include <limits>
 
 int main() {
 	CircularDoublyLinkedList list;
