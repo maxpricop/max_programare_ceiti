@@ -1,3 +1,4 @@
+#include "../include/exercises/Exercises.hpp"
 #include <cstddef>
 #include <iostream>
 #include <string>
