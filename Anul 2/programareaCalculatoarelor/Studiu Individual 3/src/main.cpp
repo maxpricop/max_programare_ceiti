@@ -7,12 +7,22 @@ const long long INF = std::numeric_limits<long long>::max() / 4;
 
 int main() {
 	int numNodes, numEdges, startNode;
-	std::cin >> numNodes >> numEdges >> startNode;
+
+	std::cout << "Introdu numarul de noduri: ";
+	std::cin >> numNodes;
+
+	std::cout << "Introdu numarul de muchii: ";
+	std::cin >> numEdges;
+
+	std::cout << "Introdu nodul de start: ";
+	std::cin >> startNode;
 
 	std::vector<std::vector<std::pair<int, long long>>> adjacencyList(numNodes + 1);
 	for (int edgeIndex = 0; edgeIndex < numEdges; ++edgeIndex) {
 		int from, to;
 		long long weight;
+
+		std::cout << "Introdu muchia " << edgeIndex + 1 << " (format: nodulOrigine, nodulFinal, greutatea/costul ): ";
 		std::cin >> from >> to >> weight;
 
 		if (from >= 1 && from <= numNodes) adjacencyList[from].emplace_back(to, weight);
@@ -46,10 +56,11 @@ int main() {
 	}
 
 	for (int nodeIndex = 1; nodeIndex <= numNodes; ++nodeIndex) {
+		std::cout << "Distanta de la nodul " << startNode << " la nodul " << nodeIndex << " este: ";
 		if (distance[nodeIndex] == INF) std::cout << -1;
 		else std::cout << distance[nodeIndex];
 
-		if (nodeIndex < numNodes) std::cout << ' ';
+		std::cout << '\n';
 	}
 
 	std::cout << '\n';
