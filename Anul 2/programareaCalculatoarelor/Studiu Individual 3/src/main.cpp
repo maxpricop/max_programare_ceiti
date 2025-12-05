@@ -22,7 +22,7 @@ int main() {
 		int from, to;
 		long long weight;
 
-		std::cout << "Introdu muchia " << edgeIndex + 1 << " (format: nodulOrigine, nodulFinal, greutatea/costul ): ";
+		std::cout << "Introdu muchia " << edgeIndex + 1 << " (format: nodulOrigine, nodulFinal, greutatea/costul): ";
 		std::cin >> from >> to >> weight;
 
 		if (from >= 1 && from <= numNodes) adjacencyList[from].emplace_back(to, weight);
@@ -55,7 +55,7 @@ int main() {
 		}
 	}
 
-	for (int nodeIndex = 1; nodeIndex <= numNodes; ++nodeIndex) {
+	for (int nodeIndex = 1; nodeIndex <= numNodes; nodeIndex++) {
 		std::cout << "Distanta de la nodul " << startNode << " la nodul " << nodeIndex << " este: ";
 		if (distance[nodeIndex] == INF) std::cout << -1;
 		else std::cout << distance[nodeIndex];
