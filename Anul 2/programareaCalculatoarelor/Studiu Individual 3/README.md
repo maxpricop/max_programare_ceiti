@@ -1,6 +1,6 @@
-# Studiul Individual 2 – Ghicire a unui număr ascuns (C++)
+# Studiul Individual 3 – Algoritmul lui Dijkstra
 
-Acesta este **Studiul Individual nr. 2**, o implementare simplă, în C++, a unui joc în care un jucător (calculatorul/programul) se "gândește" la un număr natural x în intervalul [1, n], iar celălalt încearcă să-l ghicească punând întrebări la care se răspunde doar cu "Da" sau "Nu".
+Acest proiect implementează algoritmul lui Dijkstra pentru determinarea costului minim al drumurilor într-un graf orientat ponderat, pornind de la un nod sursă specificat.
 
 ---
 
@@ -8,28 +8,22 @@ Acesta este **Studiul Individual nr. 2**, o implementare simplă, în C++, a unu
 
 Studiul individual conține doar 1 fișier:
 
-- `src/main.cpp` – implementarea programului care simulează jocul de ghicire.
+- `src/main.cpp` – implementarea programului.
 
 ---
 
-## Cerințele temei
+## Cerința problemei
 
-Parafrazare clară a cerinței:
-
-- Implementați un program care simulează un joc de ghicire a unui număr natural x din intervalul [1, n]. Un jucător "se gândește" la număr, iar celălalt pune întrebări la care se răspunde cu "Da" sau "Nu". Întrebările permise sunt:
-  - "Numărul este egal cu ... ?"
-  - "Numărul este mai mare decât ... ?"
-  - "Numărul este mai mic decât ... ?"
-- Programul trebuie să genereze (sau să rețină) un număr ascuns în intervalul [1, n] și să permită interacțiunea până când numărul este ghicit sau utilizatorul se predă.
+Se dă un graf orientat ponderat – în care fiecare arc are asociat un cost, număr natural strict pozitiv, și un nod p. Să se determine, folosind algoritmul lui Dijkstra, costul minim al drumului de la p la fiecare nod al grafului.
 
 ---
 
 ## Funcționalități
 
-- Generare aleatorie a numărului ascuns între `1` și `n`.
-- Meniu interactiv pentru întrebările permise: egal, mai mare, mai mic, sau opțiunea de a se preda.
-- Validare robustă a intrărilor (opțiuni invalide, date ne-numerice) cu mesaje clare și cerere de reîncercare.
-- Răspunsuri explicite "Da" / "Nu" pentru întrebările despre relația dintre numărul ascuns și valoarea introdusă.
+- **Citire robustă a intrării**: programul citește numărul de noduri, muchii și nodul sursă, apoi muchiile (origine, destinație, greutate).
+- **Dijkstra eficient**: implementare cu coadă de priorități (`std::priority_queue` cu comparator inversat) și vector de distanțe inițializate cu `INF`.
+- **Validare noduri**: muchiile către noduri în afara intervalului sunt ignorate pentru a evita accesări invalide.
+- **Ieșire clară**: pentru fiecare nod se afișează distanța minimă sau `-1` dacă nodul nu este accesibil.
 
 ---
 
