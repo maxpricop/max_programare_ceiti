@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="10" alignment="CENTER" xmlns:fx="http://javafx.com/fxml" fx:controller="lectia7.controllers.AddBookController">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Add Book"/>
+    <TextField fx:id="titleField" promptText="Title"/>
+    <TextField fx:id="authorField" promptText="Author"/>
+    <Button text="Add" onAction="#handleAdd"/>
+    <Button text="Back to list" onAction="#handleBack"/>
+    <Label fx:id="messageLabel"/>
+</VBox>
