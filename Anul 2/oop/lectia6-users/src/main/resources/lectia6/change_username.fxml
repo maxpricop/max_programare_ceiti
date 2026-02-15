@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+
+<VBox spacing="10" alignment="CENTER" xmlns:fx="http://javafx.com/fxml" fx:controller="lectia6.controllers.ChangeUsernameController">
+    <padding>
+        <Insets top="15" right="15" bottom="15" left="15"/>
+    </padding>
+
+    <Label text="New username"/>
+    <TextField fx:id="newUsernameField" promptText="new username"/>
+
+    <HBox spacing="10">
+        <Button fx:id="confirmButton" text="Confirm" onAction="#handleConfirm"/>
+        <Button fx:id="cancelButton" text="Cancel" onAction="#handleCancel"/>
+    </HBox>
+
+    <Label fx:id="messageLabel"/>
+</VBox>

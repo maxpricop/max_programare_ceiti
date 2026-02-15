@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+
+<VBox spacing="10" alignment="CENTER" xmlns:fx="http://javafx.com/fxml" fx:controller="lectia6.controllers.ProfileController">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Profile"/>
+    <Label text="Username:"/>
+    <Label fx:id="usernameLabel"/>
+    <Label text="Password hash:"/>
+    <Label fx:id="passwordHashLabel" wrapText="true"/>
+
+    <HBox spacing="10">
+        <Button fx:id="changeUsernameButton" text="Change username" onAction="#handleChangeUsername"/>
+        <Button fx:id="changePasswordButton" text="Change password" onAction="#handleChangePassword"/>
+        <Button fx:id="logoutButton" text="Logout" onAction="#handleLogout"/>
+    </HBox>
+
+    <Label fx:id="messageLabel"/>
+
+</VBox>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="10" alignment="CENTER" xmlns:fx="http://javafx.com/fxml" fx:controller="lectia6.controllers.RegisterController">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Register"/>
+
+    <TextField fx:id="usernameField" promptText="Username"/>
+
+    <PasswordField fx:id="passwordField" promptText="Password"/>
+
+    <Button text="Register" onAction="#handleRegister"/>
+
+    <Button text="Go to Login" onAction="#switchToLogin"/>
+
+    <Label fx:id="messageLabel"/>
+
+</VBox>
