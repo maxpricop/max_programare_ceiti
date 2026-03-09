@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.geometry.Insets?>
+
+<VBox alignment="CENTER" spacing="10.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lectia8.controllers.SecondaryController">
+    <children>
+        <Label fx:id="lblSalut" style="-fx-font-size:16px; -fx-font-weight:bold;" />
+        <HBox spacing="10" alignment="CENTER">
+            <children>
+                <Button text="Deconectare" onAction="#deconectare" />
+            </children>
+        </HBox>
+        <Separator />
+        <Label text="Lista utilizatorilor:" style="-fx-font-weight:bold;" />
+        <ListView fx:id="lvUsers" prefHeight="200" prefWidth="300" />
+        <HBox spacing="10">
+            <children>
+                <Button text="Reîmprospătează" onAction="#refreshUsers" />
+                <Button text="Detalii" onAction="#showDetails" />
+                <Button text="Blochează" onAction="#lockSelected" />
+                <Button text="Deblochează" onAction="#unlockSelected" />
+                <Button text="Reset încercări" onAction="#resetAttempts" />
+                <Button text="Șterge" onAction="#deleteSelected" />
+            </children>
+        </HBox>
+        <Label fx:id="lblDetails" wrapText="true" />
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <children>
+                <TextField fx:id="tfNewPassword" promptText="Parolă nouă pentru utilizator selectat" />
+                <Button text="Schimbă parolă" onAction="#changePasswordSelected" />
+            </children>
+        </HBox>
+        <Label fx:id="lblMesajSec" textFill="red" />
+    </children>
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+</VBox>
