@@ -1,0 +1,216 @@
+/* ─── Root / Window ─── */
+.root {
+    -fx-base: #1a1a2e;
+    -fx-background: #1a1a2e;
+    -fx-control-inner-background: #16213e;
+    -fx-font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+/* ─── Header label ─── */
+.header-label {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #c9d6f0;
+    -fx-padding: 14 20 14 20;
+    -fx-background-color: #16213e;
+    -fx-border-color: #0f3460;
+    -fx-border-width: 0 0 2 0;
+    -fx-alignment: center;
+    -fx-max-width: infinity;
+}
+
+/* ─── Center content area ─── */
+.content-vbox {
+    -fx-padding: 14 14 14 14;
+    -fx-background-color: #1a1a2e;
+    -fx-spacing: 10;
+}
+
+/* ─── Table ─── */
+.table-view {
+    -fx-background-color: #16213e;
+    -fx-border-color: #0f3460;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #0f3460;
+}
+
+.table-view .column-header,
+.table-view .filler {
+    -fx-background-color: transparent;
+    -fx-border-color: #1a4a7a #1a4a7a transparent transparent;
+    -fx-border-width: 0 1 0 0;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #88b4e7;
+    -fx-font-weight: bold;
+    -fx-font-size: 12px;
+    -fx-padding: 6 4;
+}
+
+.table-view .table-row-cell {
+    -fx-background-color: #1c2d42;
+    -fx-table-cell-border-color: #243447;
+}
+
+.table-view .table-row-cell:odd {
+    -fx-background-color: #19283c;
+}
+
+.table-view .table-row-cell:hover {
+    -fx-background-color: #1e3a5f;
+}
+
+.table-view .table-row-cell:selected {
+    -fx-background-color: #0f3a6e;
+}
+
+.table-view .table-row-cell:selected .table-cell {
+    -fx-text-fill: #ffffff;
+}
+
+.table-view .table-cell {
+    -fx-text-fill: #c8d6e5;
+    -fx-font-size: 12px;
+    -fx-padding: 5 6;
+}
+
+/* ─── Scrollbars inside table ─── */
+.table-view .scroll-bar:vertical,
+.table-view .scroll-bar:horizontal {
+    -fx-background-color: #16213e;
+}
+
+.table-view .scroll-bar:vertical .thumb,
+.table-view .scroll-bar:horizontal .thumb {
+    -fx-background-color: #0f3460;
+    -fx-background-radius: 4;
+}
+
+/* ─── Button rows ─── */
+.button-bar-hbox {
+    -fx-padding: 2 0 2 0;
+    -fx-alignment: center-left;
+    -fx-spacing: 8;
+}
+
+/* ─── Buttons (default) ─── */
+.button {
+    -fx-background-color: #1a3a5c;
+    -fx-text-fill: #c9d6f0;
+    -fx-font-size: 13px;
+    -fx-padding: 7 14;
+    -fx-background-radius: 5;
+    -fx-border-color: #2a5a8c;
+    -fx-border-radius: 5;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #2a5a8c;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #3a7abf;
+}
+
+.button:pressed {
+    -fx-background-color: #0d2a4a;
+    -fx-text-fill: #aaccee;
+}
+
+.button:focused {
+    -fx-border-color: #4a9ade;
+    -fx-border-width: 1.5;
+}
+
+/* ─── Sync button (green accent) ─── */
+.sync-button {
+    -fx-background-color: #1a4a2e;
+    -fx-border-color: #2a7a4e;
+    -fx-text-fill: #a8d8b8;
+}
+
+.sync-button:hover {
+    -fx-background-color: #2a7a4e;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #3a9a5e;
+}
+
+.sync-button:pressed {
+    -fx-background-color: #0f2e1c;
+}
+
+/* ─── Delete button (red accent) ─── */
+.danger-button {
+    -fx-background-color: #4a1a1a;
+    -fx-border-color: #8a2a2a;
+    -fx-text-fill: #f0a8a8;
+}
+
+.danger-button:hover {
+    -fx-background-color: #8a2a2a;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #c03030;
+}
+
+.danger-button:pressed {
+    -fx-background-color: #2e0f0f;
+}
+
+/* ─── Standalone FXML dialog windows ─── */
+.dialog-root {
+    -fx-background-color: #1a1a2e;
+    -fx-border-color: #0f3460;
+    -fx-border-width: 1;
+}
+
+.dialog-content {
+    -fx-padding: 16 20 12 20;
+    -fx-background-color: #1a1a2e;
+    -fx-spacing: 10;
+}
+
+.dialog-button-bar {
+    -fx-background-color: #16213e;
+    -fx-border-color: #0f3460;
+    -fx-border-width: 1 0 0 0;
+    -fx-padding: 10 14;
+    -fx-spacing: 8;
+    -fx-alignment: CENTER_RIGHT;
+}
+
+.dialog-message-label {
+    -fx-text-fill: #c9d6f0;
+    -fx-font-size: 13px;
+}
+
+/* ─── Labels (global — dialogs and main window) ─── */
+.label {
+    -fx-text-fill: #c9d6f0;
+}
+
+/* ─── Text fields ─── */
+.text-field {
+    -fx-background-color: #16213e;
+    -fx-text-fill: #c9d6f0;
+    -fx-border-color: #0f3460;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    -fx-prompt-text-fill: #5577aa;
+    -fx-padding: 5 8;
+    -fx-highlight-fill: #2a5a8c;
+}
+
+.text-field:focused {
+    -fx-border-color: #4a9ade;
+    -fx-border-width: 1.5;
+}
+
+/* ─── GridPane inside dialogs ─── */
+.grid-pane {
+    -fx-background-color: #1a1a2e;
+    -fx-padding: 4;
+}

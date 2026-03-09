@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="studiul_individual_1.controllers.SearchRangeDialogController"
+      stylesheets="@styles.css" styleClass="dialog-root"
+      prefWidth="300">
+
+   <VBox styleClass="dialog-content">
+      <GridPane hgap="10" vgap="8">
+         <columnConstraints>
+            <ColumnConstraints minWidth="50" />
+            <ColumnConstraints hgrow="ALWAYS" />
+         </columnConstraints>
+         <Label text="Min:" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+         <TextField fx:id="tfMin" GridPane.rowIndex="0" GridPane.columnIndex="1" />
+         <Label text="Max:" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+         <TextField fx:id="tfMax" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+      </GridPane>
+   </VBox>
+
+   <HBox styleClass="dialog-button-bar">
+      <Button text="Anulează" onAction="#onCancel" />
+      <Button text="Caută" onAction="#onSearch" />
+   </HBox>
+</VBox>

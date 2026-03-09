@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="studiul_individual_1.controllers.PatientDialogController"
+      stylesheets="@styles.css" styleClass="dialog-root"
+      prefWidth="420">
+
+   <VBox styleClass="dialog-content">
+      <GridPane hgap="12" vgap="8">
+         <columnConstraints>
+            <ColumnConstraints minWidth="110" />
+            <ColumnConstraints hgrow="ALWAYS" />
+         </columnConstraints>
+         <Label text="Prenume:"      GridPane.rowIndex="0" GridPane.columnIndex="0" />
+         <TextField fx:id="tfFirstName"  GridPane.rowIndex="0" GridPane.columnIndex="1" />
+         <Label text="Nume:"         GridPane.rowIndex="1" GridPane.columnIndex="0" />
+         <TextField fx:id="tfLastName"   GridPane.rowIndex="1" GridPane.columnIndex="1" />
+         <Label text="Patronimic:"   GridPane.rowIndex="2" GridPane.columnIndex="0" />
+         <TextField fx:id="tfPatronymic" GridPane.rowIndex="2" GridPane.columnIndex="1" />
+         <Label text="Adresă:"       GridPane.rowIndex="3" GridPane.columnIndex="0" />
+         <TextField fx:id="tfAddress"    GridPane.rowIndex="3" GridPane.columnIndex="1" />
+         <Label text="Telefon:"      GridPane.rowIndex="4" GridPane.columnIndex="0" />
+         <TextField fx:id="tfPhone"      GridPane.rowIndex="4" GridPane.columnIndex="1" />
+         <Label text="Număr poliță:" GridPane.rowIndex="5" GridPane.columnIndex="0" />
+         <TextField fx:id="tfPolicy"     GridPane.rowIndex="5" GridPane.columnIndex="1" />
+         <Label text="Secție:"       GridPane.rowIndex="6" GridPane.columnIndex="0" />
+         <TextField fx:id="tfSection"    GridPane.rowIndex="6" GridPane.columnIndex="1" />
+         <Label text="Diagnoză:"     GridPane.rowIndex="7" GridPane.columnIndex="0" />
+         <TextField fx:id="tfDiagnosis"  GridPane.rowIndex="7" GridPane.columnIndex="1" />
+      </GridPane>
+   </VBox>
+
+   <HBox styleClass="dialog-button-bar">
+      <Button text="Anulează" onAction="#onCancel" />
+      <Button text="Salvează" onAction="#onSave" styleClass="button,sync-button" />
+   </HBox>
+</VBox>

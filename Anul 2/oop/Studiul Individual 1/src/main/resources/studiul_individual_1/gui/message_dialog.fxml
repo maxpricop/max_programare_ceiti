@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="studiul_individual_1.controllers.MessageDialogController"
+      stylesheets="@styles.css" styleClass="dialog-root"
+      prefWidth="360">
+
+   <VBox styleClass="dialog-content" VBox.vgrow="ALWAYS">
+      <Label fx:id="msgLabel" styleClass="dialog-message-label" wrapText="true" maxWidth="320" />
+   </VBox>
+
+   <HBox styleClass="dialog-button-bar">
+      <Button text="OK" onAction="#onOk" />
+   </HBox>
+</VBox>

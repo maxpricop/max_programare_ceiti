@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="studiul_individual_1.controllers.MainController"
+            stylesheets="@styles.css">
+   <top>
+      <Label text="Gestionarea pacienților" styleClass="header-label" BorderPane.alignment="CENTER" maxWidth="Infinity" />
+   </top>
+   <center>
+      <VBox styleClass="content-vbox">
+         <TableView fx:id="table" VBox.vgrow="ALWAYS">
+            <columns>
+               <TableColumn fx:id="colId"         text="ID"            prefWidth="45"  />
+               <TableColumn fx:id="colFirstName"  text="Prenume"       prefWidth="110" />
+               <TableColumn fx:id="colLastName"   text="Nume"          prefWidth="110" />
+               <TableColumn fx:id="colPatronymic" text="Patronimic"    prefWidth="110" />
+               <TableColumn fx:id="colAddress"    text="Adresă"        prefWidth="140" />
+               <TableColumn fx:id="colPhone"      text="Telefon"       prefWidth="110" />
+               <TableColumn fx:id="colPolicy"     text="Număr poliță"  prefWidth="105" />
+               <TableColumn fx:id="colSection"    text="Secție"        prefWidth="95"  />
+               <TableColumn fx:id="colDiagnosis"  text="Diagnoză"      prefWidth="140" />
+            </columns>
+         </TableView>
+
+         <HBox styleClass="button-bar-hbox">
+            <Button text="Sincronizează"    onAction="#onSync"           styleClass="button,sync-button"   />
+            <Button text="Adaugă pacient"   onAction="#onAddPrimary"     styleClass="button"               />
+            <Button text="Modifică selectat" onAction="#onModifyPrimary" styleClass="button"               />
+            <Button text="Șterge selectat"  onAction="#onDeletePrimary"  styleClass="button,danger-button" />
+         </HBox>
+
+         <HBox styleClass="button-bar-hbox">
+            <Button text="Caută după diagnoză"    onAction="#onSearchByDiagnosisDialog"   styleClass="button" />
+            <Button text="Caută interval polițe"  onAction="#onSearchByPolicyRangeDialog" styleClass="button" />
+            <Button text="Caută poliță"           onAction="#onSearchByPolicyDialog"      styleClass="button" />
+            <Button text="Caută secție"           onAction="#onSearchBySectionDialog"     styleClass="button" />
+            <Button text="Caută prenume"          onAction="#onSearchByFirstNameDialog"   styleClass="button" />
+         </HBox>
+      </VBox>
+   </center>
+</BorderPane>
