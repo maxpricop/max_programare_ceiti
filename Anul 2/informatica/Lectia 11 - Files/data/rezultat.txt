@@ -1,0 +1,6 @@
+=== Statistici Fișier ===
+Număr de linii:     3
+Număr de cuvinte:   9
+Număr de caractere: 72
+Cuvânt căutat:      "absentele"
+Apariții cuvânt:    2
