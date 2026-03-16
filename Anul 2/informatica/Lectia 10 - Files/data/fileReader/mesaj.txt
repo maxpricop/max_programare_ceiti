@@ -1,0 +1,3 @@
+Salut! Acesta este un mesaj de test.
+Numaram toate caracterele din acest fisier.
+Fiecare litera, spatiu si semn de punctuatie conteaza.

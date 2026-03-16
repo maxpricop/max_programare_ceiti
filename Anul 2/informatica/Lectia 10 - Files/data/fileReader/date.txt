@@ -1,0 +1,3 @@
+Acesta este un fisier de test.
+Java este un limbaj de programare.
+Lectia despre fisiere este interesanta!

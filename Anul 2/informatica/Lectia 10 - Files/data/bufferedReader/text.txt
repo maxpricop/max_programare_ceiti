@@ -1,0 +1,5 @@
+Prima linie din fisier.
+A doua linie din fisier.
+A treia linie din fisier.
+A patra linie din fisier.
+Ultima linie din fisier.
