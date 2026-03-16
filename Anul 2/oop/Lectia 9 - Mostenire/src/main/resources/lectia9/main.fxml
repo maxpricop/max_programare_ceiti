@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="lectia9.controllers.MainController"
+            prefWidth="950" prefHeight="620">
+
+    <top>
+        <HBox style="-fx-background-color: #2c3e50; -fx-padding: 12;">
+            <Label text="IT Company Employee Manager"
+                   style="-fx-font-size: 20; -fx-font-weight: bold; -fx-text-fill: white;"/>
+        </HBox>
+    </top>
+
+    <center>
+        <TableView fx:id="employeeTable" style="-fx-font-size: 13;">
+            <columns>
+                <TableColumn fx:id="typeColumn"        text="Type"         prefWidth="90"/>
+                <TableColumn fx:id="nameColumn"        text="Name"         prefWidth="110"/>
+                <TableColumn fx:id="ageColumn"         text="Age"          prefWidth="50"/>
+                <TableColumn fx:id="salaryColumn"      text="Base Salary"  prefWidth="110"/>
+                <TableColumn fx:id="totalSalaryColumn" text="Total Salary" prefWidth="110"/>
+                <TableColumn fx:id="detailsColumn"     text="Details"      prefWidth="160"/>
+                <TableColumn fx:id="bonusColumn"       text="Bonus"        prefWidth="90"/>
+            </columns>
+        </TableView>
+    </center>
+
+    <right>
+        <VBox spacing="7" style="-fx-padding: 12; -fx-background-color: #ecf0f1; -fx-min-width: 210;">
+            <Label text="Add Employee"
+                   style="-fx-font-weight: bold; -fx-font-size: 14; -fx-padding: 0 0 4 0;"/>
+
+            <Label text="Type:"/>
+            <ComboBox fx:id="typeComboBox" prefWidth="190"/>
+
+            <Label text="Name:"/>
+            <TextField fx:id="nameField" promptText="Full name" prefWidth="190"/>
+
+            <Label text="Age:"/>
+            <TextField fx:id="ageField" promptText="Age" prefWidth="190"/>
+
+            <Label text="Base Salary:"/>
+            <TextField fx:id="salaryField" promptText="Salary" prefWidth="190"/>
+
+            <Label fx:id="extraLabel" text="Programming Language:"/>
+            <TextField fx:id="extraField" promptText="Extra info" prefWidth="190"/>
+
+            <Button text="Add Employee"     onAction="#handleAdd"    prefWidth="190"
+                    style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-font-weight: bold;"/>
+            <Button text="Remove Selected"  onAction="#handleRemove" prefWidth="190"
+                    style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-font-weight: bold;"/>
+        </VBox>
+    </right>
+
+    <bottom>
+        <HBox spacing="12" style="-fx-padding: 10; -fx-background-color: #bdc3c7; -fx-alignment: center-left;">
+            <Label text="Total Salary (with bonuses):"
+                   style="-fx-font-size: 14; -fx-font-weight: bold;"/>
+            <Label fx:id="totalSalaryLabel" text="0.00"
+                   style="-fx-font-size: 14; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+            <Button text="Recalculate" onAction="#handleCalculateTotal"
+                    style="-fx-background-color: #8e44ad; -fx-text-fill: white; -fx-font-weight: bold;"/>
+        </HBox>
+    </bottom>
+
+</BorderPane>
