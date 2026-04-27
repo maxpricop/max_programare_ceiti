@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Priority?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/13" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="studiul_individual_2.controllers.MainController"
+            prefWidth="1220.0" prefHeight="760.0" styleClass="app-root">
+
+    <top>
+        <VBox styleClass="top-banner" spacing="4.0">
+            <padding>
+                <Insets top="18.0" right="26.0" bottom="18.0" left="26.0"/>
+            </padding>
+            <children>
+                <Label text="Sistem de gestiune transport public" styleClass="banner-title"/>
+                <Label text="Administrare vehicule, disponibilitate si venit zilnic" styleClass="banner-subtitle"/>
+            </children>
+        </VBox>
+    </top>
+
+    <center>
+        <SplitPane dividerPositions="0.34" styleClass="main-split-pane">
+            <items>
+                <VBox spacing="18.0" styleClass="card form-card">
+                    <padding>
+                        <Insets top="20.0" right="20.0" bottom="20.0" left="20.0"/>
+                    </padding>
+                    <children>
+                        <Label text="Introducere vehicul" styleClass="section-title"/>
+
+                        <GridPane hgap="12.0" vgap="12.0">
+                            <columnConstraints>
+                                <ColumnConstraints percentWidth="42.0"/>
+                                <ColumnConstraints percentWidth="58.0" hgrow="ALWAYS"/>
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints/>
+                                <RowConstraints/>
+                                <RowConstraints/>
+                                <RowConstraints/>
+                                <RowConstraints/>
+                                <RowConstraints/>
+                            </rowConstraints>
+                            <children>
+                                <Label text="Tip vehicul" GridPane.columnIndex="0" GridPane.rowIndex="0" styleClass="field-label"/>
+                                <ComboBox fx:id="typeComboBox" GridPane.columnIndex="1" GridPane.rowIndex="0" maxWidth="1.7976931348623157E308"/>
+
+                                <Label text="Numar vehicul" GridPane.columnIndex="0" GridPane.rowIndex="1" styleClass="field-label"/>
+                                <TextField fx:id="vehicleNumberField" GridPane.columnIndex="1" GridPane.rowIndex="1" promptText="ex: 101"/>
+
+                                <Label text="Traseu" GridPane.columnIndex="0" GridPane.rowIndex="2" styleClass="field-label"/>
+                                <TextField fx:id="lineNameField" GridPane.columnIndex="1" GridPane.rowIndex="2" promptText="ex: Linia 22"/>
+
+                                <Label text="Numar locuri" GridPane.columnIndex="0" GridPane.rowIndex="3" styleClass="field-label"/>
+                                <TextField fx:id="capacityField" GridPane.columnIndex="1" GridPane.rowIndex="3" promptText="ex: 80"/>
+
+                                <Label text="Tarif" GridPane.columnIndex="0" GridPane.rowIndex="4" styleClass="field-label"/>
+                                <TextField fx:id="ticketPriceField" GridPane.columnIndex="1" GridPane.rowIndex="4" promptText="ex: 6.5"/>
+
+                                <Label fx:id="extraLabel" text="Detalii" GridPane.columnIndex="0" GridPane.rowIndex="5" styleClass="field-label"/>
+                                <TextField fx:id="extraField" GridPane.columnIndex="1" GridPane.rowIndex="5" promptText=""/>
+                            </children>
+                        </GridPane>
+
+                        <Button text="Adauga vehicul" onAction="#handleAddVehicle" styleClass="primary-button" maxWidth="1.7976931348623157E308"/>
+                    </children>
+                </VBox>
+
+                <VBox spacing="16.0" styleClass="card table-card">
+                    <padding>
+                        <Insets top="20.0" right="20.0" bottom="20.0" left="20.0"/>
+                    </padding>
+                    <children>
+                        <HBox spacing="10.0">
+                            <children>
+                                <Label text="Lista vehicule" styleClass="section-title" HBox.hgrow="ALWAYS"/>
+                                <Button text="Toate" onAction="#handleShowAll" styleClass="secondary-button"/>
+                                <Button text="Disponibile" onAction="#handleShowAvailable" styleClass="secondary-button"/>
+                            </children>
+                        </HBox>
+
+                        <TableView fx:id="vehicleTable" VBox.vgrow="ALWAYS" styleClass="vehicle-table">
+                            <columns>
+                                <TableColumn fx:id="typeColumn" text="Tip" prefWidth="90.0"/>
+                                <TableColumn fx:id="vehicleNumberColumn" text="Nr. vehicul" prefWidth="100.0"/>
+                                <TableColumn fx:id="lineNameColumn" text="Traseu" prefWidth="140.0"/>
+                                <TableColumn fx:id="capacityColumn" text="Locuri" prefWidth="95.0"/>
+                                <TableColumn fx:id="ticketPriceColumn" text="Tarif" prefWidth="90.0"/>
+                                <TableColumn fx:id="detailsColumn" text="Detalii" prefWidth="200.0"/>
+                            </columns>
+                        </TableView>
+
+                        <HBox spacing="10.0" styleClass="action-row">
+                            <children>
+                                <Button text="Venit selectat" onAction="#handleSelectedRevenue" styleClass="accent-button"/>
+                                <Button text="Venit total" onAction="#handleTotalRevenue" styleClass="accent-button"/>
+                                <Button text="Salveaza" onAction="#handleSaveVehicles" styleClass="warn-button"/>
+                                <Button text="Incarca" onAction="#handleLoadVehicles" styleClass="warn-button"/>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+            </items>
+        </SplitPane>
+    </center>
+
+    <bottom>
+        <HBox styleClass="status-bar">
+            <padding>
+                <Insets top="10.0" right="24.0" bottom="12.0" left="24.0"/>
+            </padding>
+            <children>
+                <Label fx:id="statusLabel" text="" styleClass="status-label"/>
+            </children>
+        </HBox>
+    </bottom>
+
+</BorderPane>

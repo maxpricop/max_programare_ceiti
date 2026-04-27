@@ -1,0 +1,233 @@
+.root {
+    -fx-font-family: "Poppins", "Segoe UI", "Noto Sans", sans-serif;
+}
+
+.app-root {
+    -fx-background-color:
+            radial-gradient(center 12% 8%, radius 90%, #24365d 0%, #141f38 38%, #0b1222 100%);
+}
+
+.top-banner {
+    -fx-background-color: rgba(9, 15, 29, 0.72);
+    -fx-border-color: rgba(115, 148, 199, 0.25);
+    -fx-border-width: 0 0 1 0;
+}
+
+.banner-title {
+    -fx-text-fill: #eef5ff;
+    -fx-font-size: 30px;
+    -fx-font-weight: 800;
+}
+
+.banner-subtitle {
+    -fx-text-fill: #99aed3;
+    -fx-font-size: 13px;
+    -fx-font-weight: 500;
+}
+
+.main-split-pane {
+    -fx-padding: 18 20 12 20;
+}
+
+.main-split-pane .split-pane-divider {
+    -fx-background-color: transparent;
+    -fx-padding: 0 5 0 5;
+}
+
+.card {
+    -fx-background-color: rgba(12, 21, 40, 0.82);
+    -fx-background-radius: 16;
+    -fx-border-radius: 16;
+    -fx-border-width: 1;
+    -fx-border-color: rgba(167, 191, 230, 0.16);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.34), 20, 0.12, 0, 8);
+}
+
+.section-title {
+    -fx-text-fill: #f2f7ff;
+    -fx-font-size: 20px;
+    -fx-font-weight: 700;
+}
+
+.field-label {
+    -fx-text-fill: #3a3a3a;
+    -fx-font-weight: 600;
+    -fx-font-size: 12px;
+}
+
+.text-field,
+.combo-box {
+    -fx-background-color: #172642;
+    -fx-text-fill: #edf4ff;
+    -fx-prompt-text-fill: #6783ae;
+    -fx-background-radius: 10;
+    -fx-border-color: #2b4267;
+    -fx-border-width: 1;
+    -fx-border-radius: 10;
+    -fx-padding: 8 10;
+}
+
+.combo-box .list-cell,
+.combo-box-popup .list-view .list-cell {
+    -fx-text-fill: #edf4ff;
+    -fx-background-color: #172642;
+}
+
+.combo-box-base {
+    -fx-background-color: #172642;
+    -fx-border-color: #2b4267;
+}
+
+.combo-box-base .arrow-button {
+    -fx-background-color: #1f3150;
+}
+
+.combo-box-base .arrow {
+    -fx-background-color: #edf4ff;
+}
+
+.combo-box .list-cell:filled,
+.combo-box .list-cell:filled:selected,
+.combo-box .list-cell:filled:hover {
+    -fx-text-fill: #edf4ff;
+    -fx-background-color: transparent;
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: #101a2f;
+    -fx-border-color: #2b4267;
+}
+
+.combo-box-popup .list-view .list-cell:filled:selected,
+.combo-box-popup .list-view .list-cell:filled:selected:hover {
+    -fx-background-color: #2f4c7b;
+    -fx-text-fill: #ffffff;
+}
+
+.combo-box-popup .list-view .list-cell:hover {
+    -fx-background-color: #28406a;
+}
+
+.text-field:focused,
+.combo-box:focused,
+.button:focused {
+    -fx-border-color: #76b4ff;
+    -fx-border-width: 1.3;
+}
+
+.button {
+    -fx-cursor: hand;
+    -fx-font-weight: 700;
+    -fx-font-size: 12px;
+    -fx-padding: 9 16;
+    -fx-background-radius: 11;
+    -fx-border-radius: 11;
+}
+
+.primary-button {
+    -fx-background-color: linear-gradient(to bottom right, #20c5a8, #138f8f);
+    -fx-text-fill: #06261f;
+}
+
+.primary-button:hover {
+    -fx-background-color: linear-gradient(to bottom right, #35e0c1, #1ca8a9);
+}
+
+.secondary-button {
+    -fx-background-color: #253b5f;
+    -fx-text-fill: #d4e4fd;
+    -fx-border-color: #345280;
+    -fx-border-width: 1;
+}
+
+.secondary-button:hover {
+    -fx-background-color: #2e4a75;
+}
+
+.accent-button {
+    -fx-background-color: #4e3fbd;
+    -fx-text-fill: #f2edff;
+    -fx-border-color: #6f61d8;
+    -fx-border-width: 1;
+}
+
+.accent-button:hover {
+    -fx-background-color: #6253d6;
+}
+
+.warn-button {
+    -fx-background-color: #4a3657;
+    -fx-text-fill: #f6ecff;
+    -fx-border-color: #6a4f7c;
+    -fx-border-width: 1;
+}
+
+.warn-button:hover {
+    -fx-background-color: #614473;
+}
+
+.action-row {
+    -fx-alignment: center-left;
+}
+
+.vehicle-table {
+    -fx-background-color: #111e34;
+    -fx-background-radius: 12;
+    -fx-border-color: #2f446a;
+    -fx-border-radius: 12;
+    -fx-border-width: 1;
+}
+
+.vehicle-table .column-header-background {
+    -fx-background-color: #1f2f4f;
+    -fx-background-radius: 12 12 0 0;
+}
+
+.vehicle-table .column-header,
+.vehicle-table .filler {
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+}
+
+.vehicle-table .column-header .label {
+    -fx-text-fill: #bfcef0;
+    -fx-font-size: 12px;
+    -fx-font-weight: 700;
+}
+
+.vehicle-table .table-row-cell {
+    -fx-background-color: #121f35;
+    -fx-table-cell-border-color: #223352;
+}
+
+.vehicle-table .table-row-cell:odd {
+    -fx-background-color: #0f1b2f;
+}
+
+.vehicle-table .table-row-cell:selected {
+    -fx-background-color: #2a4b76;
+}
+
+.vehicle-table .table-cell {
+    -fx-text-fill: #dce8ff;
+    -fx-padding: 8 7;
+}
+
+.status-bar {
+    -fx-background-color: rgba(9, 15, 29, 0.78);
+    -fx-border-color: rgba(115, 148, 199, 0.20);
+    -fx-border-width: 1 0 0 0;
+}
+
+.status-label {
+    -fx-font-size: 13px;
+    -fx-font-weight: 600;
+}
+
+.status-success {
+    -fx-text-fill: #5fe2b7;
+}
+
+.status-error {
+    -fx-text-fill: #ff8e8e;
+}
