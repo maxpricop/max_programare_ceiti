@@ -1,4 +1,9 @@
 {
-    "recommendations": ["biomejs.biome", "editorconfig.editorconfig", "llvm-vs-code-extensions.vscode-clangd", "vscjava.vscode-java-pack"],
+    "recommendations": [
+        "biomejs.biome",
+        "editorconfig.editorconfig",
+        "llvm-vs-code-extensions.vscode-clangd",
+        "vscjava.vscode-java-pack"
+    ],
     "unwantedRecommendations": ["esbenp.prettier-vscode", "dbaeumer.vscode-eslint"]
 }

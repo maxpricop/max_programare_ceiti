@@ -1,10 +1,13 @@
 {
-	"java.project.sourcePaths": ["src"],
-	"java.project.outputPath": "bin",
-	"java.project.referencedLibraries": ["lib/**/*.jar"],
-	"java.format.enabled": true,
-	"java.format.settings.url": "${workspaceFolder}/../../../java-formatter.xml",
-	"[java]": {
-		"editor.insertSpaces": false
-	}
+    "java.project.sourcePaths": ["src"],
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": ["lib/**/*.jar"],
+    "java.format.enabled": true,
+    "java.format.settings.url": "${workspaceFolder}/../../../java-formatter.xml",
+    "[java]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 4,
+        "editor.detectIndentation": false,
+        "files.eol": "\n"
+    }
 }
