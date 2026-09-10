@@ -1,0 +1,13 @@
+hr {
+    height: 0.25rem;
+    background-color: black;
+    border: 0;
+}
+
+.linii-dreapta hr {
+    margin: 0.75rem 0 0.75rem auto;
+}
+
+.linii-centru hr {
+    margin: 0.75rem auto;
+}

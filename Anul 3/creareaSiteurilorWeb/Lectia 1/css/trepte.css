@@ -1,0 +1,28 @@
+.trepte {
+    font-family: monospace;
+    font-weight: bold;
+}
+
+.trepte span {
+    display: block;
+}
+
+.trepte span:nth-child(2) {
+    margin-inline-start: 2rem;
+}
+
+.trepte span:nth-child(3) {
+    margin-inline-start: 4rem;
+}
+
+.trepte span:nth-child(4) {
+    margin-inline-start: 6rem;
+}
+
+.trepte span:nth-child(5) {
+    margin-inline-start: 8rem;
+}
+
+.trepte span:nth-child(6) {
+    margin-inline-start: 10rem;
+}

@@ -1,0 +1,15 @@
+body {
+    margin: 1.5rem;
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.5;
+    color: black;
+    background-color: white;
+}
+
+a {
+    color: #174ea6;
+}
+
+pre {
+    overflow-x: auto;
+}

@@ -1,0 +1,18 @@
+.titlu-poezie {
+    color: green;
+    text-align: center;
+    background-color: yellow;
+}
+
+.linie-poezie {
+    width: 50%;
+    height: 0.3125rem;
+    margin: 1.5rem auto;
+    background-color: black;
+    border: 0;
+}
+
+.versuri {
+    font-style: italic;
+    font-weight: bold;
+}

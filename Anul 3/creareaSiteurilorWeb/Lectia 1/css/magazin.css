@@ -1,0 +1,8 @@
+.linie-magazin {
+    width: 80%;
+    height: 0.25rem;
+    margin: 1.5rem auto;
+    margin-left: 0;
+    background-color: blue;
+    border: 0;
+}

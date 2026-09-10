@@ -1,0 +1,12 @@
+.teorema {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.linie-teoreme {
+    width: 70%;
+    height: 0.125rem;
+    margin: 1.5rem auto;
+    background-color: red;
+    border: 0;
+}
