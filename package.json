@@ -1,0 +1,23 @@
+{
+    "name": "max-programare-ceiti",
+    "private": true,
+    "description": "Shared development tools for CEITI coursework",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/maxpricop/max_programare_ceiti.git"
+    },
+    "license": "Unlicense",
+    "scripts": {
+        "check": "biome check .",
+        "fix": "biome check --write .",
+        "format": "biome format --write .",
+        "lint": "biome lint ."
+    },
+    "devDependencies": {
+        "@biomejs/biome": "2.5.12"
+    },
+    "packageManager": "npm@11.13.0",
+    "engines": {
+        "node": ">=24 <25"
+    }
+}

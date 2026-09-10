@@ -5,3 +5,14 @@
 !.vscode/launch.json
 !.vscode/extensions.json
 !.vscode/*.code-snippets
+
+### Dependencies and generated output ###
+node_modules/
+target/
+bin/
+obj/
+dist/
+.vs/
+*.class
+*.user
+*.suo

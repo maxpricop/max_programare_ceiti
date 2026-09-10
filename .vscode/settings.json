@@ -1,37 +1,60 @@
 {
-	"editor.formatOnSave": true,
-
-	"prettier.configPath": "./.prettierrc",
-	"prettier.useEditorConfig": true,
-
-	"C_Cpp.intelliSenseEngine": "disabled",
-	"cmake.ignoreCMakeListsMissing": true,
-
-	"[cpp]": {
-		"editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
-		"editor.wordBasedSuggestions": "currentDocument",
-		"editor.semanticHighlighting.enabled": true,
-		"editor.stickyScroll.defaultModel": "outlineModel",
-		"editor.suggest.insertMode": "replace"
-	},
-
-	"[java]": {
-		"editor.defaultFormatter": "redhat.java"
-	},
-
-	"[json]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode",
-		"editor.quickSuggestions": {
-			"strings": true
-		},
-		"editor.suggest.insertMode": "replace"
-	},
-
-	"[jsonc]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode",
-		"editor.quickSuggestions": {
-			"strings": true
-		},
-		"editor.suggest.insertMode": "replace"
-	}
+    "editor.formatOnSave": true,
+    "C_Cpp.intelliSenseEngine": "disabled",
+    "cmake.ignoreCMakeListsMissing": true,
+    "java.format.settings.url": "${workspaceFolder}/java-formatter.xml",
+    "[cpp]": {
+        "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
+        "editor.wordBasedSuggestions": "currentDocument",
+        "editor.semanticHighlighting.enabled": true,
+        "editor.stickyScroll.defaultModel": "outlineModel",
+        "editor.suggest.insertMode": "replace"
+    },
+    "[java]": {
+        "editor.defaultFormatter": "redhat.java"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "biomejs.biome",
+        "editor.quickSuggestions": {
+            "strings": true
+        },
+        "editor.suggest.insertMode": "replace"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "biomejs.biome",
+        "editor.quickSuggestions": {
+            "strings": true
+        },
+        "editor.suggest.insertMode": "replace"
+    },
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4,
+    "editor.detectIndentation": false,
+    "files.eol": "\n",
+    "biome.enabled": true,
+    "biome.suggestInstallingGlobally": false,
+    "biome.requireConfiguration": true,
+    "biome.configurationPath": "./biome.json",
+    "editor.codeActionsOnSave": {
+        "source.fixAll.biome": "explicit",
+        "source.action.noDuplicateClasses.biome": "explicit",
+        "source.action.useSortedProperties.biome": "explicit",
+        "source.organizeImports.biome": "explicit",
+        "source.action.useSortedPackageJson.biome": "explicit"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "biomejs.biome"
+    },
+    "[css]": {
+        "editor.defaultFormatter": "biomejs.biome"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "biomejs.biome"
+    },
+    "[c]": {
+        "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+    },
+    "[csharp]": {
+        "editor.defaultFormatter": "ms-dotnettools.csharp"
+    }
 }

@@ -1,0 +1,175 @@
+{
+    "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+    "root": true,
+    "files": {
+        "includes": [
+            "Anul 3/creareaSiteurilorWeb/**",
+            "**/*.json",
+            "**/*.jsonc",
+            "!!**/node_modules",
+            "!!**/target",
+            "!!**/bin",
+            "!!**/obj",
+            "!!**/dist",
+            "!!**/.vs",
+            "!!.agents",
+            "!!.codex",
+            "!.github/modernize",
+            "!**/package-lock.json"
+        ],
+        "ignoreUnknown": true
+    },
+    "vcs": {
+        "enabled": true,
+        "clientKind": "git",
+        "useIgnoreFile": true,
+        "defaultBranch": "main"
+    },
+    "linter": {
+        "enabled": true,
+        "rules": {
+            "preset": "recommended",
+            "complexity": {
+                "noImplicitCoercions": "warn",
+                "noUselessCatchBinding": "warn",
+                "noUselessStringConcat": "warn",
+                "useArrayFind": "info",
+                "useWhile": "warn"
+            },
+            "correctness": {
+                "noUnusedInstantiation": "error",
+                "useSingleJsDocAsterisk": "info"
+            },
+            "nursery": {
+                "noDuplicateSelectors": "info",
+                "noEmptyObjectKeys": "info",
+                "noUnnecessaryTemplateExpression": "info",
+                "useArraySome": "info",
+                "useExhaustiveSwitchCases": "warn",
+                "useImportsFirst": "info",
+                "useIncludes": "info"
+            },
+            "performance": {
+                "noAwaitInLoops": "warn",
+                "noDelete": "error",
+                "noNamespaceImport": "info",
+                "noReExportAll": "warn",
+                "noSyncScripts": "warn",
+                "useTopLevelRegex": "warn"
+            },
+            "style": {
+                "noCommonJs": "error",
+                "noExportedImports": "info",
+                "noMultiAssign": "info",
+                "noMultilineString": "info",
+                "noNegationElse": "info",
+                "noNestedTernary": "info",
+                "noParameterAssign": {
+                    "level": "warn",
+                    "options": {
+                        "propertyAssignment": "allow"
+                    }
+                },
+                "noSubstr": "info",
+                "noUnusedTemplateLiteral": "warn",
+                "noUselessElse": "warn",
+                "noYodaExpression": "info",
+                "useAtIndex": "info",
+                "useCollapsedElseIf": "info",
+                "useCollapsedIf": "info",
+                "useConsistentArrowReturn": "info",
+                "useConsistentBuiltinInstantiation": "warn",
+                "useConsistentCurlyBraces": "error",
+                "useDefaultParameterLast": "warn",
+                "useDefaultSwitchClause": "info",
+                "useExplicitLengthCheck": "warn",
+                "useNumberNamespace": "warn",
+                "useObjectSpread": "info",
+                "useSelfClosingElements": "warn",
+                "useShorthandAssign": "info",
+                "useSingleVarDeclarator": "warn",
+                "useThrowNewError": "info",
+                "useTrimStartEnd": "info"
+            },
+            "suspicious": {
+                "noAlert": "warn",
+                "noBitwiseOperators": "info",
+                "noConstantBinaryExpressions": "info",
+                "noDuplicateDependencies": "warn",
+                "noEmptyBlockStatements": "warn",
+                "noEqualsToNull": "error",
+                "noForIn": "warn",
+                "noNestedPromises": "info",
+                "noReturnAssign": "info",
+                "noUnassignedVariables": "info",
+                "noUnusedExpressions": "info",
+                "noVar": "error",
+                "useAwait": "warn",
+                "useErrorMessage": "warn",
+                "useNumberToFixedDigitsArgument": "warn"
+            }
+        }
+    },
+    "assist": {
+        "enabled": true,
+        "actions": {
+            "recommended": false,
+            "source": {
+                "noDuplicateClasses": "on",
+                "organizeImports": "on",
+                "useSortedAttributes": "off",
+                "useSortedInterfaceMembers": "off",
+                "useSortedKeys": "off",
+                "useSortedPackageJson": "on",
+                "useSortedProperties": "on"
+            }
+        }
+    },
+    "formatter": {
+        "enabled": true,
+        "formatWithErrors": false,
+        "indentStyle": "space",
+        "indentWidth": 4,
+        "lineEnding": "lf",
+        "lineWidth": 120,
+        "attributePosition": "auto",
+        "bracketSpacing": true,
+        "expand": "auto",
+        "trailingNewline": true,
+        "useEditorconfig": true,
+        "delimiterSpacing": false
+    },
+    "javascript": {
+        "formatter": {
+            "enabled": true,
+            "jsxQuoteStyle": "double",
+            "bracketSameLine": false,
+            "quoteStyle": "double",
+            "quoteProperties": "asNeeded",
+            "trailingCommas": "none",
+            "semicolons": "always",
+            "arrowParentheses": "always",
+            "operatorLinebreak": "after"
+        }
+    },
+    "json": {
+        "formatter": {
+            "enabled": true,
+            "trailingCommas": "none"
+        }
+    },
+    "css": {
+        "formatter": {
+            "enabled": true,
+            "quoteStyle": "double"
+        }
+    },
+    "html": {
+        "formatter": {
+            "enabled": true,
+            "bracketSameLine": false,
+            "whitespaceSensitivity": "css",
+            "selfCloseVoidElements": "never"
+        }
+    }
+}

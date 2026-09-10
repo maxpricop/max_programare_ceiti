@@ -1,9 +1,18 @@
 root = true
 
 [*]
-indent_style = tab
+indent_style = space
 indent_size = 4
-end_of_line = crlf
+end_of_line = lf
 charset = utf-8
 insert_final_newline = true
 max_line_length = 120
+
+[Makefile]
+indent_style = tab
+
+[*.mk]
+indent_style = tab
+
+[*.{bat,cmd,ps1,reg,sln,vcproj,vcxproj,vcxproj.filters}]
+end_of_line = crlf

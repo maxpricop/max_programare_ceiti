@@ -1,0 +1,285 @@
+# Default behavior
+* text=auto eol=lf
+
+
+# =============================================================================
+# Web / frontend source files
+# =============================================================================
+
+*.html text eol=lf
+*.htm text eol=lf
+
+*.css text eol=lf
+*.scss text eol=lf
+*.sass text eol=lf
+
+*.js text eol=lf
+*.jsx text eol=lf
+*.mjs text eol=lf
+*.cjs text eol=lf
+
+*.ts text eol=lf
+*.tsx text eol=lf
+*.mts text eol=lf
+*.cts text eol=lf
+
+*.vue text eol=lf
+*.svelte text eol=lf
+
+
+# =============================================================================
+# Server source files
+# =============================================================================
+
+*.lua text eol=lf
+*.sql text eol=lf
+
+
+# =============================================================================
+# C and C++ source and build files
+# =============================================================================
+
+*.c text eol=lf
+*.cc text eol=lf
+*.cpp text eol=lf
+*.cxx text eol=lf
+*.h text eol=lf
+*.hh text eol=lf
+*.hpp text eol=lf
+*.hxx text eol=lf
+*.inl text eol=lf
+*.ipp text eol=lf
+*.tpp text eol=lf
+*.cmake text eol=lf
+CMakeLists.txt text eol=lf
+Makefile text eol=lf
+*.mk text eol=lf
+.clang-format text eol=lf
+.clang-tidy text eol=lf
+
+
+# =============================================================================
+# Java source, UI, and build files
+# =============================================================================
+
+*.java text eol=lf
+*.fxml text eol=lf
+*.gradle text eol=lf
+*.kts text eol=lf
+mvnw text eol=lf
+gradlew text eol=lf
+.classpath text eol=lf
+.project text eol=lf
+*.prefs text eol=lf
+
+
+# =============================================================================
+# C# and .NET source, UI, and build files
+# =============================================================================
+
+*.cs text eol=lf
+*.csx text eol=lf
+*.csproj text eol=lf
+*.xaml text eol=lf
+*.resx text eol=lf
+*.razor text eol=lf
+*.cshtml text eol=lf
+*.config text eol=lf
+*.props text eol=lf
+*.targets text eol=lf
+*.slnx text eol=lf
+*.slnf text eol=lf
+
+
+# =============================================================================
+# Data, config, and metadata
+# =============================================================================
+
+*.cfg text eol=lf
+*.code-workspace text eol=lf
+*.code-snippets text eol=lf
+*.csv text eol=lf
+*.env text eol=lf
+.env.* text eol=lf
+*.example text eol=lf
+*.graphql text eol=lf
+*.gql text eol=lf
+*.ini text eol=lf
+*.json text eol=lf
+*.jsonc text eol=lf
+*.lock text eol=lf
+*.map text eol=lf
+*.meta text eol=lf
+*.patch text eol=lf
+*.properties text eol=lf
+*.toml text eol=lf
+*.txt text eol=lf
+*.webmanifest text eol=lf
+*.xml text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+
+.browserslistrc text eol=lf
+.editorconfig text eol=lf
+.gitattributes text eol=lf
+.gitignore text eol=lf
+.gitmodules text eol=lf
+.gitmodules_ssh text eol=lf
+.npmrc text eol=lf
+.nvmrc text eol=lf
+.node-version text eol=lf
+.npmignore text eol=lf
+
+Dockerfile text eol=lf
+LICENSE text eol=lf
+UNLICENSE text eol=lf
+
+bun.lock text eol=lf
+package-lock.json text eol=lf
+pnpm-lock.yaml text eol=lf
+yarn.lock text eol=lf
+
+
+# =============================================================================
+# Documentation
+# =============================================================================
+
+*.md text eol=lf
+*.mdx text eol=lf
+
+
+# =============================================================================
+# Scripts and platform-specific files
+# =============================================================================
+
+*.bash text eol=lf
+*.sh text eol=lf
+*.zsh text eol=lf
+
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+*.reg text eol=crlf
+
+*.sln text eol=crlf
+*.vcproj text eol=crlf
+*.vcxproj text eol=crlf
+*.vcxproj.filters text eol=crlf
+
+
+# =============================================================================
+# Text-based assets
+# =============================================================================
+
+*.svg text eol=lf
+*.drawio text eol=lf
+
+
+# =============================================================================
+# Images
+# =============================================================================
+
+*.apng binary
+*.avif binary
+*.bmp binary
+*.gif binary
+*.ico binary
+*.jpeg binary
+*.jpg binary
+*.png binary
+*.webp binary
+
+
+# =============================================================================
+# Audio
+# =============================================================================
+
+*.mp3 binary
+*.ogg binary
+*.wav binary
+
+
+# =============================================================================
+# Fonts
+# =============================================================================
+
+*.eot binary
+*.otf binary
+*.ttf binary
+*.woff binary
+*.woff2 binary
+
+
+# =============================================================================
+# Game assets
+# =============================================================================
+
+*.awc binary
+*.dat binary
+*.fxap binary
+*.gfx binary
+*.rel binary
+*.ybn binary
+*.ycd binary
+*.ydd binary
+*.ydr binary
+*.yft binary
+*.ymap binary
+*.ymf binary
+*.ymt binary
+*.ynd binary
+*.ynv binary
+*.ytd binary
+*.ytyp binary
+
+
+# =============================================================================
+# Documents
+# =============================================================================
+
+*.pdf binary
+*.doc binary
+*.docx binary
+*.xls binary
+*.xlsx binary
+*.ppt binary
+*.pptx binary
+
+
+# =============================================================================
+# Databases and compiled output
+# =============================================================================
+
+*.db binary
+*.sqlite binary
+*.sqlite3 binary
+*.class binary
+*.jar binary
+*.war binary
+*.ear binary
+*.exe binary
+*.dll binary
+*.pdb binary
+*.o binary
+*.obj binary
+*.a binary
+*.lib binary
+*.so binary
+*.dylib binary
+*.nupkg binary
+*.snupkg binary
+
+
+# =============================================================================
+# Archives and packaged files
+# =============================================================================
+
+*.7z binary
+*.bz2 binary
+*.gz binary
+*.rar binary
+*.tar binary
+*.tgz binary
+*.xz binary
+*.zip binary
+

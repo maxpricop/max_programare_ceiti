@@ -1,10 +1,11 @@
 BasedOnStyle: LLVM
-UseTab: Always
+UseTab: Never
+LineEnding: LF
 IndentWidth: 4
 TabWidth: 4
 ---
 Language: Cpp
-ColumnLimit: 140
+ColumnLimit: 120
 DerivePointerAlignment: false
 PointerAlignment: Right
 AllowShortIfStatementsOnASingleLine: AllIfsAndElse
@@ -13,4 +14,3 @@ IndentCaseLabels: true
 IndentAccessModifiers: true
 AccessModifierOffset: 4
 ---
-

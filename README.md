@@ -6,12 +6,14 @@ Acest repository conține tot codul scris în timpul orelor de programare la **C
 
 ## 📂 Structura
 - **.vscode/** - Fișiere de configurare pentru editor, pentru un mediu de dezvoltare consistent.
-- **.prettierrc** - Configurația Prettier pentru formatarea codului.
+- **biome.json** - Configurația Biome pentru formatarea și verificarea fișierelor web și JSON.
 - **.editorconfig** - Fișier EditorConfig pentru menținerea unui stil de codare consistent.
-- **.prettierignore** - Conține fișierele și folderele care trebuie excluse din formatarea automată cu Prettier.
+- **.gitattributes** - Reguli pentru fișiere text, binare și terminatoare de linie.
+- **package.json** / **package-lock.json** - Instalarea locală și reproductibilă a instrumentelor npm.
 - **.clang-format** - Configurația formatatorul Clang.
 - **Anul 1/** - Cod și materiale din cadrul lecțiilor în timpului primului an de studii.
 - **Anul 2/** - Cod și materiale din cadrul lecțiilor în timpului anului 2 de studii.
+- **Anul 3/** - Cod și materiale din cadrul lecțiilor în timpului anului 3 de studii.
 - (Mai multe foldere vor fi adăugate pe măsură ce se introduc noi cursuri.)
 
 ---
