@@ -16,3 +16,37 @@ indent_style = tab
 
 [*.{bat,cmd,ps1,reg,sln,vcproj,vcxproj,vcxproj.filters}]
 end_of_line = crlf
+
+[*.cs]
+indent_style = space
+indent_size = 4
+
+# Keep opening braces on the declaration line, including } else {
+csharp_new_line_before_open_brace = none
+csharp_new_line_before_else = false
+csharp_new_line_before_catch = false
+csharp_new_line_before_finally = false
+
+# Align case block braces with the case label
+csharp_indent_case_contents_when_block = false
+
+# Allow at most one consecutive blank line
+dotnet_style_allow_multiple_blank_lines_experimental = false
+dotnet_diagnostic.IDE2000.severity = warning
+
+# Spaces: if (condition), a + b
+csharp_space_after_keywords_in_control_flow_statements = true
+csharp_space_around_binary_operators = before_and_after
+
+# Expand compact blocks and statements
+csharp_preserve_single_line_blocks = false
+csharp_preserve_single_line_statements = false
+
+# Prefer explicit types instead of var
+csharp_style_var_for_built_in_types = false
+csharp_style_var_when_type_is_apparent = false
+csharp_style_var_elsewhere = false
+dotnet_diagnostic.IDE0008.severity = suggestion
+
+# Optional for lessons: disable "declare types in namespaces"
+dotnet_diagnostic.CA1050.severity = none
