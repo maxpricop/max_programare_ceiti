@@ -1,0 +1,207 @@
+<Window
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    x:Class="Lectia2.MainWindow"
+    Title="Media de concurs"
+    WindowStartupLocation="CenterScreen"
+    >
+
+    <ScrollViewer
+        VerticalScrollBarVisibility="Auto"
+        HorizontalScrollBarVisibility="Disabled"
+        >
+        <StackPanel
+            Margin="24"
+            Spacing="12"
+            >
+            <TextBlock
+                Text="Calcularea mediei de concurs"
+                FontSize="24"
+                FontWeight="Bold"
+                />
+
+            <Grid
+                ColumnDefinitions="Auto,*"
+                RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto"
+                ColumnSpacing="16"
+                RowSpacing="12"
+                >
+                <TextBlock
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Text="Specialitatea:"
+                    VerticalAlignment="Center"
+                    />
+                <ComboBox
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    x:Name="SpecialtyComboBox"
+                    HorizontalAlignment="Stretch"
+                    SelectionChanged="SpecialtyComboBox_SelectionChanged"
+                    >
+                    <ComboBoxItem
+                        Content="Programare"
+                        />
+                    <ComboBoxItem
+                        Content="Web"
+                        />
+                    <ComboBoxItem
+                        Content="Rețele"
+                        />
+                    <ComboBoxItem
+                        Content="Secretariat"
+                        />
+                    <ComboBoxItem
+                        Content="Contabilitate"
+                        />
+                    <ComboBoxItem
+                        Content="Operator"
+                        />
+                </ComboBox>
+
+                <TextBlock
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Text="Media examenelor:"
+                    VerticalAlignment="Center"
+                    />
+                <TextBox
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    x:Name="ExamAverageTextBox"
+                    PlaceholderText="1 - 10"
+                    TextChanged="GradeTextBox_TextChanged"
+                    />
+
+                <TextBlock
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    x:Name="InstructionLanguageLabel"
+                    Text="Limba de instruire:"
+                    VerticalAlignment="Center"
+                    />
+                <TextBox
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    x:Name="InstructionLanguageTextBox"
+                    PlaceholderText="1 - 10"
+                    TextChanged="GradeTextBox_TextChanged"
+                    />
+
+                <TextBlock
+                    Grid.Row="3"
+                    Grid.Column="0"
+                    x:Name="ForeignLanguageLabel"
+                    Text="Limba străină:"
+                    VerticalAlignment="Center"
+                    />
+                <TextBox
+                    Grid.Row="3"
+                    Grid.Column="1"
+                    x:Name="ForeignLanguageTextBox"
+                    PlaceholderText="1 - 10"
+                    TextChanged="GradeTextBox_TextChanged"
+                    />
+
+                <TextBlock
+                    Grid.Row="4"
+                    Grid.Column="0"
+                    Text="Matematică:"
+                    VerticalAlignment="Center"
+                    />
+                <TextBox
+                    Grid.Row="4"
+                    Grid.Column="1"
+                    x:Name="MathematicsTextBox"
+                    PlaceholderText="1 - 10"
+                    TextChanged="GradeTextBox_TextChanged"
+                    />
+
+                <TextBlock
+                    Grid.Row="5"
+                    Grid.Column="0"
+                    x:Name="InformaticsLabel"
+                    Text="Informatică:"
+                    VerticalAlignment="Center"
+                    />
+                <TextBox
+                    Grid.Row="5"
+                    Grid.Column="1"
+                    x:Name="InformaticsTextBox"
+                    PlaceholderText="1 - 10"
+                    TextChanged="GradeTextBox_TextChanged"
+                    />
+                <TextBlock
+                    Grid.Row="6"
+                    Grid.Column="0"
+                    x:Name="HistoryLabel"
+                    Text="Istorie:"
+                    VerticalAlignment="Center"
+                    />
+                <TextBox
+                    IsVisible="False"
+                    Grid.Row="6"
+                    Grid.Column="1"
+                    x:Name="HistoryTextBox"
+                    PlaceholderText="1 - 10"
+                    TextChanged="GradeTextBox_TextChanged"
+                    />
+            </Grid>
+
+            <TextBlock
+                Text="MC = 0,6 * MDNP + 0,4 * MNEA"
+                />
+            <Button
+                x:Name="CalculateButton"
+                Content="Calculează media"
+                IsDefault="True"
+                HorizontalAlignment="Stretch"
+                HorizontalContentAlignment="Center"
+                Click="CalculateButton_Click"
+                />
+
+            <TextBlock
+                x:Name="ErrorTextBlock"
+                Foreground="Crimson"
+                TextWrapping="Wrap"
+                IsVisible="False"
+                />
+
+            <Border
+                x:Name="ResultPanel"
+                IsVisible="False"
+                BorderBrush="Gray"
+                BorderThickness="1"
+                CornerRadius="8"
+                Padding="16"
+                >
+                <StackPanel
+                    Spacing="8"
+                    >
+                    <TextBlock
+                        Text="Rezultat"
+                        FontSize="24"
+                        FontWeight="Bold"
+                        />
+                    <TextBlock
+                        x:Name="SpecialtyResultTextBlock"
+                        />
+                    <TextBlock
+                        x:Name="ProfileResultTextBlock"
+                        />
+                    <TextBlock
+                        x:Name="SubjectAverageResultTextBlock"
+                        />
+                    <TextBlock
+                        x:Name="ExamAverageResultTextBlock"
+                        />
+                    <TextBlock
+                        x:Name="CompetitionAverageResultTextBlock"
+                        FontSize="24"
+                        FontWeight="Bold"
+                        />
+                </StackPanel>
+            </Border>
+        </StackPanel>
+    </ScrollViewer>
+</Window>
