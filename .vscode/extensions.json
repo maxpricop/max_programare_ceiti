@@ -2,6 +2,7 @@
     "recommendations": [
         "biomejs.biome",
         "editorconfig.editorconfig",
+        "dabbinavo.xamlstyler",
         "llvm-vs-code-extensions.vscode-clangd",
         "vscjava.vscode-java-pack"
     ],

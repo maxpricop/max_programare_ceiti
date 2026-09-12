@@ -56,5 +56,16 @@
     },
     "[csharp]": {
         "editor.defaultFormatter": "ms-dotnettools.csharp"
-    }
+    },
+    "[axaml]": {
+        "editor.defaultFormatter": "dabbinavo.xamlstyler"
+    },
+    "xamlstyler.attributes.formatting.tolerance": 0,
+    "xamlstyler.attributes.formatting.maxPerLine": 1,
+    "xamlstyler.attributes.formatting.keepFirstOnSameLine": false,
+    "xamlstyler.attributes.formatting.indentation": 4,
+    "xamlstyler.attributes.formatting.newlineExemptionElements": [],
+    "xamlstyler.elements.endingBracketOnNewLine": true,
+    "xamlstyler.attributes.reordering.enable": false,
+    "xamlstyler.elements.reordering.reorderVisualStateManager": "None"
 }
