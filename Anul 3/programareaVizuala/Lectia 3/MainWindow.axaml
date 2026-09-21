@@ -1,0 +1,158 @@
+<Window
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    x:Class="Lectia3.MainWindow"
+    Title="Curs Valutar"
+    Width="500"
+    MinWidth="420"
+    MinHeight="320"
+    SizeToContent="Height"
+    WindowStartupLocation="CenterScreen"
+    >
+
+    <ScrollViewer>
+        <StackPanel
+            Margin="24"
+            Spacing="12"
+            >
+            <TextBlock
+                Text="Curs Valutar"
+                FontSize="24"
+                FontWeight="Bold"
+                />
+
+            <Grid
+                ColumnDefinitions="Auto,*"
+                RowDefinitions="Auto,Auto,Auto"
+                ColumnSpacing="16"
+                RowSpacing="12"
+                >
+                <TextBlock
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Text="Suma:"
+                    VerticalAlignment="Center"
+                    />
+
+                <TextBox
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    x:Name="MoneyTextBox"
+                    PlaceholderText="Ex: 1000"
+                    TextChanged="MoneyTextBox_TextChanged"
+                    />
+
+                <TextBlock
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Text="Valuta Originală:"
+                    VerticalAlignment="Center"
+                    />
+
+                <ComboBox
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    x:Name="OriginalCurrencyComboBox"
+                    HorizontalAlignment="Stretch"
+                    SelectionChanged="OriginalCurrencyComboBox_SelectionChanged"
+                    >
+                    <ComboBoxItem
+                        Content="MDL"
+                        />
+                    <ComboBoxItem
+                        Content="EUR"
+                        />
+                    <ComboBoxItem
+                        Content="USD"
+                        />
+                    <ComboBoxItem
+                        Content="RON"
+                        />
+                </ComboBox>
+
+                <TextBlock
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    Text="Valuta Finală:"
+                    VerticalAlignment="Center"
+                    />
+
+                <ComboBox
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    x:Name="FinalCurrencyComboBox"
+                    HorizontalAlignment="Stretch"
+                    SelectionChanged="FinalCurrencyComboBox_SelectionChanged"
+                    >
+                    <ComboBoxItem
+                        Content="MDL"
+                        />
+                    <ComboBoxItem
+                        Content="EUR"
+                        />
+                    <ComboBoxItem
+                        Content="USD"
+                        />
+                    <ComboBoxItem
+                        Content="RON"
+                        />
+                </ComboBox>
+            </Grid>
+
+            <Button
+                x:Name="CalculateButton"
+                Content="Calculează Suma"
+                IsDefault="True"
+                HorizontalAlignment="Stretch"
+                HorizontalContentAlignment="Center"
+                Click="CalculateButton_Click"
+                />
+
+            <TextBlock
+                x:Name="ErrorTextBlock"
+                Foreground="Crimson"
+                TextWrapping="Wrap"
+                IsVisible="False"
+                />
+
+            <Border
+                x:Name="ResultBorder"
+                BorderBrush="Gray"
+                BorderThickness="1"
+                CornerRadius="8"
+                Padding="16"
+                Margin="0,8,0,0"
+                IsVisible="False"
+                >
+                <StackPanel
+                    Spacing="6"
+                    >
+                    <TextBlock
+                        Text="Rezultat"
+                        FontSize="16"
+                        FontWeight="SemiBold"
+                        />
+
+                    <TextBlock
+                        x:Name="ResultTextBlock"
+                        TextWrapping="Wrap"
+                        FontSize="28"
+                        FontWeight="Bold"
+                        />
+
+                    <TextBlock
+                        x:Name="ConversionSummaryTextBlock"
+                        TextWrapping="Wrap"
+                        />
+
+                    <TextBlock
+                        x:Name="RateDetailsTextBlock"
+                        FontSize="12"
+                        Opacity="0.7"
+                        TextWrapping="Wrap"
+                        />
+                </StackPanel>
+            </Border>
+        </StackPanel>
+    </ScrollViewer>
+</Window>
