@@ -1,0 +1,23 @@
+body {
+    padding: 0 1rem;
+    font-family: Arial, sans-serif;
+}
+
+img,
+video {
+    height: auto;
+}
+
+figure {
+    margin: 1rem 0;
+}
+
+/* Sarcina 5 */
+.imagine-evidentiata {
+    box-sizing: border-box;
+    width: 22.5rem;
+    height: 23.75rem;
+    object-fit: contain;
+    border: 0.125rem solid #555;
+    border-radius: 0.5rem;
+}

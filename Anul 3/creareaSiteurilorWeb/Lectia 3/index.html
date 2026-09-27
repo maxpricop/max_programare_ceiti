@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ro">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Starship - Obiecte media în HTML</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!-- Sarcina 1 -->
+        <header>
+            <p>CEITI | Anul III | Crearea site-urilor web | Lecția 3</p>
+            <h1>Starship: de la lansare la recuperare</h1>
+            <h2>O rachetă construită pentru a zbura din nou</h2>
+            <p>
+                Starship este un sistem de transport spațial dezvoltat de SpaceX. Acesta include nava Starship și prima
+                treaptă, numită Super Heavy. Sistemul este proiectat pentru reutilizare și pentru misiuni către orbita
+                Pământului, Lună și Marte.
+            </p>
+        </header>
+        <hr>
+        <main>
+            <!-- Sarcina 2 -->
+            <section>
+                <h2>Galerie</h2>
+                <p>
+                    Fotografiile urmăresc al cincilea zbor de test: racheta pe rampă, lansarea, separarea treptelor și
+                    boosterul Super Heavy după recuperare.
+                </p>
+                <img
+                    src="imagini/starship-rampa.jpg"
+                    alt="Starship pe rampa iluminată, înainte de zborul 5"
+                    width="320"
+                >
+                <img
+                    src="imagini/starship-lansare.jpg"
+                    alt="Starship urcând deasupra norului de la lansare"
+                    width="320"
+                >
+                <img
+                    src="imagini/separare-trepte.jpg"
+                    alt="Starship și Super Heavy în timpul separării treptelor"
+                    width="320"
+                    loading="lazy"
+                >
+                <img
+                    src="imagini/booster-recuperat.jpg"
+                    alt="Boosterul Super Heavy susținut de brațele turnului după revenire"
+                    width="240"
+                    loading="lazy"
+                >
+            </section>
+
+            <!-- Sarcinile 3 și 5 -->
+            <section>
+                <h2>Momentul recuperării</h2>
+                <p>Revenirea boosterului la turn este unul dintre cele mai impresionante momente ale zborului.</p>
+                <figure>
+                    <img
+                        class="imagine-evidentiata"
+                        src="imagini/booster-recuperat.jpg"
+                        alt="Super Heavy recuperat la turnul de lansare din Starbase"
+                        width="360"
+                        height="380"
+                        loading="lazy"
+                    >
+                    <figcaption>
+                        La 13 octombrie 2024, Super Heavy a fost prins pentru prima dată de brațele turnului, la finalul
+                        revenirii din zborul de test 5.
+                    </figcaption>
+                </figure>
+            </section>
+
+            <!-- Sarcina 4, varianta B -->
+            <section>
+                <h2>Imagine recomandată</h2>
+                <p>
+                    Pe ecrane de maximum 800px apare Starship pe rampă, fotografiat de la sol. Pe ecrane mai mari apare
+                    o fotografie a rachetei în zbor, privită de jos spre cer. Redimensionează fereastra pentru a vedea
+                    schimbarea fotografiei.
+                </p>
+                <picture>
+                    <source media="(max-width: 800px)" srcset="imagini/starship-rampa.jpg">
+                    <source media="(min-width: 801px)" srcset="imagini/starship-lansare.jpg">
+                    <img
+                        src="imagini/starship-lansare.jpg"
+                        alt="Starship văzut de la sol: pe rampa de lansare sau în timpul ascensiunii"
+                        width="700"
+                    >
+                </picture>
+            </section>
+
+            <!-- Sarcina 6 -->
+            <section>
+                <h2>Video</h2>
+                <p>
+                    Înregistrarea prezintă revenirea și prinderea boosterului Super Heavy la zborul 5. Boosterul coboară
+                    spre brațele turnului, iar înregistrarea păstrează sunetul original al revenirii și al
+                    spectatorilor.
+                </p>
+                <!-- biome-ignore lint/a11y/useMediaCaption: To follow the lesson requirements. -->
+                <video controls width="420" preload="metadata" loop>
+                    <source src="video/booster-recuperare.mp4" type="video/mp4">
+                    <source src="video/booster-recuperare.webm" type="video/webm">
+                    <a href="video/booster-recuperare.mp4">Deschide fișierul video.</a>
+                </video>
+            </section>
+
+            <!-- Sarcina 7 -->
+            <section>
+                <h2>Audio</h2>
+                <!-- biome-ignore lint/a11y/useMediaCaption: To follow the lesson requirements. -->
+                <audio src="audio/motoare-lansare.mp3" controls loop preload="metadata"></audio>
+                <p>
+                    Ascultă 20 de secunde din vuietul motoarelor la prima lansare de test Starship, pe 20 aprilie 2023.
+                </p>
+            </section>
+
+            <!-- Sarcina 8 -->
+            <section>
+                <h2>Mai multe informații</h2>
+                <p>În cadrul de mai jos poți citi despre treptele rachetei și rolul turnului de lansare.</p>
+                <iframe
+                    src="detalii.html"
+                    title="Detalii despre Starship și Super Heavy"
+                    width="700"
+                    height="350"
+                    loading="lazy"
+                ></iframe>
+                <p><a href="detalii.html">Deschide informațiile într-o pagină separată.</a></p>
+            </section>
+        </main>
+        <hr>
+    </body>
+</html>
