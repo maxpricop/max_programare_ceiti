@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding: 0 10rem;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 1rem;
+    color: #334955;
+    background: #f5f0e6;
+}
+
+header {
+    padding: 3rem 0;
+}
+
+header > p:first-of-type {
+    font-weight: 800;
+    color: #287d85;
+    text-transform: uppercase;
+}
+
+header > h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    color: #263f4c;
+}
+
+header > p:last-of-type {
+    margin: 0.5rem 0;
+    color: #72828a;
+}
+
+header > hr {
+    width: 15%;
+    height: 0.25rem;
+    background: #d9795f;
+    border: 0;
+}
+
+section {
+    margin: 0 0 3rem;
+}
+
+h2 {
+    margin: 1.5rem 0 1rem;
+    font-size: 1.8rem;
+    color: #29424f;
+}
+
+h3 {
+    margin: 0 0 0.75rem;
+    color: #29424f;
+}
+
+p {
+    margin: 0 0 1rem;
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+figcaption {
+    margin: 0.5rem 0 0;
+    font-size: 0.85rem;
+    color: #6d7a80;
+}
+
+ul,
+ol {
+    padding: 0 0 0 1.5rem;
+}
+
+li {
+    margin: 0 0 0.5rem;
+}
+
+.two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.two-columns section:last-child {
+    padding: 0 0 0 2rem;
+    border-left: 3px solid #b9d7d6;
+}
+
+.details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.definition-card {
+    padding: 2rem;
+    background: #e7f1f0;
+}
+
+dt {
+    margin: 1rem 0 0;
+    font-weight: 800;
+    color: #287d85;
+}
+
+dd {
+    margin: 0.25rem 0 0;
+}
+
+.media {
+    padding: 2rem 0 0;
+    border-top: 3px solid #cad9d7;
+}
+
+article {
+    margin: 2rem 0 0;
+}
+
+audio {
+    width: 60%;
+}
+
+video {
+    width: 70%;
+}
+
+.challenge {
+    padding: 2rem;
+    margin: 0 0 3rem;
+    background: #e7f1f0;
+}
+
+footer {
+    padding: 1rem 0 2rem;
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: #55727a;
+    text-transform: uppercase;
+    border-top: 3px solid #cad9d7;
+}
