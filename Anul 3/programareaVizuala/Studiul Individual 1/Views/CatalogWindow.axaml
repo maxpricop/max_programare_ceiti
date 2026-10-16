@@ -1,0 +1,111 @@
+<Window
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    x:Class="BarberDesk.Views.CatalogWindow"
+    Title="Servicii și prețuri"
+    Width="760"
+    Height="510"
+    MinWidth="700"
+    MinHeight="490"
+    WindowStartupLocation="CenterOwner"
+    >
+    <DockPanel
+        Margin="24"
+        >
+        <StackPanel
+            DockPanel.Dock="Top"
+            Spacing="6"
+            Margin="0,0,0,20"
+            >
+            <TextBlock
+                Text="Servicii și prețuri"
+                Classes="heading"
+                />
+            <TextBlock
+                Text="Modificările se aplică rezervărilor noi. Programările existente își păstrează tariful."
+                TextWrapping="Wrap"
+                />
+        </StackPanel>
+        <StackPanel
+            DockPanel.Dock="Bottom"
+            Spacing="10"
+            Margin="0,15,0,0"
+            >
+            <TextBlock
+                x:Name="ErrorText"
+                Classes="error"
+                />
+            <Button
+                Content="Închide"
+                Click="Close_Click"
+                HorizontalAlignment="Right"
+                />
+        </StackPanel>
+        <Grid
+            ColumnDefinitions="*,270"
+            ColumnSpacing="20"
+            >
+            <ListBox
+                x:Name="ServiceList"
+                Background="White"
+                SelectionChanged="ServiceList_Changed"
+                />
+            <StackPanel
+                Grid.Column="1"
+                Spacing="9"
+                >
+                <TextBlock
+                    x:Name="EditorTitle"
+                    Text="Serviciu nou"
+                    FontWeight="SemiBold"
+                    />
+                <TextBox
+                    x:Name="NameBox"
+                    PlaceholderText="Denumirea serviciului"
+                    MaxLength="60"
+                    />
+                <TextBlock
+                    Text="Durata (minute)"
+                    />
+                <NumericUpDown
+                    x:Name="MinutesBox"
+                    Minimum="5"
+                    Maximum="180"
+                    Increment="5"
+                    Value="30"
+                    FormatString="0"
+                    />
+                <TextBlock
+                    Text="Preț (MDL)"
+                    />
+                <TextBox
+                    x:Name="PriceBox"
+                    PlaceholderText="Ex.: 150 sau 150,50"
+                    MaxLength="10"
+                    />
+                <StackPanel
+                    Orientation="Horizontal"
+                    Spacing="8"
+                    >
+                    <Button
+                        x:Name="SaveButton"
+                        Content="Salvează"
+                        Classes="primary"
+                        Click="Save_Click"
+                        />
+                    <Button
+                        x:Name="NewButton"
+                        Content="Nou"
+                        Click="New_Click"
+                        />
+                </StackPanel>
+                <Button
+                    x:Name="DeleteButton"
+                    Content="Șterge serviciul"
+                    IsEnabled="False"
+                    Click="Delete_Click"
+                    />
+            </StackPanel>
+        </Grid>
+    </DockPanel>
+</Window>
