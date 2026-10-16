@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ro">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Atelierul web CEITI - Contact</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <p>Atelierul web CEITI | Lecția 4</p>
+            <h1>Contactează organizatorii</h1>
+            <p>Scrie o întrebare despre program sau despre participare.</p>
+        </header>
+        <nav aria-label="Navigare principală">
+            <ul>
+                <li><a href="index.html">Acasă</a></li>
+                <li><a href="inscriere.html">Înscriere</a></li>
+                <li><a href="contact.html" aria-current="page">Contact</a></li>
+            </ul>
+        </nav>
+        <main>
+            <p>Câmpurile marcate cu * sunt obligatorii. Completează numai date fictive.</p>
+            <p>Formular demonstrativ, fără un serviciu configurat pentru primirea mesajelor.</p>
+            <!-- Sarcina 2: etichete asociate, câmpuri obligatorii și butoane explicite. -->
+            <form method="post" action="#">
+                <p>
+                    <label for="nume">Nume complet *</label><br>
+                    <input type="text" id="nume" name="nume" placeholder="Ex.: Ana Popescu" required>
+                </p>
+                <p>
+                    <label for="email">Adresă e-mail *</label><br>
+                    <input type="email" id="email" name="email" placeholder="ana@example.com" required>
+                </p>
+                <p>
+                    <label for="mesaj">Mesaj *</label><br>
+                    <textarea id="mesaj" name="mesaj" rows="5" placeholder="Scrie mesajul tău..." required></textarea>
+                </p>
+                <button type="submit">Trimite mesajul</button>
+                <button type="reset">Resetează</button>
+            </form>
+        </main>
+        <footer>
+            <p>Organizator: Clubul web CEITI, exemplu fictiv. &copy; 2026. Realizat de Maxim Pricop.</p>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="ro">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Atelierul web CEITI - Înscriere</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <p>Atelierul web CEITI | Lecția 4</p>
+            <h1>Înscriere la atelier</h1>
+            <p>Alege modul de participare și activitățile care te interesează.</p>
+        </header>
+        <nav aria-label="Navigare principală">
+            <ul>
+                <li><a href="index.html">Acasă</a></li>
+                <li><a href="inscriere.html" aria-current="page">Înscriere</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <main>
+            <p>Câmpurile marcate cu * sunt obligatorii. Folosește numai date și o parolă fictive.</p>
+            <p>Formular demonstrativ, fără un serviciu configurat pentru înregistrarea participanților.</p>
+            <!--
+                Sarcina 8: două probleme reproduse în variante temporare la testarea în Firefox.
+                1. Fără pattern, type="tel" accepta litere. pattern="[0-9]{9}" respinge telefonul invalid.
+                2. Fără value="", opțiunea inițială satisfăcea required. Valoarea goală obligă alegerea unui atelier.
+                Atributele corecte sunt păstrate în formularul de mai jos.
+            -->
+            <!-- Sarcina 6: un singur formular, cu trei grupuri principale și un câmp ascuns. -->
+            <!-- multipart/form-data permite includerea fișierului într-o cerere POST către un server. -->
+            <form method="post" action="#" enctype="multipart/form-data">
+                <input type="hidden" name="eveniment" value="atelierul-web-ceiti-2026">
+                <!-- Sarcina 3 -->
+                <fieldset>
+                    <legend>Date personale</legend>
+                    <p>
+                        <label for="nume">Nume și prenume *</label><br>
+                        <input type="text" id="nume" name="nume" maxlength="60" placeholder="Nume Prenume" required>
+                    </p>
+                    <p>
+                        <label for="email">E-mail *</label><br>
+                        <input type="email" id="email" name="email" placeholder="nume@example.com" required>
+                    </p>
+                    <p>
+                        <label for="parola">Parolă de minimum 8 caractere *</label><br>
+                        <input type="password" id="parola" name="parola" minlength="8" placeholder="********" required>
+                    </p>
+                    <p>
+                        <label for="varsta">Vârstă între 14 și 25 de ani *</label><br>
+                        <input type="number" id="varsta" name="varsta" min="14" max="25" placeholder="18" required>
+                    </p>
+                    <p>
+                        <label for="data">Data participării *</label><br>
+                        <input type="date" id="data" name="data" min="2026-10-24" max="2026-10-24" required>
+                    </p>
+                    <p>
+                        <label for="telefon">Telefon, exact 9 cifre</label><br>
+                        <input
+                            type="tel"
+                            id="telefon"
+                            name="telefon"
+                            pattern="[0-9]{9}"
+                            maxlength="9"
+                            placeholder="060000000"
+                            title="Introdu exact 9 cifre, fără spații sau alte caractere."
+                        >
+                    </p>
+                </fieldset>
+                <!-- Sarcina 4 -->
+                <fieldset>
+                    <legend>Preferințe</legend>
+                    <fieldset>
+                        <legend>Mod de participare *</legend>
+                        <p>
+                            <input type="radio" id="fizic" name="mod" value="fizic" required>
+                            <label for="fizic">Fizic</label>
+                        </p>
+                        <p>
+                            <input type="radio" id="online" name="mod" value="online" required>
+                            <label for="online">Online</label>
+                        </p>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Activități preferate</legend>
+                        <!-- checked bifează atelierul la deschidere; Reset restabilește această alegere. -->
+                        <p>
+                            <input type="checkbox" id="practica" name="activitati" value="atelier-practic" checked>
+                            <label for="practica">Atelier practic</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" id="prezentari" name="activitati" value="prezentari">
+                            <label for="prezentari">Prezentări</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" id="concurs" name="activitati" value="concurs">
+                            <label for="concurs">Concurs</label>
+                        </p>
+                    </fieldset>
+                    <p>
+                        <label for="atelier">Alege atelierul *</label><br>
+                        <select id="atelier" name="atelier" required>
+                            <option value="">-- Alege un atelier --</option>
+                            <optgroup label="Tehnologie">
+                                <option value="html">HTML</option>
+                                <option value="robotica">Robotică</option>
+                            </optgroup>
+                            <optgroup label="Creativitate">
+                                <option value="fotografie">Fotografie</option>
+                                <option value="design">Design</option>
+                            </optgroup>
+                        </select>
+                    </p>
+                </fieldset>
+                <!-- Sarcina 5 -->
+                <fieldset>
+                    <legend>Detalii suplimentare</legend>
+                    <p>
+                        <label for="oras">Orașul tău</label><br>
+                        <input type="text" id="oras" name="oras" list="orase" placeholder="Începe să scrii...">
+                        <datalist id="orase">
+                            <option value="Chișinău"></option>
+                            <option value="Bălți"></option>
+                            <option value="Orhei"></option>
+                            <option value="Cahul"></option>
+                        </datalist>
+                    </p>
+                    <p>
+                        <label for="document">Document PDF, JPG sau PNG</label><br>
+                        <input type="file" id="document" name="document" accept=".pdf,.jpg,.png">
+                    </p>
+                    <p>
+                        <label for="culoare">Culoarea preferată</label><br>
+                        <input type="color" id="culoare" name="culoare" value="#7c3aed">
+                    </p>
+                    <!-- placeholder este un indiciu; value stabilește valoarea inițială a unui input. -->
+                    <p>
+                        <label for="motivatie">De ce dorești să participi?</label><br>
+                        <textarea
+                            id="motivatie"
+                            name="motivatie"
+                            rows="3"
+                            maxlength="200"
+                            placeholder="Maximum 200 de caractere..."
+                        ></textarea>
+                    </p>
+                    <!-- Sarcina 8: câmp suplimentar opțional. -->
+                    <p>
+                        <label for="portofoliu">Adresa portofoliului tău</label><br>
+                        <input type="url" id="portofoliu" name="portofoliu" placeholder="https://example.com">
+                    </p>
+                </fieldset>
+                <p>
+                    <input type="checkbox" id="confirmare" name="date_fictive" value="confirmat" required>
+                    <label for="confirmare">Confirm că datele introduse sunt fictive *</label>
+                </p>
+                <button type="submit">Trimite înscrierea</button>
+                <button type="reset">Resetează formularul</button>
+            </form>
+        </main>
+        <footer>
+            <p>Organizator: Clubul web CEITI, exemplu fictiv. &copy; 2026. Realizat de Maxim Pricop.</p>
+        </footer>
+    </body>
+</html>

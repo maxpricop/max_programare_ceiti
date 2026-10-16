@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background: #f2f4f7;
+}
+
+body {
+    max-width: 840px;
+    padding: 24px;
+    margin: 24px auto;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #263445;
+    background: white;
+}
+
+h1,
+h2,
+h3,
+a {
+    color: #245b86;
+}
+
+h1 {
+    margin-top: 0;
+    line-height: 1.2;
+}
+
+nav {
+    border-block: 1px solid #ccd4dc;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+    padding: 0;
+    list-style: none;
+}
+
+nav a[aria-current="page"],
+legend {
+    font-weight: bold;
+}
+
+section,
+aside {
+    margin-block: 28px;
+}
+
+fieldset {
+    min-width: 0;
+    padding: 12px 16px;
+    margin: 20px 0;
+    border: 1px solid #ccd4dc;
+}
+
+input,
+select,
+textarea,
+button {
+    max-width: 100%;
+    font: inherit;
+    accent-color: #245b86;
+}
+
+input:not([type="radio"]):not([type="checkbox"]):not([type="color"]):not([type="hidden"]),
+select,
+textarea {
+    width: 100%;
+    max-width: 440px;
+    padding: 7px;
+    margin-top: 4px;
+    border: 1px solid #ccd4dc;
+    border-radius: 3px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    padding: 8px 14px;
+    margin: 4px 8px 4px 0;
+    color: white;
+    cursor: pointer;
+    background: #245b86;
+    border: 1px solid #245b86;
+    border-radius: 3px;
+}
+
+button[type="reset"] {
+    color: #245b86;
+    background: white;
+}
+
+:focus-visible {
+    outline: 2px solid #245b86;
+    outline-offset: 3px;
+}
+
+footer {
+    margin-top: 32px;
+    font-size: 0.9rem;
+    border-top: 1px solid #ccd4dc;
+}

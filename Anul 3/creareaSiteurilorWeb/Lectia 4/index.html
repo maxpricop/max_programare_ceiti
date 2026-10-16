@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ro">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Atelierul web CEITI - Acasă</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!-- Sarcinile 1 și 7: structură semantică și navigare între pagini. -->
+        <header>
+            <p>CEITI | Anul III | Crearea site-urilor web | Lecția 4</p>
+            <h1>Atelierul web CEITI</h1>
+            <p>Un eveniment fictiv pentru elevii care vor să exerseze crearea paginilor web.</p>
+        </header>
+        <nav aria-label="Navigare principală">
+            <ul>
+                <li><a href="index.html" aria-current="page">Acasă</a></li>
+                <li><a href="#despre">Despre</a></li>
+                <li><a href="#program">Program</a></li>
+                <li><a href="inscriere.html">Înscriere</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <main>
+            <section id="despre">
+                <h2>Despre eveniment</h2>
+                <p>
+                    Atelierul reunește elevi cu vârste între 14 și 25 de ani. Participanții construiesc pagini HTML,
+                    discută idei de proiecte și își prezintă lucrările. Participarea poate fi fizică sau online.
+                </p>
+                <p>
+                    Evenimentul este un exemplu pentru laboratorul despre formulare și taguri semantice. Folosește numai
+                    date fictive când completezi formularele.
+                </p>
+            </section>
+            <section id="program">
+                <h2>Program</h2>
+                <p>Activitățile au loc pe <time datetime="2026-10-24">24 octombrie 2026</time>.</p>
+                <ol>
+                    <li><time datetime="09:00">09:00</time>: primirea participanților.</li>
+                    <li><time datetime="09:30">09:30</time>: prezentarea structurii unei pagini HTML.</li>
+                    <li><time datetime="10:00">10:00</time>: ateliere de tehnologie și creativitate.</li>
+                    <li><time datetime="12:00">12:00</time>: concurs și prezentarea proiectelor.</li>
+                </ol>
+                <article>
+                    <h3>Înscrierile sunt deschise</h3>
+                    <p>
+                        Alege atelierul care te interesează în formularul de înscriere. Poți bifa mai multe activități
+                        la care dorești să participi. Pentru exercițiile practice, pregătește un laptop cu un browser și
+                        un editor de text.
+                    </p>
+                    <p><a href="inscriere.html">Completează formularul de înscriere.</a></p>
+                </article>
+            </section>
+            <aside>
+                <h2>Informații utile</h2>
+                <ul>
+                    <li>Participarea este gratuită în scenariul acestui proiect.</li>
+                    <li>Activitățile se desfășoară în limba română.</li>
+                    <li>Nu ai nevoie de experiență anterioară în programare.</li>
+                </ul>
+                <p><a href="contact.html">Contactează organizatorii pentru alte întrebări.</a></p>
+            </aside>
+            <section>
+                <h2>Întrebări frecvente</h2>
+                <article>
+                    <h3>Pot participa online?</h3>
+                    <p>Da. Alege opțiunea Online în formularul de înscriere.</p>
+                </article>
+                <article>
+                    <h3>Este obligatoriu să încarc un document?</h3>
+                    <p>Nu. Documentul și celelalte câmpuri din Detalii suplimentare sunt opționale.</p>
+                </article>
+            </section>
+        </main>
+        <footer>
+            <p>Organizator: Clubul web CEITI, exemplu fictiv. &copy; 2026. Realizat de Maxim Pricop.</p>
+        </footer>
+    </body>
+</html>
