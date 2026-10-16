@@ -1,0 +1,164 @@
+<Window
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    x:Class="Lectia6.MainWindow"
+    Title="MathGeo Visualizer"
+    Width="980"
+    Height="720"
+    MinWidth="720"
+    MinHeight="580"
+    Background="White"
+    WindowStartupLocation="CenterScreen"
+    >
+    <Grid
+        Margin="20"
+        RowDefinitions="Auto,Auto,Auto,*,Auto"
+        RowSpacing="12"
+        >
+        <StackPanel
+            Spacing="4"
+            >
+            <TextBlock
+                Text="MathGeo Visualizer"
+                FontSize="26"
+                FontWeight="Bold"
+                Foreground="#18576B"
+                />
+            <TextBlock
+                Text="Bine ați venit la lecția de matematică!"
+                FontSize="16"
+                />
+            <TextBlock
+                Text="Azi vom rezolva aria uneia dintre figurile alese: triunghi, dreptunghi și cerc."
+                TextWrapping="Wrap"
+                Foreground="#52636B"
+                />
+        </StackPanel>
+
+        <Border
+            Grid.Row="1"
+            Background="#EDF5F7"
+            Padding="16"
+            >
+            <WrapPanel
+                Orientation="Horizontal"
+                >
+                <StackPanel
+                    Width="160"
+                    Spacing="6"
+                    Margin="0,0,16,0"
+                    >
+                    <TextBlock
+                        Text="Figura geometrică"
+                        />
+                    <ComboBox
+                        x:Name="FigureComboBox"
+                        HorizontalAlignment="Stretch"
+                        SelectionChanged="FigureComboBox_SelectionChanged"
+                        >
+                        <ComboBoxItem
+                            Content="Triunghi"
+                            />
+                        <ComboBoxItem
+                            Content="Dreptunghi"
+                            />
+                        <ComboBoxItem
+                            Content="Cerc"
+                            />
+                    </ComboBox>
+                </StackPanel>
+
+                <StackPanel
+                    Width="100"
+                    Spacing="6"
+                    Margin="0,0,12,0"
+                    >
+                    <TextBlock
+                        x:Name="FirstLabel"
+                        Text="Latura a (m)"
+                        />
+                    <TextBox
+                        x:Name="FirstTextBox"
+                        Text="3"
+                        />
+                </StackPanel>
+
+                <StackPanel
+                    x:Name="SecondPanel"
+                    Width="100"
+                    Spacing="6"
+                    Margin="0,0,12,0"
+                    >
+                    <TextBlock
+                        x:Name="SecondLabel"
+                        Text="Latura b (m)"
+                        />
+                    <TextBox
+                        x:Name="SecondTextBox"
+                        Text="4"
+                        />
+                </StackPanel>
+
+                <StackPanel
+                    x:Name="ThirdPanel"
+                    Width="100"
+                    Spacing="6"
+                    Margin="0,0,12,0"
+                    >
+                    <TextBlock
+                        Text="Latura c (m)"
+                        />
+                    <TextBox
+                        x:Name="ThirdTextBox"
+                        Text="5"
+                        />
+                </StackPanel>
+
+            </WrapPanel>
+        </Border>
+
+        <TextBlock
+            Grid.Row="2"
+            x:Name="ErrorTextBlock"
+            Foreground="Crimson"
+            TextWrapping="Wrap"
+            />
+
+        <Border
+            Grid.Row="3"
+            BorderBrush="#D4E3E8"
+            BorderThickness="1"
+            Background="#F8FAFC"
+            Padding="12"
+            >
+            <Canvas
+                x:Name="DrawingCanvas"
+                Width="500"
+                Height="360"
+                Background="#F8FAFC"
+                />
+        </Border>
+
+        <StackPanel
+            Grid.Row="4"
+            Spacing="6"
+            Margin="0,4,0,0"
+            >
+            <TextBlock
+                x:Name="AreaTextBlock"
+                FontSize="16"
+                TextWrapping="Wrap"
+                />
+            <TextBlock
+                x:Name="PerimeterTextBlock"
+                FontSize="16"
+                TextWrapping="Wrap"
+                />
+            <TextBlock
+                x:Name="TypeTextBlock"
+                Foreground="#52636B"
+                TextWrapping="Wrap"
+                />
+        </StackPanel>
+    </Grid>
+</Window>
