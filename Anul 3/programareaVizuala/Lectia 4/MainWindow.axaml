@@ -1,0 +1,99 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="Lectia4.MainWindow"
+        Title="Lecția 4 - Test de programare" Width="1000" Height="780"
+        MinWidth="640" MinHeight="560" Background="#F3F6FA"
+        RequestedThemeVariant="Light" FontFamily="Inter">
+    <Window.Styles>
+        <Style Selector="Button">
+            <Setter Property="Padding" Value="16,10" />
+            <Setter Property="CornerRadius" Value="6" />
+        </Style>
+        <Style Selector="Button.primary">
+            <Setter Property="Background" Value="#245BCC" />
+            <Setter Property="Foreground" Value="White" />
+        </Style>
+        <Style Selector="Button.question">
+            <Setter Property="Width" Value="44" />
+            <Setter Property="Height" Value="40" />
+            <Setter Property="Padding" Value="0" />
+            <Setter Property="Margin" Value="0,0,6,6" />
+            <Setter Property="HorizontalContentAlignment" Value="Center" />
+        </Style>
+        <Style Selector="TextBlock">
+            <Setter Property="Foreground" Value="#203049" />
+        </Style>
+    </Window.Styles>
+    <Grid Margin="28" RowDefinitions="Auto,*" RowSpacing="20">
+        <Grid ColumnDefinitions="*,Auto">
+            <TextBlock Text="Test de programare" FontSize="26" FontWeight="SemiBold" />
+            <TextBlock Grid.Column="1" Text="C# / Lecția 4" VerticalAlignment="Center" Foreground="#53647A" />
+        </Grid>
+
+        <ScrollViewer x:Name="StartView" Grid.Row="1" HorizontalScrollBarVisibility="Disabled">
+            <Border Background="White" Padding="32" CornerRadius="10" MaxWidth="760" HorizontalAlignment="Stretch">
+                <StackPanel Spacing="22">
+                    <TextBlock Text="Cât de bine cunoști bazele C#?" FontSize="30" FontWeight="SemiBold" TextWrapping="Wrap" />
+                    <TextBlock x:Name="StartDetails" FontSize="18" TextWrapping="Wrap" />
+                    <TextBlock Text="Vei întâlni întrebări cu un singur răspuns, răspunsuri multiple, propoziții de completat din liste și răspunsuri scrise." TextWrapping="Wrap" FontSize="16" />
+                    <Border Background="#EAF0FD" Padding="20" CornerRadius="6">
+                        <StackPanel Spacing="12">
+                            <TextBlock Text="Cum se acordă punctele" FontSize="18" FontWeight="SemiBold" />
+                            <TextBlock Text="La răspunsuri multiple primești puncte pentru alegerile corecte și pierzi aceeași parte pentru alegerile greșite. Punctajul întrebării nu scade sub zero." TextWrapping="Wrap" />
+                            <TextBlock Text="La completarea din liste primești puncte separat pentru fiecare spațiu corect. La răspunsurile scrise introdu doar numărul sau cuvântul cerut." TextWrapping="Wrap" />
+                        </StackPanel>
+                    </Border>
+                    <TextBlock Text="Poți reveni la orice întrebare înainte de finalizare. Răspunsurile se păstrează când navighezi. Întrebările fără răspuns primesc 0 puncte." TextWrapping="Wrap" />
+                    <Button x:Name="StartButton" Classes="primary" Content="Începe testul" Click="StartTest" Padding="24,14" />
+                </StackPanel>
+            </Border>
+        </ScrollViewer>
+
+        <Grid x:Name="TestView" Grid.Row="1" IsVisible="False" RowDefinitions="Auto,*,Auto" RowSpacing="16">
+            <StackPanel Spacing="8">
+                <Grid ColumnDefinitions="*,Auto">
+                    <TextBlock x:Name="AnsweredText" FontWeight="SemiBold" />
+                    <TextBlock Grid.Column="1" Text="Cu răspuns: albastru • Incomplet: galben" FontSize="12" Foreground="#53647A" />
+                </Grid>
+                <WrapPanel x:Name="QuestionSelector" />
+                <ProgressBar x:Name="AnswerProgress" Height="5" Foreground="#245BCC" />
+            </StackPanel>
+            <Border Grid.Row="1" Background="White" CornerRadius="10" Padding="24">
+                <ScrollViewer HorizontalScrollBarVisibility="Disabled">
+                    <StackPanel Spacing="16">
+                        <TextBlock x:Name="ProgressText" Foreground="#53647A" />
+                        <TextBlock x:Name="QuestionText" FontSize="23" FontWeight="SemiBold" TextWrapping="Wrap" />
+                        <TextBlock x:Name="InstructionText" TextWrapping="Wrap" Foreground="#53647A" />
+                        <StackPanel x:Name="AnswersPanel" Spacing="12" />
+                        <Border x:Name="ReviewFeedback" IsVisible="False" Background="#EAF0FD" Padding="18" CornerRadius="6">
+                            <StackPanel Spacing="10">
+                                <TextBlock x:Name="QuestionScoreText" FontSize="18" FontWeight="SemiBold" />
+                                <TextBlock x:Name="CorrectAnswerText" TextWrapping="Wrap" />
+                                <TextBlock x:Name="ExplanationText" TextWrapping="Wrap" />
+                            </StackPanel>
+                        </Border>
+                    </StackPanel>
+                </ScrollViewer>
+            </Border>
+            <Grid Grid.Row="2" ColumnDefinitions="Auto,Auto,*,Auto" ColumnSpacing="8">
+                <Button x:Name="PreviousButton" Content="Înapoi" Click="PreviousQuestion" />
+                <Button x:Name="NextButton" Grid.Column="1" Content="Înainte" Click="NextQuestion" />
+                <Button x:Name="FinishButton" Grid.Column="3" Classes="primary" Content="Finalizează testul" Click="FinishTest" />
+                <Button x:Name="BackToResultsButton" Grid.Column="3" IsVisible="False" Content="Înapoi la rezultate" Click="BackToResults" />
+            </Grid>
+        </Grid>
+
+        <Grid x:Name="ResultsView" Grid.Row="1" IsVisible="False" RowDefinitions="Auto,*,Auto" RowSpacing="18">
+            <StackPanel Spacing="10">
+                <TextBlock Text="Test finalizat" FontSize="30" FontWeight="SemiBold" />
+                <TextBlock x:Name="ResultText" FontSize="24" TextWrapping="Wrap" />
+                <TextBlock x:Name="ResultSummary" TextWrapping="Wrap" />
+                <TextBlock Text="Selectează o întrebare pentru a vedea răspunsul tău și explicația." Foreground="#53647A" TextWrapping="Wrap" />
+            </StackPanel>
+            <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Disabled">
+                <StackPanel x:Name="ResultsList" Spacing="8" />
+            </ScrollViewer>
+            <Button Grid.Row="2" x:Name="RestartButton" Classes="primary" Content="Începe un test nou" Click="StartTest" />
+        </Grid>
+    </Grid>
+</Window>
