@@ -1,0 +1,271 @@
+:root {
+    --accent: #8bd7ed;
+    --ink: #edf1f7;
+    --muted: #aebbcf;
+    --line: #2b3b52;
+    --panel: #142136;
+    color-scheme: dark;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.65;
+    color: var(--ink);
+    background: #0b1423;
+}
+
+header,
+main,
+footer {
+    width: min(90%, 70rem);
+    margin-inline: auto;
+}
+
+header,
+nav,
+footer,
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header {
+    padding-block: 1.4rem;
+    border-bottom: 0.06rem solid var(--line);
+}
+
+.brand {
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+}
+
+.brand span {
+    font-size: 0.8rem;
+    color: var(--muted);
+    letter-spacing: 0;
+}
+a {
+    color: var(--accent);
+    text-underline-offset: 0.25em;
+}
+nav a {
+    color: var(--muted);
+    text-decoration: none;
+}
+nav a[aria-current="page"],
+a:hover {
+    color: var(--ink);
+    text-decoration: underline;
+}
+:focus-visible {
+    outline: 0.15rem solid var(--accent);
+    outline-offset: 0.25rem;
+}
+.hero {
+    padding-block: 3.5rem 1rem;
+}
+
+.eyebrow {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+}
+h1 {
+    max-width: 20ch;
+    margin-block: 0.6rem 1rem;
+    font-size: clamp(2.3rem, 6vw, 4.3rem);
+    letter-spacing: -0.04em;
+}
+h2 {
+    margin-top: 0;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+}
+h3 {
+    margin-block: 0.7rem;
+    font-size: 1.15rem;
+}
+.intro {
+    max-width: 65ch;
+    font-size: 1.1rem;
+    color: var(--muted);
+}
+section {
+    margin-bottom: 3rem;
+}
+figure {
+    margin: 0 0 2rem;
+}
+img,
+video {
+    display: block;
+    width: 100%;
+    border-radius: 0.4rem;
+}
+.photos img {
+    height: 26rem;
+    object-fit: contain;
+    background: #000;
+}
+.mission-photo {
+    max-height: 30rem;
+    object-fit: contain;
+    background: #000;
+}
+video {
+    max-height: 28rem;
+    object-fit: contain;
+    background: #000;
+}
+figcaption,
+.note,
+footer {
+    font-size: 0.85rem;
+    color: var(--muted);
+}
+figcaption {
+    margin-top: 0.6rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+    gap: 1.5rem;
+    align-items: start;
+}
+.grid > * {
+    min-width: 0;
+}
+
+.card {
+    padding: 1.5rem;
+    background: var(--panel);
+    border: 0.06rem solid var(--line);
+    border-radius: 0.4rem;
+}
+
+ul,
+ol {
+    padding-left: 1.4rem;
+}
+li {
+    margin-block: 0.45rem;
+}
+li::marker {
+    color: var(--accent);
+}
+
+table {
+    width: 100%;
+    font-size: 0.95rem;
+    overflow-wrap: anywhere;
+    border-collapse: collapse;
+}
+caption {
+    margin-bottom: 0.75rem;
+    color: var(--muted);
+    text-align: left;
+}
+th,
+td {
+    padding: 0.85rem 0.5rem;
+    vertical-align: top;
+    text-align: left;
+    border-bottom: 0.06rem solid var(--line);
+}
+th {
+    background: var(--panel);
+}
+audio {
+    width: 100%;
+    margin-block: 0.75rem;
+}
+
+label {
+    display: block;
+    margin-block: 0.8rem 0.3rem;
+}
+input,
+select,
+textarea,
+button {
+    font: inherit;
+}
+input:not([type="radio"]):not([type="checkbox"]),
+select,
+textarea {
+    width: 100%;
+    padding: 0.6rem;
+    color: var(--ink);
+    background: #0b1423;
+    border: 0.06rem solid #586e89;
+    border-radius: 0.3rem;
+}
+textarea {
+    resize: vertical;
+}
+input {
+    accent-color: var(--accent);
+}
+fieldset {
+    min-width: 0;
+    padding: 0.7rem 1rem;
+    margin: 1.3rem 0;
+    border: 0.06rem solid var(--line);
+}
+legend {
+    padding-inline: 0.4rem;
+}
+.choice {
+    display: flex;
+    gap: 0.6rem;
+    align-items: baseline;
+    margin-block: 0.45rem;
+}
+.choice input {
+    flex-shrink: 0;
+}
+.actions {
+    justify-content: flex-start;
+    margin-top: 1rem;
+}
+button {
+    padding: 0.65rem 1rem;
+    color: #0b1423;
+    cursor: pointer;
+    background: var(--accent);
+    border: 0.06rem solid var(--accent);
+    border-radius: 0.3rem;
+}
+button:hover {
+    background: #b8e8f5;
+}
+button.secondary {
+    color: var(--accent);
+    background: transparent;
+}
+button.secondary:hover {
+    background: #213650;
+}
+
+footer {
+    padding-block: 1.5rem;
+    margin-top: 3rem;
+    border-top: 0.06rem solid var(--line);
+}

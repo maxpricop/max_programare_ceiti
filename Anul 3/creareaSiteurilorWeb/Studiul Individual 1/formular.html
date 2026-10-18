@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="ro">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Formular despre proiectele spațiale și domeniile care te interesează.">
+        <title>Formular — Orbit</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <a class="brand" href="index.html">ORBIT<span> / Explorarea spațiului</span></a>
+            <nav aria-label="Navigare principală">
+                <a href="index.html">Acasă</a>
+                <a href="misiuni.html">Misiuni și viitor</a>
+                <a href="formular.html" aria-current="page">Formular</a>
+            </nav>
+        </header>
+        <main>
+            <section class="hero">
+                <h1>Formular</h1>
+                <p class="intro">Ce proiect spațial te interesează cel mai mult?</p>
+            </section>
+            <section class="grid">
+                <form action="formular.html" method="get" class="card">
+                    <h2>Preferințe</h2>
+                    <p class="note">Câmpurile marcate cu * sunt obligatorii.</p>
+                    <label for="nume">Nume sau pseudonim *</label>
+                    <input id="nume" name="nume" type="text" maxlength="60" required>
+                    <label for="email">Email (opțional)</label>
+                    <input id="email" name="email" type="email" placeholder="nume@example.com">
+                    <label for="proiect">Proiectul preferat *</label>
+                    <select id="proiect" name="proiect" required>
+                        <option value="">Alege un proiect</option>
+                        <option>Starship</option>
+                        <option>Artemis</option>
+                        <option>New Glenn</option>
+                        <option>Blue Moon</option>
+                        <option>Stații spațiale comerciale</option>
+                    </select>
+                    <fieldset>
+                        <legend>Destinația preferată *</legend>
+                        <label class="choice">
+                            <input type="radio" name="destinatie" value="orbita Pământului" required>
+                            Orbita Pământului
+                        </label>
+                        <label class="choice"><input type="radio" name="destinatie" value="Luna"> Luna</label>
+                        <label class="choice"><input type="radio" name="destinatie" value="Marte"> Marte</label>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Ce te interesează? (opțional)</legend>
+                        <label class="choice">
+                            <input type="checkbox" name="interese" value="rachete">
+                            Rachetele reutilizabile
+                        </label>
+                        <label class="choice">
+                            <input type="checkbox" name="interese" value="cercetare">
+                            Experimentele științifice
+                        </label>
+                        <label class="choice">
+                            <input type="checkbox" name="interese" value="habitate">
+                            Viața în spațiu
+                        </label>
+                    </fieldset>
+                    <label for="mesaj">De ce ai ales acest proiect? (opțional)</label>
+                    <textarea id="mesaj" name="mesaj" rows="4" maxlength="500"></textarea>
+                    <div class="actions">
+                        <button type="submit">Verifică formularul</button>
+                        <button type="reset" class="secondary">Resetează</button>
+                    </div>
+                </form>
+                <aside>
+                    <figure>
+                        <img
+                            src="images/iss.jpg"
+                            alt="Panourile solare ale Stației Spațiale Internaționale deasupra Oceanului Pacific"
+                        >
+                        <figcaption>Stația Spațială Internațională</figcaption>
+                    </figure>
+                    <h2>Lucrul în spațiu</h2>
+                    <h3>Roluri într-o misiune</h3>
+                    <table>
+                        <caption>
+                            Exemple de activități ale echipajului.
+                        </caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Rol</th>
+                                <th scope="col">Activitate</th>
+                                <th scope="col">Scop</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Cercetător</td>
+                                <td>Experimente</td>
+                                <td>Descoperiri noi</td>
+                            </tr>
+                            <tr>
+                                <td>Inginer</td>
+                                <td>Verificarea sistemelor</td>
+                                <td>Siguranța misiunii</td>
+                            </tr>
+                            <tr>
+                                <td>Medic</td>
+                                <td>Monitorizarea echipajului</td>
+                                <td>Sănătatea astronauților</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h3>Completarea formularului</h3>
+                    <ol>
+                        <li>Completează numele și alege proiectul preferat.</li>
+                        <li>Selectează o destinație.</li>
+                        <li>Apasă „Verifică formularul”.</li>
+                    </ol>
+                    <h3>Resurse</h3>
+                    <ul>
+                        <li><a href="misiuni.html">Misiuni planificate</a></li>
+                        <li><a href="https://www.nasa.gov/learning-resources/">Resurse educaționale NASA</a></li>
+                    </ul>
+                </aside>
+            </section>
+        </main>
+        <footer><span>ORBIT · Studiul individual 1</span><a href="index.html">Acasă</a></footer>
+    </body>
+</html>

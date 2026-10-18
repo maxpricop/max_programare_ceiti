@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="ro">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Explorarea spațiului pe scurt: Starship, Artemis și New Glenn.">
+        <title>Orbit — Explorarea spațiului</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <a class="brand" href="index.html">ORBIT<span> / Explorarea spațiului</span></a>
+            <nav aria-label="Navigare principală">
+                <a href="index.html" aria-current="page">Acasă</a>
+                <a href="misiuni.html">Misiuni și viitor</a>
+                <a href="formular.html">Formular</a>
+            </nav>
+        </header>
+        <main>
+            <section class="hero">
+                <h1>Explorarea spațiului</h1>
+                <p class="intro">
+                    SpaceX, NASA și Blue Origin lucrează la rachete, misiuni lunare și stații spațiale. Printre
+                    proiectele lor se numără Starship, Artemis și New Glenn.
+                </p>
+                <a href="misiuni.html">Misiuni planificate</a>
+            </section>
+            <div class="grid photos">
+                <figure>
+                    <img src="images/starship.jpg" alt="Starship și Super Heavy pe rampa de lansare de la Starbase">
+                    <figcaption>Starship</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/new-glenn.jpg" alt="Racheta New Glenn în timpul unei lansări pe timp de zi">
+                    <figcaption>New Glenn</figcaption>
+                </figure>
+            </div>
+            <section>
+                <h2>Proiecte principale</h2>
+                <div class="grid">
+                    <article class="card">
+                        <p class="eyebrow">SpaceX</p>
+                        <h3>Starship</h3>
+                        <p>
+                            Starship este alcătuit din prima treaptă Super Heavy și nava Starship. SpaceX dezvoltă
+                            ambele componente pentru reutilizare și pentru zboruri spre orbită, Lună și Marte.
+                        </p>
+                        <a href="https://www.spacex.com/vehicles/starship/">SpaceX — Starship</a>
+                    </article>
+                    <article class="card">
+                        <p class="eyebrow">NASA și partenerii</p>
+                        <h3>Programul Artemis</h3>
+                        <p>
+                            Artemis este programul NASA pentru revenirea astronauților pe Lună. SLS lansează capsula
+                            Orion, iar modulele de aselenizare vor transporta echipajul pe suprafață.
+                        </p>
+                        <a href="https://www.nasa.gov/artemis/">NASA — Artemis</a>
+                    </article>
+                    <article class="card">
+                        <p class="eyebrow">Blue Origin</p>
+                        <h3>New Glenn</h3>
+                        <p>
+                            New Glenn este racheta orbitală a companiei Blue Origin. Transportă sateliți și alte
+                            încărcături, iar prima treaptă este construită pentru a fi refolosită.
+                        </p>
+                        <a href="https://www.blueorigin.com/new-glenn">Blue Origin — New Glenn</a>
+                    </article>
+                </div>
+            </section>
+            <section>
+                <h2>Comparație</h2>
+                <table>
+                    <caption>
+                        Două sisteme de lansare și un program de explorare.
+                    </caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Proiect</th>
+                            <th scope="col">Organizație</th>
+                            <th scope="col">Rol</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Starship</td>
+                            <td>SpaceX</td>
+                            <td>Transport spațial reutilizabil, în dezvoltare.</td>
+                        </tr>
+                        <tr>
+                            <td>Artemis</td>
+                            <td>NASA și partenerii</td>
+                            <td>Explorare lunară cu astronauți.</td>
+                        </tr>
+                        <tr>
+                            <td>New Glenn</td>
+                            <td>Blue Origin</td>
+                            <td>Lansarea încărcăturilor pe orbită.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section class="grid">
+                <article>
+                    <h2>Obiective</h2>
+                    <ul>
+                        <li>Studierea Lunii și a altor corpuri din Sistemul Solar.</li>
+                        <li>Testarea echipamentelor în condiții de microgravitație.</li>
+                        <li>Cercetarea efectelor zborului spațial asupra oamenilor.</li>
+                    </ul>
+                </article>
+                <article>
+                    <h2>Etapele unei misiuni</h2>
+                    <ol>
+                        <li>Proiectarea și testarea vehiculului.</li>
+                        <li>Lansarea și atingerea orbitei.</li>
+                        <li>Îndeplinirea obiectivelor și analiza rezultatelor.</li>
+                    </ol>
+                </article>
+            </section>
+            <section>
+                <h2>Video și audio</h2>
+                <div class="grid">
+                    <article>
+                        <h3>Starship: recuperarea boosterului</h3>
+                        <video
+                            controls
+                            preload="metadata"
+                            poster="images/starship-catch.jpg"
+                            aria-label="Filmarea capturării boosterului Super Heavy, zborul 5"
+                        >
+                            <source src="media/starship-catch.webm" type="video/webm">
+                            <a href="media/starship-catch.webm">Deschide videoclipul.</a>
+                        </video>
+                    </article>
+                    <article class="card">
+                        <h3>Vibrațiile Soarelui</h3>
+                        <p>
+                            Datele măsurate de observatorul SOHO au fost convertite în sunet și accelerate pentru a fi
+                            auzite.
+                        </p>
+                        <audio
+                            controls
+                            preload="metadata"
+                            aria-label="Sun Sonification, date SOHO transformate în sunet"
+                        >
+                            <source src="media/sun-sonification.wav" type="audio/wav">
+                            <a href="media/sun-sonification.wav">Deschide fișierul audio.</a>
+                        </audio>
+                    </article>
+                </div>
+            </section>
+        </main>
+        <footer><span>ORBIT · Studiul individual 1</span><a href="formular.html">Formular</a></footer>
+    </body>
+</html>
